@@ -16,13 +16,14 @@ button {
   border-radius: 8px;
   font-size: 8px;
   line-height: 1.22;
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     width: 134px;
     height: 42px;
     border-radius: 10px;
     font-size: 14px;
     line-height: 1.25;
   }
+
   &:hover {
     border-color: #0a8817;
   }
@@ -83,8 +84,4 @@ button {
 // .contacts__button--transparent {
 // }
 // .header__button {
-// }
-// .custom {
-//   cursor: url(images/my-cursor.png), auto;
-//   cursor: url(target.svg) 15 15, move;
 // }
