@@ -1,0 +1,25 @@
+.text-main {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #131313;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.text-modal {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
