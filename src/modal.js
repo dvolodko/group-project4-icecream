@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
       Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
   var modalButtons = document.querySelectorAll('.js-open-modal'),
     overlay = document.querySelector('.js-overlay-modal'),
-    closeButtons = document.querySelectorAll('.js-modal-close');
+    closeButtons = document.querySelectorAll('.js-modal-close'),
+    modals = document.querySelectorAll('.modal');
 
   /* Перебираем массив кнопок */
   modalButtons.forEach(function (item) {
@@ -61,6 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       parentModal.classList.remove('active');
       overlay.classList.remove('active');
+    });
+  }); // end foreach
+
+  // Fix the situation when modal is inside the overlay
+  modals.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      e.stopPropagation();
     });
   }); // end foreach
 
