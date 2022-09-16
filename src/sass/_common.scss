@@ -2,6 +2,7 @@
 
 body {
   color: $primaryColor;
+  background-color: $backgroundColor;
   font-family: 'Montserrat';
   @include font(400, 12, 1.76, 0.04em);
 
