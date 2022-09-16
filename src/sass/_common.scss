@@ -1,1 +1,15 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  color: $primaryColor;
+  font-family: 'Montserrat';
+  @include font(400, 12, 1.76, 0.04em);
+
+  @include mq(tablet) {
+    @include font(400, 14, 1.76, 0.04em);
+  }
+
+  @include mq(desktop) {
+    @include font(400, 16, 1.76, 0.04em);
+  }
+}
