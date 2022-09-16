@@ -1,5 +1,7 @@
 .title-section {
   @include font(400, 30px, 1.26, 0.04em);
+  font-family: 'Seymour One';
+  text-align: center;
 
   @include mq(tablet) {
     @include font(400, 34px, 1.26, 0.04em);
@@ -12,6 +14,8 @@
 
 .title {
   @include font(700, 20px, 1.2, 0.04em);
+  font-family: 'Montserrat';
+  text-align: center;
 
   @include mq(tablet) {
     @include font(400, 22px, 1.23, 0.04em);
