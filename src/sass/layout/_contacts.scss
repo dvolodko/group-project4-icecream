@@ -40,7 +40,6 @@
   padding: 2px 18px;
   background: #f8d24e;
   border-radius: 4px;
-  margin-bottom: 20px;
 }
 
 .contacts-item__text {
@@ -56,9 +55,11 @@
 }
 
 .contacts-adress {
+  padding-top: 20px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e1e1e1;
   @include mq(tablet) {
+    padding-top: 32px;
     padding-bottom: 26px;
   }
   @include mq(desktop) {
@@ -130,9 +131,6 @@
   align-items: center;
 }
 
-.contacts__button {
-}
-
 // кнопка Our Locations
 .contacts__button {
   @media (max-width: 419px) {
@@ -144,7 +142,8 @@
   background-color: $accentColor;
   border-radius: 10px;
   gap: 6px;
-  &:first-child {
+}
+&:first-child {
   @media (max-width: 419px) {
     margin-bottom: 16px;
   }
