@@ -142,22 +142,23 @@
   background-color: $accentColor;
   border-radius: 10px;
   gap: 6px;
+  &:first-child {
+    @media (max-width: 419px) {
+      margin-bottom: 16px;
+    }
+    &:hover {
+      background-color: $btn-hoverColor;
+    }
+    &:focus {
+      background-color: $btn-hoverColor;
+      color: $textColor;
+    }
+    &:disabled {
+      background-color: $btn-disabledColor;
+    }
+  }
 }
-&:first-child {
-  @media (max-width: 419px) {
-    margin-bottom: 16px;
-  }
-  &:hover {
-    background-color: $btn-hoverColor;
-  }
-  &:focus {
-    background-color: $btn-hoverColor;
-    color: $textColor;
-  }
-  &:disabled {
-    background-color: $btn-disabledColor;
-  }
-}
+
 // кнопка Franchise
 .contacts__button--transparent {
   background-color: transparent;
