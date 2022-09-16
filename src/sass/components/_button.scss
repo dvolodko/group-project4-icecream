@@ -1,0 +1,170 @@
+button {
+  background-color: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  @include font(600, 14px, 1.25, null);
+  @include flex(flex, center, center);
+}
+
+.header__button {
+  min-width: 152px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
+
+.hero__button {
+  min-width: 62px;
+  height: 24px;
+  border: 2px solid $accentColor;
+  border-radius: 8px;
+  font-size: 8px;
+  line-height: 1.22;
+  @include mq(desktop) {
+    min-width: 134px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  &:hover {
+    border-color: $btn-hoverColor;
+  }
+  &:focus {
+    color: $textColor;
+  }
+  &:disabled {
+    color: $btn-disabledColor;
+  }
+  &--without-body {
+    min-width: 83px;
+    height: 24px;
+    border: none;
+    color: $accentColor;
+    text-decoration: underline;
+
+    @include mq(desktop) {
+      min-width: 154px;
+      height: 40px;
+    }
+    &:hover {
+      color: $btn-hoverColor;
+    }
+    &:focus {
+      color: $textColor;
+    }
+    &:disabled {
+      color: $btn-disabledColor;
+    }
+  }
+}
+
+.about__button {
+  min-width: 164px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
+
+.contacts__button {
+  min-width: 196px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
+
+.contacts__button--transparent {
+  background-color: transparent;
+  border: 2px solid $accentColor;
+  &:hover {
+    background-color: transparent;
+    border-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: transparent;
+    border-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: transparent;
+    border-color: $btn-disabledColor;
+  }
+}
+
+.modal__location__button {
+  min-width: 134px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  @include mq(mobile-only) {
+    @include font(null, 12px, 1.22, null);
+  }
+  @include mq(desktop) {
+    min-width: 145px;
+  }
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
+
+.modal__button {
+  min-width: 134px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  @include mq(mobile-only) {
+    @include font(null, 12px, 1.22, null);
+  }
+  @include mq(desktop) {
+    min-width: 121px;
+    height: 42px;
+  }
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
