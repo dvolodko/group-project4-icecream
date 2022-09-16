@@ -3,27 +3,41 @@ button {
   border: none;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.25;
+  @include font(600, 14px, 1.25, null);
   @include flex(flex, center, center);
 }
 
+.header__button {
+  min-width: 152px;
+  height: 42px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    background-color: #0a8817;
+    color: #ffffff;
+  }
+  &:disabled {
+    background-color: #ababab;
+  }
+}
+
 .hero__button {
-  width: 62px;
+  min-width: 62px;
   height: 24px;
   border: 2px solid #f8d24e;
   border-radius: 8px;
   font-size: 8px;
   line-height: 1.22;
   @include mq(desktop) {
-    width: 134px;
+    min-width: 134px;
     height: 42px;
     border-radius: 10px;
     font-size: 14px;
     line-height: 1.25;
   }
-
   &:hover {
     border-color: #0a8817;
   }
@@ -33,10 +47,31 @@ button {
   &:disabled {
     color: #ababab;
   }
+  &--without-body {
+    min-width: 83px;
+    height: 24px;
+    border: none;
+    color: #f8d24e;
+    text-decoration: underline;
+
+    @include mq(desktop) {
+      min-width: 154px;
+      height: 40px;
+    }
+    &:hover {
+      color: #0a8817;
+    }
+    &:focus {
+      color: #ffffff;
+    }
+    &:disabled {
+      color: #ababab;
+    }
+  }
 }
 
 .about__button {
-  width: 164px;
+  min-width: 164px;
   height: 42px;
   background-color: #f8d24e;
   border-radius: 10px;
@@ -53,7 +88,7 @@ button {
 }
 
 .contacts__button {
-  width: 196px;
+  min-width: 196px;
   height: 42px;
   background-color: #f8d24e;
   border-radius: 10px;
@@ -67,21 +102,69 @@ button {
   &:disabled {
     background-color: #ababab;
   }
-  &--transparent {
+}
+
+.contacts__button--transparent {
+  background-color: transparent;
+  border: 2px solid #f8d24e;
+  &:hover {
     background-color: transparent;
-    border: 2px solid #f8d24e;
-    &:hover {
-      border-color: #0a8817;
-    }
-    &:focus {
-      color: #ffffff;
-    }
-    &:disabled {
-      color: #ababab;
-    }
+    border-color: #0a8817;
+  }
+  &:focus {
+    background-color: transparent;
+    border-color: #0a8817;
+    color: #ffffff;
+  }
+  &:disabled {
+    background-color: transparent;
+    border-color: #ababab;
   }
 }
-// .contacts__button--transparent {
-// }
-// .header__button {
-// }
+
+.modal__location__button {
+  min-width: 134px;
+  height: 42px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  @include mq(mobile-only) {
+    @include font(null, 12px, 1.22, null);
+  }
+  @include mq(desktop) {
+    min-width: 145px;
+  }
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    background-color: #0a8817;
+    color: #ffffff;
+  }
+  &:disabled {
+    background-color: #ababab;
+  }
+}
+
+.modal__button {
+  min-width: 134px;
+  height: 42px;
+  background-color: #f8d24e;
+  border-radius: 10px;
+  @include mq(mobile-only) {
+    @include font(null, 12px, 1.22, null);
+  }
+  @include mq(desktop) {
+    min-width: 121px;
+    height: 42px;
+  }
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    background-color: #0a8817;
+    color: #ffffff;
+  }
+  &:disabled {
+    background-color: #ababab;
+  }
+}
