@@ -1,67 +1,3 @@
-/* Стили для подложки */
-
-.overlay {
-  /* Скрываем подложку  */
-  opacity: 0;
-  visibility: hidden;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
-  transition: 0.3s all;
-}
-
-/* Стили для модальных окон */
-
-.modal {
-  /* Скрываем окна  */
-  opacity: 0;
-  visibility: hidden;
-
-  /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 500px;
-
-  /*  Центрируем и задаем z-index */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
-
-  /*  Побочные стили   */
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 30px;
-  border-radius: 3px;
-  background-color: #fff;
-  transition: 0.3s all;
-}
-
-/* Стили для активных классов подложки и окна */
-
-.modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Стили для кнопки закрытия */
-
-.modal__cross {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  fill: #444;
-  cursor: pointer;
-}
-
 /* Стили для кнопок. Мы ведь порядочные разработчики, негоже простые ссылки оставлять */
 
 a {
@@ -72,4 +8,80 @@ a {
   margin: 10px;
   color: #fff;
   border-radius: 3px;
+}
+
+// TODO: move to common variables
+$mainTransitionDuration: 250ms;
+$mainTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
+    visibility $mainTransitionDuration $mainTransitionTimingFunction;
+
+  z-index: 20;
+}
+
+.modal {
+  position: relative;
+  padding: 30px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  background-color: $textColor;
+  border: 2px solid $accentColor;
+  border-radius: 10px;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Fix for iphone
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal__btn-close-icon {
+}
+
+.modal__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  color: $primaryColor;
 }
