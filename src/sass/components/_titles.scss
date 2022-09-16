@@ -1,11 +1,11 @@
 .title-section {
   @include font(400, 30px, 1.26, 0.04em);
 
-  @include mq($tablet) {
+  @include mq(tablet) {
     @include font(400, 34px, 1.26, 0.04em);
   }
 
-  @include mq($desktop) {
+  @include mq(desktop) {
     @include font(400, 36px, 1.25, 0.04em);
   }
 }
@@ -13,11 +13,11 @@
 .title {
   @include font(700, 20px, 1.2, 0.04em);
 
-  @include mq($tablet) {
+  @include mq(tablet) {
     @include font(400, 22px, 1.23, 0.04em);
   }
 
-  @include mq($desktop) {
+  @include mq(desktop) {
     @include font(400, 30px, 1.25, 0.04em);
   }
 }
