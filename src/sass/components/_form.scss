@@ -4,6 +4,7 @@
 }
 
 .form__input {
+  padding: 11px 11px;
   margin-bottom: 12px;
   height: 32px;
 
@@ -17,6 +18,7 @@
   border-radius: 10px;
 
   @include mq(tablet) {
+    padding: 16px 11px;
     margin-bottom: 16px;
     height: 42px;
 
