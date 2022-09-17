@@ -36,6 +36,7 @@
 .form__input--multiline {
   margin-bottom: 24px;
   height: 64px;
+  resize: none;
 
   @include mq(tablet) {
     margin-bottom: 32px;
