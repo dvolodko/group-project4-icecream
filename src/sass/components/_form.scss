@@ -15,16 +15,29 @@
   background-color: rgba(248, 210, 78, 0.1);
   border: 1px solid $backgroundColor;
   border-radius: 10px;
+
+  @include mq(tablet) {
+    margin-bottom: 16px;
+    height: 42px;
+
+    font-size: 14px;
+  }
 }
 
 .form__input--multiline {
   margin-bottom: 24px;
   height: 64px;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+    height: 84px;
+  }
 }
 
 .form__button {
   align-self: center;
 
+  // Copied from _button.scss .modal__button
   min-width: 134px;
   height: 42px;
   background-color: $accentColor;
