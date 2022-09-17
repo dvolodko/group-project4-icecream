@@ -1,6 +1,6 @@
 .menu {
   stroke: #ffffff;
-  transition: stroke 250ms ease;
+  transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     stroke: #f8d24e;
   }
@@ -37,7 +37,7 @@
 }
 .arrow-white {
   fill: #fcfcfc;
-  transition: fill 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     fill: #f8d24e;
   }
@@ -48,7 +48,7 @@
 
 .close {
   fill: #ffffff;
-  transition: fill 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     fill: #f8d24e;
   }
@@ -60,7 +60,7 @@
 .close-modal,
 .close-modal-20 {
   fill: #131313;
-  transition: fill 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     fill: #f8d24e;
   }
@@ -81,7 +81,7 @@
   width: 34px;
   height: 34px;
   fill: #84a178;
-  transition: width 250ms ease, height 250ms ease;
+  transition: width $mainTransitionDuration $mainTransitionTimingFunction, height $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     width: 32px;
     height: 32px;
