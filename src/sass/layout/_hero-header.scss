@@ -26,19 +26,16 @@
 
 .header_item-desktop {
   @include font(700, 16px, 1.25, 0.04em);
-
+  cursor: pointer;
   align-items: center;
   color: $textColor;
-transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header_item-desktop:hover,
- .header_item-desktop:focus{
-    color: $primaryColor;
+.header_item-desktop:focus {
+  color: $primaryColor;
 }
-
-
-
 
 .header__list {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -71,208 +68,215 @@ transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-
 /*--------hero*/
-.hero .container{
-    color: $textColor;
+.hero .container {
+  color: $textColor;
 }
 
-.hero__wrap--top{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 28px;
-    @include mq(desktop){
-        margin-bottom: 42px;
-    }
+.hero__wrap--top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+
+  @include mq(desktop) {
+    margin-bottom: 42px;
+  }
 }
 
-.hero__title{
-    @include font(400, 26px, 1.27, 0.04em);
-    font-family: 'Seymour One';
+.hero__title {
+  @include font(400, 26px, 1.27, 0.04em);
+  font-family: 'Seymour One';
 
-max-width: 247px;
-margin-top: 110px;
+  max-width: 247px;
+  margin-top: 110px;
 
-@include mq(tablet) {
+  @include mq(tablet) {
     @include font(400, 18px, 1.28, 0.04em);
     margin-top: 104px;
     max-width: 181px;
-    }
+  }
 
-    @include mq(desktop) {
+  @include mq(desktop) {
     @include font(400, 38px, 1.26, 0.04em);
     margin-top: 118px;
     max-width: 367px;
-    }
+  }
 }
 
-.accent{
-@include font(400, 34px, 0.97, 0.04em);
-font-family: 'Seymour One';
-    
+.accent {
+  @include font(400, 34px, 0.97, 0.04em);
+  font-family: 'Seymour One';
 
-    @include mq(tablet) {
-            @include font(400, 24px, 0.54, 0.04em);
-          
-        }
-    
-        @include mq(desktop) {
-            @include font(400, 38px, 1.26, 0.04em);
-          
-        }
- }
+  @include mq(tablet) {
+    @include font(400, 24px, 0.54, 0.04em);
+  }
+
+  @include mq(desktop) {
+    @include font(400, 38px, 1.26, 0.04em);
+  }
+}
 
 .hero__list {
-    margin-top: 32px;
-    display: flex;
-    gap: 8px;
+  margin-top: 32px;
+  display: flex;
+  gap: 8px;
 
-
-    @include mq(mobile-only) {
-        margin-bottom: 239px;
-    }
+  @include mq(mobile-only) {
+    margin-bottom: 239px;
+  }
 }
 
-.hero__wrap--right{
-@include mq(mobile-only) {
-        display: none;
-    }
-
-    margin-top: 94px;
-    margin-right: 0;
-
-    @include mq(desktop){
-        margin-top: 126px;
-    }
-}
-
-.hero__item--right span{
-    @include font(900, 28px, 1.21, 0.04em);
-      color: $primaryColor;
-
-     @include mq(desktop) {
-         @include font(900, 46px, 1.22, 0.04em);
-         
-     }
-}
-
-.hero__text--after-span{
-    @include font(400, 8px, 1.25, 0.04em);
-       
-        margin-top: 4px;
-    
-        @include mq(desktop) {
-            @include font(400, 14px, 1.21, 0.04em);
-   
-        }
-}
-
-.hero__item--right:first-child{
-    margin-bottom: 20px;
-
-    @include mq(desktop){
-        margin-bottom: 16px;
-    }
-}
-
-.hero__wrap--bottom{
-@include mq(mobile-only){
+.hero__wrap--right {
+  @include mq(mobile-only) {
     display: none;
+  }
+
+  margin-top: 94px;
+  margin-right: 0;
+
+  @include mq(desktop) {
+    margin-top: 126px;
+  }
 }
 
-margin-bottom: 13px;
-display: flex;
-gap: 33px;
-@include mq(desktop) {
-        margin-bottom: 65px;
-    }
+.hero__item--right span {
+  @include font(900, 28px, 1.21, 0.04em);
+  color: $primaryColor;
+
+  @include mq(desktop) {
+    @include font(900, 46px, 1.22, 0.04em);
+  }
 }
 
-.hero__text{
+.hero__text--after-span {
+  @include font(400, 8px, 1.25, 0.04em);
 
-@include font(400, 12px, 1.4, 0.04em);
-max-width: 151px;
+  margin-top: 4px;
 
-    @include mq(desktop) {
-        @include font(400, 14px, 1.4, 0.04em);
-max-width: 200px;
-    }
+  @include mq(desktop) {
+    @include font(400, 14px, 1.21, 0.04em);
+  }
+}
 
-    
+.hero__item--right:first-child {
+  margin-bottom: 20px;
+
+  @include mq(desktop) {
+    margin-bottom: 16px;
+  }
+}
+
+.hero__wrap--bottom {
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  margin-bottom: 13px;
+  display: flex;
+  align-items: flex-end;
+  gap: 33px;
+
+  @include mq(desktop) {
+    margin-bottom: 65px;
+  }
+}
+
+.hero__text {
+  @include font(400, 12px, 1.4, 0.04em);
+  max-width: 151px;
+  margin-bottom: 20px;
+
+  @include mq(desktop) {
+    @include font(400, 14px, 1.4, 0.04em);
+    max-width: 200px;
+    margin-bottom: 32px;
+  }
+}
+
+.icon-buttom {
+  fill: $textColor;
+}
+
+.icon-buttom:hover {
+  width: 50px;
+}
+
+.icon-buttom:focus {
+  width: 50px;
+  /*border: 3px solid #131313;*/
 }
 
 /*-----------mobile_menu---*/
 
 .header__button-menu {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .header__mobile-menu {
-    background: #84a178;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 12px;
-background-color: rgb(70, 70, 230);
-    @include mq(tablet){
-        padding-left: 32px;
-            padding-right: 32px;
-            padding-top: 20px;
-    }
+  background: #84a178;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  background-color: rgb(70, 70, 230);
 
+  @include mq(tablet) {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 20px;
+  }
 }
 
 .mobile-menu__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 51px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 51px;
 
-    @include mq(tablet){
-        margin-bottom: 76px;
-    }
+  @include mq(tablet) {
+    margin-bottom: 76px;
+  }
 }
 
 .site-nav {
-    margin-bottom: 111px;
-    text-align: center;
+  margin-bottom: 111px;
+  text-align: center;
 }
 
 .site-nav__item:not(:last-child) {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    @include mq(tablet){
-        margin-bottom: 40px;
-    }
+  @include mq(tablet) {
+    margin-bottom: 40px;
+  }
 }
 
-.site-nav__item{
-    @include font(700, 32px, 1.22, 0.04em);
-    text-align: center;
-    color: $textColor;
+.site-nav__item {
+  @include font(700, 32px, 1.22, 0.04em);
+  text-align: center;
+  color: $textColor;
+  cursor: pointer;
 
-    @include mq(tablet){
-        @include font(700, 48px, 1.23, 0.04em);
-     
-    }
-    
-    transform: color  250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include mq(tablet) {
+    @include font(700, 48px, 1.23, 0.04em);
+  }
+
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav__item:hover{
-    color: $primaryColor;
+.site-nav__item:hover {
+  color: $primaryColor;
 }
 
-.header__mobile-menu .header__button{
-    display: block;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 63px;
+.header__mobile-menu .header__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 63px;
 
-@include mq(tablet){
+  @include mq(tablet) {
     display: none;
-}
+  }
 }
