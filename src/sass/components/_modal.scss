@@ -39,9 +39,10 @@ $mainTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
-    visibility $mainTransitionDuration $mainTransitionTimingFunction;
+    visibility $mainTransitionDuration $mainTransitionTimingFunction,
+    transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   z-index: 30; /* Should be greater than  for .overlay */
 
@@ -55,6 +56,10 @@ $mainTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(100%);
 }
 
 .modal__btn-close {
