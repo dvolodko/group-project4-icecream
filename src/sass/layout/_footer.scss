@@ -1,0 +1,49 @@
+.footer-titles {
+  &_pretitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+    color: #fcfcfc;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: #fcfcfc;
+  }
+}
+
+.footer-soc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-contact {
+  &__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    text-align: right;
+    color: #131313;
+  }
+  &__tel {
+    color: #fcfcfc;
+  }
+}
+
+.footer-after-title {
+  padding: 16px 64px 62px 64px;
+  text-align: center;
+  @include mq(table) {
+    padding: 14px 0px 13px 0px;
+  }
+  @include mq(desktop) {
+    padding: 12px 0px 11px 0px;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(21 / 14);
+    text-align: center;
+    color: #7a7a7a;
+  }
+}
