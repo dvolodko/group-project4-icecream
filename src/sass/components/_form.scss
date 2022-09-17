@@ -14,8 +14,15 @@
   color: $primaryColor;
 
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid $backgroundColor;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $backgroundColor;
   border-radius: 10px;
+  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
 
   @include mq(tablet) {
     padding: 16px 11px;
