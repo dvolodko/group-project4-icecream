@@ -44,5 +44,22 @@
   </p>
 
   <!-- TODO: form -->
-  <form></form>
+  <form class="form">
+    <input
+      class="form__input"
+      type="text"
+      name="username"
+      placeholder="Name"
+      autofocus
+    />
+    <input class="form__input" type="tel" name="phone" placeholder="Phone" />
+    <input class="form__input" type="email" name="email" placeholder="Email" />
+    <textarea
+      class="form__input form__input--multiline"
+      name="comment"
+      id="comment"
+      placeholder="Comment"
+    ></textarea>
+    <button class="form__button button" type="submit">Submit</button>
+  </form>
 </div>
