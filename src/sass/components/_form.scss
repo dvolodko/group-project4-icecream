@@ -24,6 +24,11 @@
     border-color: red;
   }
 
+  &:focus {
+    outline: none;
+    border-color: $accentColor;
+  }
+
   @include mq(tablet) {
     padding: 16px 11px;
     margin-bottom: 16px;
