@@ -43,6 +43,8 @@ $mainTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
     visibility $mainTransitionDuration $mainTransitionTimingFunction;
 
+  z-index: 30; /* Should be greater than  for .overlay */
+
   @include mq(tablet) {
     width: 568px;
   }
@@ -68,6 +70,17 @@ $mainTransitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
   // Fix for iphone
   padding: 0;
   cursor: pointer;
+}
+
+.modal__btn-close-icon {
+  fill: #131313;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+  .modal__btn-close:hover & {
+    fill: #f8d24e;
+  }
+  .modal__btn-close:focus & {
+    fill: #f8d24e;
+  }
 }
 
 .modal__title {
