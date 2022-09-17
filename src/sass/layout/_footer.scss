@@ -1,3 +1,15 @@
+.footer-main {
+  @include mq(tablet) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq(desktop) {
+    margin-bottom: 54px;
+  }
+}
+
 .footer-titles {
   width: 256px;
   margin-bottom: 39px;
@@ -6,8 +18,8 @@
     margin-bottom: 40px;
   }
   @include mq(desktop) {
-    width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
+    width: 505px;
   }
   &_pretitle {
     font-weight: 700;
@@ -39,15 +51,15 @@
     text-transform: uppercase;
     color: #fcfcfc;
     text-align: left;
-  }
-  @include mq(tablet) {
-    font-size: 48px;
-    line-height: calc(59 / 48);
-    letter-spacing: 0.06em;
-  }
-  @include mq(desktop) {
-    font-size: 58px;
-    line-height: calc(71 / 58);
+    @include mq(tablet) {
+      font-size: 48px;
+      line-height: calc(59 / 48);
+      letter-spacing: 0.06em;
+    }
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: calc(71 / 58);
+    }
   }
 }
 
@@ -62,16 +74,20 @@
 .facebook,
 .github,
 .telegram {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   fill: #84a178;
   transition: width 250ms ease, height 250ms ease;
-  .icon__hover__focus:hover & {
+  @media (max-width: 767px) {
+    width: 34px;
+    height: 34px;
+  }
+  .icons-soc:hover & {
     width: 32px;
     height: 32px;
     fill: #fcfcfc;
   }
-  .icon__hover__focus:focus & {
+  .icons-soc:focus & {
     width: 35px;
     height: 35px;
     fill: #fcfcfc;
@@ -99,6 +115,9 @@
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-top: 40px;
+  @include mq(tablet) {
+    margin-top: 0px;
+  }
 }
 .footer-after-title {
   padding: 16px 60px 62px 60px;
