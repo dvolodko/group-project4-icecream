@@ -95,5 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   overlay.addEventListener('click', function () {
     document.querySelector('.modal.active').classList.remove('active');
     this.classList.remove('active');
+    // Prevent body scroll when modal is open
+    body.classList.remove('no-scroll');
   });
 }); // end ready
