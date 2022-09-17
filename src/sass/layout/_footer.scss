@@ -1,23 +1,58 @@
 .footer-titles {
+  padding-right: 46px;
+  margin-bottom: 42px;
   &_pretitle {
     font-weight: 700;
     font-size: 18px;
     line-height: calc(22 / 18);
     text-transform: uppercase;
     color: #fcfcfc;
+    text-align: left;
+    margin-bottom: 16px;
   }
   &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: calc(41 / 34);
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #fcfcfc;
+    text-align: left;
   }
 }
 
 .footer-soc {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 27px;
+  justify-content: right;
+  margin-bottom: 38px;
 }
+
+.facebook,
+.github,
+.telegram {
+  width: 34px;
+  height: 34px;
+  fill: #84a178;
+  transition: width 250ms ease, height 250ms ease;
+  .icon__hover__focus:hover & {
+    width: 32px;
+    height: 32px;
+    fill: #fcfcfc;
+  }
+  .icon__hover__focus:focus & {
+    width: 35px;
+    height: 35px;
+    fill: #fcfcfc;
+  }
+}
+
 .footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+
   &__text {
     font-weight: 700;
     font-size: 12px;
@@ -30,8 +65,11 @@
   }
 }
 
+.footer-border {
+  border: 1px solid #e1e1e1;
+}
 .footer-after-title {
-  padding: 16px 64px 62px 64px;
+  padding: 16px 60px 62px 60px;
   text-align: center;
   @include mq(table) {
     padding: 14px 0px 13px 0px;
