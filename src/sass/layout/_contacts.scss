@@ -5,7 +5,7 @@
   }
   // кнопка Our Locations
   &__button {
-    @media (max-width: 419px) {
+    @media (max-width: 767px) {
       margin-left: auto;
       margin-right: auto;
     }
@@ -15,7 +15,7 @@
     border-radius: 10px;
     gap: 6px;
     &:first-child {
-      @media (max-width: 419px) {
+      @media (max-width: 767px) {
         margin-bottom: 16px;
       }
       &:hover {
