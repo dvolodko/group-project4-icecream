@@ -18,7 +18,6 @@
   &.arrow-focus {
     display: none;
   }
-
   .icon__hover__focus:hover & {
     &.arrow-default {
       display: none;
@@ -46,6 +45,7 @@
     fill: #f8d24e;
   }
 }
+
 .close {
   fill: #ffffff;
   transition: fill 250ms ease;
@@ -56,6 +56,7 @@
     fill: #f8d24e;
   }
 }
+
 .close-modal,
 .close-modal-20 {
   fill: #131313;
