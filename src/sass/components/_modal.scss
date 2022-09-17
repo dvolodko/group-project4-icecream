@@ -95,6 +95,11 @@
   margin-bottom: 20px;
 
   color: $primaryColor;
+
+  @include mq(tablet) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 }
 
 .no-scroll {
