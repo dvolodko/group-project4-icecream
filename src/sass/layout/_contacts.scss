@@ -51,6 +51,16 @@
   }
 }
 
+.contacts-btns {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .contacts-box {
   display: flex;
   flex-wrap: wrap;
@@ -79,24 +89,26 @@
   @include mq(desktop) {
     padding: 40px;
   }
-  &__titel {
-    display: inline-block;
-    height: 28px;
-    padding: 0px 15px;
-    background: #f8d24e;
-    border-radius: 4px;
-  }
-  &__text {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
-    text-align: center;
-    text-transform: uppercase;
-    color: #131313;
-  }
+}
+
+.contacts-item__title {
+  display: inline-block;
+  height: 28px;
+  padding: 0px 15px;
+  background: #f8d24e;
+  border-radius: 4px;
+}
+
+.contacts-item__text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #131313;
 }
 
 .contacts-adress {
@@ -151,6 +163,17 @@
   }
 }
 
+.contacts-time__title,
+.contacts-time__clock {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  color: #131313;
+}
+
+.contacts-time_clock {
+  color: #907e82;
+}
 .contacts-cont {
   padding-top: 24px;
   @include mq(tablet) {
@@ -164,7 +187,7 @@
   }
 }
 
-.contasts-btns {
+.contacts-btns {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
