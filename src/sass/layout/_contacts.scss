@@ -3,6 +3,62 @@
   @include mq(desktop) {
     padding-bottom: 120px;
   }
+  // кнопка Our Locations
+  &__button {
+    @media (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    min-width: 196px;
+    height: 42px;
+    background-color: $accentColor;
+    border-radius: 10px;
+    gap: 6px;
+    &:first-child {
+      @media (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+      &:hover {
+        background-color: $btn-hoverColor;
+      }
+      &:focus {
+        background-color: $btn-hoverColor;
+        color: $textColor;
+      }
+      &:disabled {
+        background-color: $btn-disabledColor;
+      }
+    }
+  }
+  // кнопка Franchise
+  &__button--transparent {
+    background-color: transparent;
+    border: 2px solid $accentColor;
+    gap: 6px;
+    &:hover {
+      background-color: transparent;
+      border-color: $btn-hoverColor;
+    }
+    &:focus {
+      background-color: transparent;
+      border-color: $btn-hoverColor;
+      color: $textColor;
+    }
+    &:disabled {
+      background-color: transparent;
+      border-color: $btn-disabledColor;
+    }
+  }
+}
+
+.contasts-btns {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contacts-box {
@@ -35,7 +91,7 @@
   }
 }
 
-.contacts-item__titel {
+.contacts-item__title {
   display: inline-block;
   height: 28px;
   padding: 0px 15px;
@@ -100,7 +156,7 @@
 }
 
 .contacts-time__title,
-.contacts-time_clock {
+.contacts-time__clock {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
@@ -122,60 +178,4 @@
   font-size: 14px;
   line-height: 1.83;
   color: #131313;
-}
-
-.contasts-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-}
-
-// кнопка Our Locations
-.contacts__button {
-  @media (max-width: 419px) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  min-width: 196px;
-  height: 42px;
-  background-color: $accentColor;
-  border-radius: 10px;
-  gap: 6px;
-  &:first-child {
-    @media (max-width: 419px) {
-      margin-bottom: 16px;
-    }
-    &:hover {
-      background-color: $btn-hoverColor;
-    }
-    &:focus {
-      background-color: $btn-hoverColor;
-      color: $textColor;
-    }
-    &:disabled {
-      background-color: $btn-disabledColor;
-    }
-  }
-}
-
-// кнопка Franchise
-.contacts__button--transparent {
-  background-color: transparent;
-  border: 2px solid $accentColor;
-  gap: 6px;
-  &:hover {
-    background-color: transparent;
-    border-color: $btn-hoverColor;
-  }
-  &:focus {
-    background-color: transparent;
-    border-color: $btn-hoverColor;
-    color: $textColor;
-  }
-  &:disabled {
-    background-color: transparent;
-    border-color: $btn-disabledColor;
-  }
 }
