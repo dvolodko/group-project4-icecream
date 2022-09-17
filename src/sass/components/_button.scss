@@ -1,17 +1,22 @@
+// загальний стиль кнопки
 button {
   background-color: transparent;
+  color: $primaryColor;
   border: none;
+  outline: none;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   @include font(600, 14px, 1.25, null);
   @include flex(flex, center, center);
+  gap: 5px;
 }
-
+// кнопка Buy now
 .header__button {
   min-width: 152px;
   height: 42px;
   background-color: $accentColor;
   border-radius: 10px;
+  gap: 7px;
   &:hover {
     background-color: $btn-hoverColor;
   }
@@ -23,7 +28,7 @@ button {
     background-color: $btn-disabledColor;
   }
 }
-
+// кнопка Products
 .hero__button {
   min-width: 62px;
   height: 24px;
@@ -42,11 +47,14 @@ button {
     border-color: $btn-hoverColor;
   }
   &:focus {
+    border-color: $btn-hoverColor;
     color: $textColor;
   }
   &:disabled {
+    border-color: $btn-disabledColor;
     color: $btn-disabledColor;
   }
+  // кнопка How it’s made?
   &--without-body {
     min-width: 83px;
     height: 24px;
@@ -69,7 +77,7 @@ button {
     }
   }
 }
-
+// кнопка Read more
 .about__button {
   min-width: 164px;
   height: 42px;
@@ -86,12 +94,13 @@ button {
     background-color: $btn-disabledColor;
   }
 }
-
+// кнопка Our Locations
 .contacts__button {
   min-width: 196px;
   height: 42px;
   background-color: $accentColor;
   border-radius: 10px;
+  gap: 6px;
   &:hover {
     background-color: $btn-hoverColor;
   }
@@ -103,10 +112,11 @@ button {
     background-color: $btn-disabledColor;
   }
 }
-
+// кнопка Franchise
 .contacts__button--transparent {
   background-color: transparent;
   border: 2px solid $accentColor;
+  gap: 6px;
   &:hover {
     background-color: transparent;
     border-color: $btn-hoverColor;
@@ -121,7 +131,7 @@ button {
     border-color: $btn-disabledColor;
   }
 }
-
+// кнопка модального вікна Open map
 .modal__location__button {
   min-width: 134px;
   height: 42px;
@@ -144,7 +154,7 @@ button {
     background-color: $btn-disabledColor;
   }
 }
-
+// кнопка модалки Submit
 .modal__button {
   min-width: 134px;
   height: 42px;
