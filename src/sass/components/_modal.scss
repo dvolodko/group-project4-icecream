@@ -114,6 +114,10 @@
   color: $primaryColor;
 
   @include mq(tablet) {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 20px;
     line-height: 1.4;
   }
