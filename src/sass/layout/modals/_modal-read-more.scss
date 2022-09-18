@@ -1,0 +1,39 @@
+.modal-readMore {
+  padding-left: 28px;
+  padding-right: 28px;
+
+  @include mq(tablet) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include mq(desktop) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.modal-readMore__title {
+  margin-bottom: 20px;
+  @include mq(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.modal-readMore__video {
+  width: 100%;
+  margin-bottom: 20px;
+  @include mq(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.modal-readMore__text {
+  font-size: 14px;
+  line-height: 1.43;
+  color: $primaryColor;
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.38;
+  }
+}
