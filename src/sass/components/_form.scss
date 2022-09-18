@@ -1,6 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    width: 370px;
+  }
 }
 
 .form__input {
@@ -8,7 +13,6 @@
   margin-bottom: 12px;
   height: 32px;
 
-  font-family: 'Montserrat';
   font-size: 12px;
   line-height: 1.4;
   color: $primaryColor;

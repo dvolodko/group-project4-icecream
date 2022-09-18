@@ -103,8 +103,7 @@
 }
 
 .modal__title {
-  font-family: 'Seymour One';
-  font-style: normal;
+  font-family: $secondaryFontFamily;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -115,6 +114,10 @@
   color: $primaryColor;
 
   @include mq(tablet) {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 20px;
     line-height: 1.4;
   }
