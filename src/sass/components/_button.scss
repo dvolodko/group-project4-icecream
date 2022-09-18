@@ -13,7 +13,8 @@ button {
   transition: color $mainTransitionDuration $mainTransitionTimingFunction,
     background-color $mainTransitionDuration $mainTransitionTimingFunction,
     border-color $mainTransitionDuration $mainTransitionTimingFunction,
-    fill $mainTransitionDuration $mainTransitionTimingFunction;
+    fill $mainTransitionDuration $mainTransitionTimingFunction,
+    scale $mainTransitionDuration $mainTransitionTimingFunction;
 }
 // кнопка Buy now
 .header__button {
@@ -150,7 +151,7 @@ button {
   }
 }
 // кнопка модального вікна Open map
-.modal__location__button {
+.location__button {
   min-width: 134px;
   height: 42px;
   background-color: $accentColor;

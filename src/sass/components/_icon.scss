@@ -1,71 +1,64 @@
 .menu {
   stroke: #ffffff;
   transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    stroke: #f8d24e;
+  .icon--hoverfocus:hover & {
+    stroke: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    stroke: #f8d24e;
+  .icon--hoverfocus:focus & {
+    stroke: $accentColor;
   }
 }
-.arrow {
-  &.arrow-default {
+.arrow--white {
+  fill: $extrabackgroundColor;
+}
+.arrow,
+.arrow--white {
+  &.arrow--default {
     display: block;
   }
-  &.arrow-hover {
+  &.arrow--hover {
     display: none;
   }
-  &.arrow-focus {
+  &.arrow--focus {
     display: none;
   }
-  .icon__hover__focus:hover & {
-    &.arrow-default {
+  .icon--hoverfocus:hover & {
+    &.arrow--default {
       display: none;
     }
-    &.arrow-hover {
+    &.arrow--hover {
       display: block;
     }
   }
-  .icon__hover__focus:focus & {
-    &.arrow-default {
+  .icon--hoverfocus:focus & {
+    &.arrow--default {
       display: none;
     }
-    &.arrow-focus {
+    &.arrow--focus {
       display: block;
     }
   }
 }
-.arrow-white {
-  fill: #fcfcfc;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
-  }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
-  }
-}
-
 .close {
   fill: #ffffff;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
   }
 }
 
-.close-modal,
-.close-modal-20 {
-  fill: #131313;
+.close--modal,
+.close--modal20 {
+  fill: $primaryColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
   }
 }
 
@@ -80,16 +73,17 @@
 .telegram {
   width: 34px;
   height: 34px;
-  fill: #84a178;
-  transition: width $mainTransitionDuration $mainTransitionTimingFunction, height $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
+  fill: $backgroundColor;
+  transition: width $mainTransitionDuration $mainTransitionTimingFunction,
+    height $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
     width: 32px;
     height: 32px;
-    fill: #fcfcfc;
+    fill: $extrabackgroundColor;
   }
-  .icon__hover__focus:focus & {
+  .icon--hoverfocus:focus & {
     width: 35px;
     height: 35px;
-    fill: #fcfcfc;
+    fill: $extrabackgroundColor;
   }
 }

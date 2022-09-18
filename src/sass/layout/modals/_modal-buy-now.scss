@@ -1,0 +1,125 @@
+.modal__title--form {
+  @include font(400, 16px, 1.5, null);
+  @include mq(tablet) {
+    @include font(400, 20px, 1.4, null);
+  }
+}
+.form-checkbox {
+  @include flex(flex, center, center);
+  margin: 0 0 20px 0;
+  @include mq(tablet) {
+    margin: 20px 0 40px 0;
+  }
+}
+.form-checkbox__list {
+  display: flex;
+  flex-direction: column;
+  & :not(:last-child) {
+    margin-bottom: 88px;
+    @include mq(tablet) {
+      margin-bottom: 0px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 68px;
+  }
+  @include mq(tablet) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 32px;
+  }
+}
+
+.form-checkbox__label {
+  position: relative;
+  display: block;
+}
+.form-checkbox__label--ice-cream {
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  background-position-y: bottom 7.48px;
+  border-radius: 98.6301px;
+}
+.form-checkbox__label--ice-coffee {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  border-radius: 98.6301px;
+}
+.form-checkbox__label--milkshake {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  border-radius: 98.6301px;
+}
+
+.form-checkbox__label--ice-cream,
+.form-checkbox__label--ice-coffee,
+.form-checkbox__label--milkshake {
+  &::after {
+    position: absolute;
+    transform: translateY(-69px);
+    z-index: -1;
+    width: 132px;
+    height: 136.4px;
+    @include font(700, 16px, 1.25, 0.04em);
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primaryColor;
+    padding-top: 95.98px;
+    padding-bottom: 20.21px;
+    border-radius: 15.78px;
+    @include mq(tablet) {
+      height: 135px;
+      padding-top: 95px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.form-checkbox__label--ice-cream {
+  &::after {
+    content: 'ice cream';
+    border: 2px solid #96af8c;
+  }
+}
+.form-checkbox__label--ice-coffee {
+  &::after {
+    content: 'ice coffee';
+    border: 2px solid #efd478;
+  }
+}
+.form-checkbox__label--milkshake {
+  &::after {
+    content: 'milkshake';
+    border: 2px solid #d6936d;
+  }
+}
+.form-checkbox__input--ice-cream:checked
+  + .form-checkbox__label--ice-cream::after {
+  background-color: #96af8c;
+}
+.form-checkbox__input--ice-coffee:checked
+  + .form-checkbox__label--ice-coffee::after {
+  background-color: #efd478;
+}
+.form-checkbox__input--milkshake:checked
+  + .form-checkbox__label--milkshake::after {
+  background-color: #d6936d;
+}

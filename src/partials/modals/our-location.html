@@ -1,5 +1,5 @@
 <!-- Modal our location -->
-<div class="modal" data-modal="4">
+<div class="modal modal__our-location" data-modal="4">
   <button
     class="modal__btn-close js-modal-close"
     type="button"
@@ -10,7 +10,41 @@
     </svg>
   </button>
 
-  <h2 class="modal__title">Our location</h2>
+  <h2 class="modal__title modal__our-location-title">Our location</h2>
+
+  <picture>
+    <source
+      srcset="./images/location-modal.jpg 1x, ./images/location-modal-2x.jpg 2x"
+      media="(min-width: 768px)"
+    />
+    <source
+      srcset="
+        ./images/location-modal-mob.jpg    1x,
+        ./images/location-modal-mob-2x.jpg 2x
+      "
+      media="(max-width: 767px)"
+    />
+    <img
+      class="modal__our-location-img"
+      src="./images/location-modal.jpg"
+      alt="maps"
+    />
+  </picture>
+
+  <button
+    type="button"
+    class="modal__location__button modal__our-location-button"
+  >
+    <a
+      target="_blank"
+      rel="noreferer noopener"
+      href="https://goo.gl/maps/F6bok8uxUymoJv2h6"
+      >Open map</a
+    >
+  </button>
+  <!-- TODO: form -->
+  <form></form>
+</div>
 
   <!-- TODO: form -->
   <form></form>
