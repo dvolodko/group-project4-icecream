@@ -1,4 +1,4 @@
-.header{
+.header {
   position: absolute;
   width: 100%;
   top: 0;
@@ -7,6 +7,7 @@
 }
 
 .header__container {
+  background-color: $backgroundColor;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,10 +19,11 @@
 
   @include mq(desktop) {
     justify-content: start;
+    padding-top: 8px;
   }
 }
 
-.logo{
+.logo {
   flex-shrink: 0;
 }
 
@@ -32,7 +34,7 @@
 
   display: flex;
   align-items: center;
-  gap: 27px;  
+  gap: 27px;
   margin-left: 270px;
 }
 
@@ -41,7 +43,7 @@
   cursor: pointer;
   align-items: center;
   color: $textColor;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .header__item-desktop:hover,
@@ -49,7 +51,7 @@
   color: $primaryColor;
 }
 
-.header__list{
+.header__list {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     align-items: center;
@@ -91,6 +93,7 @@
 /*--------hero*/
 
 .hero .container {
+  background-color: $backgroundColor;
   color: $textColor;
   position: relative;
 }
@@ -192,7 +195,7 @@
   @include mq(mobile-only) {
     display: none;
   }
-  
+
   display: flex;
   align-items: flex-end;
   gap: 33px;
@@ -204,8 +207,6 @@
   }
 }
 
-
-
 .hero__text--botton {
   @include font(400, 12px, 1.4, 0.04em);
   max-width: 200px;
@@ -214,12 +215,11 @@
   @include mq(desktop) {
     @include font(400, 14px, 1.4, 0.04em);
     max-width: 200px;
-    
   }
 }
 
-.hero-img__plate{
-z-index: 2;
+.hero-img__plate {
+  z-index: 2;
 }
 
 .icon-buttom {
@@ -228,55 +228,50 @@ z-index: 2;
 
 .icon-buttom:hover {
   width: 50px;
+  fill: red;
 }
 
-.icon-buttom__focus{
+.icon-buttom__focus {
   display: none;
 }
 
 .icon-buttom:focus {
-
-  & .icon-buttom__default{
+  & .icon-buttom__default {
     display: none;
   }
 
-  & .icon-buttom__focus{
+  & .icon-buttom__focus {
     display: block;
   }
-
 }
 
-.canvas{
+.canvas {
   position: absolute;
-  bottom: 0; 
-  left: 0;
-  width: 100%;
-
-}
-
-.hero-img__bubbles{
-position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
- 
-   
 }
 
-.hero-img__icecream{
+.hero-img__bubbles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hero-img__icecream {
   position: absolute;
   bottom: 0;
   left: 29%;
   z-index: 1;
-   
-  @include mq(tablet){
+
+  @include mq(tablet) {
     left: 54%;
   }
-
 }
 
 .canvas__mobile {
-    @include mq(tablet) {
+  @include mq(tablet) {
     display: none;
   }
 }
@@ -284,9 +279,8 @@ position: absolute;
 .canvas__tablet {
   display: none;
 
-  @media screen and (min-width:768px) and (max-width:1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
-    
   }
 }
 
@@ -309,6 +303,8 @@ position: absolute;
 }
 
 .mobile-menu {
+  display: none;
+
   background: #84a178;
   padding-left: 20px;
   padding-right: 20px;
@@ -321,9 +317,9 @@ position: absolute;
     padding-top: 20px;
   }
 
-    @include mq(desktop){
-      display: none;
-    }
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
 .mobile-menu__top {
@@ -359,7 +355,7 @@ position: absolute;
     @include font(700, 48px, 1.23, 0.04em);
   }
 
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .site-nav__item:hover {
@@ -377,7 +373,6 @@ position: absolute;
   }
 }
 
-.icon-cross{
+.icon-cross {
   fill: $textColor;
-
 }

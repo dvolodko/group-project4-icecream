@@ -3,7 +3,7 @@
     <a href="#" class="logo">
       <picture>
         <source
-          srcset="./images/Logo.png 1x, ./images/Logo-2x.png 2x"
+          srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
           media="(min-width: 1200px)"
         />
 
@@ -19,7 +19,7 @@
 
         <img
           class="header__logo"
-          src="./images/Logo.png"
+          src="./images/logo.png"
           alt="site logo icecream"
           width="60"
           height="65"
@@ -29,17 +29,19 @@
 
     <ul class="header__list-desktop">
       <li class="header__item-desktop"><a href="#">Home</a></li>
-      <li class="header__item-desktop"><a href="#"></a>How it’s made?</li>
+      <li class="header__item-desktop"><a href="#"></a>How it's made?</li>
       <li class="header__item-desktop"><a href="#"></a>Our products</li>
       <li class="header__item-desktop"><a href="#">Contact</a></li>
     </ul>
 
     <ul class="header__list">
       <li>
-        <button class="header__button-menu js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        type="button">
+        <button
+          class="header__button-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
           <svg width="32" height="32" aria-label="переключає мобільне меню">
             <use class="icon-cross" href="./images/icon.svg#menu"></use>
           </svg>
@@ -125,16 +127,21 @@
           </p>
         </li>
         <li>
-          <a href="#" class="icon-buttom">
-            <svg class="icon-buttom" width="40" height="15">
+          <a href="#" class="icon__hover__focus">
+            <svg width="40" height="15">
               <use
-                class="icon-buttom__default"
+                class="arrow-white arrow-default"
+                href="./images/icon.svg#arrow"
+              ></use>
+
+              <use
+                class="arrow-white arrow-hover"
                 href="./images/icon.svg#arrow-hover"
               ></use>
 
               <use
-                class="icon-buttom__focus"
-                href="./images/icon.svg#arrow"
+                class="arrow-white arrow-focus"
+                href="./images/icon.svg#arrow-focus"
               ></use>
             </svg>
           </a>
@@ -222,52 +229,51 @@
 
 <!--mobile_menu-->
 
-  <div class="mobile-menu js-menu-container" id="mobile-menu">
-    <div class="mobile-menu__top">
-      <a href="#" class="logo">
-        <picture>
-          <source
-            srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
-            media="(min-width: 768px)"
-          />
+<div class="mobile-menu js-menu-container is-h" id="mobile-menu">
+  <div class="mobile-menu__top">
+    <a href="#" class="logo">
+      <picture>
+        <source
+          srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
+          media="(min-width: 768px)"
+        />
 
-          <source
-            srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
-            media="(max-width: 767px)"
-          />
+        <source
+          srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
+          media="(max-width: 767px)"
+        />
 
-          <img
-            class="header__logo"
-            src="./images/Logo.png"
-            alt="site logo icecream"
-            width="60"
-            height="65"
-          />
-        </picture>
-      </a>
+        <img
+          class="header__logo"
+          src="./images/Logo.png"
+          alt="site logo icecream"
+          width="60"
+          height="65"
+        />
+      </picture>
+    </a>
 
-      <button class="header__button-menu" type="button js-close-menu">
-        <svg width="32" height="32" aria-label="переключає мобільне меню">
-          <use class="icon-cross" href="./images/icon.svg#close-modal"></use>
-        </svg>
-      </button>
-    </div>
-
-    <nav class="header__nav">
-      <ul class="site-nav">
-        <li class="site-nav__item"><a href="#Home">Home</a></li>
-        <li class="site-nav__item">
-          <a href="#How it’s made?"></a>How it’s made?
-        </li>
-        <li class="site-nav__item"><a href="#Our products"></a>Our products</li>
-        <li class="site-nav__item"><a href="#Contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <button type="button" class="header__button">
-      Buy now<svg width="12" height="12">
-        <use href="./images/icon.svg#arrow-btn"></use>
+    <button class="header__button-menu js-close-menu" type="button">
+      <svg width="32" height="32" aria-label="переключає мобільне меню">
+        <use class="icon-cross" href="./images/icon.svg#close-modal"></use>
       </svg>
     </button>
   </div>
 
+  <nav class="header__nav">
+    <ul class="site-nav">
+      <li class="site-nav__item"><a href="#">Home</a></li>
+      <li class="site-nav__item">
+        <a href="#"></a>How it's made?
+      </li>
+      <li class="site-nav__item"><a href="#"></a>Our products</li>
+      <li class="site-nav__item"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button type="button" class="header__button">
+    Buy now<svg width="12" height="12">
+      <use href="./images/icon.svg#arrow-btn"></use>
+    </svg>
+  </button>
+</div>
