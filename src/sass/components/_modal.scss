@@ -93,13 +93,12 @@
 }
 
 .modal__btn-close-icon {
-  fill: #131313;
+  fill: $primaryColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .modal__btn-close:hover & {
-    fill: #f8d24e;
-  }
+
+  .modal__btn-close:hover &,
   .modal__btn-close:focus & {
-    fill: #f8d24e;
+    fill: $btn-hoverColor;
   }
 }
 
