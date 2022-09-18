@@ -1,3 +1,11 @@
+.header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .header_container {
   display: flex;
 
@@ -74,8 +82,10 @@
 }
 
 /*--------hero*/
+
 .hero .container {
   color: $textColor;
+  position: relative;
 }
 
 .hero__wrap--top {
@@ -176,13 +186,14 @@
     display: none;
   }
 
-  margin-bottom: 13px;
+    padding-bottom: 13px;
   display: flex;
   align-items: flex-end;
   gap: 33px;
 
   @include mq(desktop) {
-    margin-bottom: 65px;
+    padding-bottom: 65px;
+    gap: 14px;
   }
 }
 
@@ -190,14 +201,18 @@
 
 .hero__text--botton {
   @include font(400, 12px, 1.4, 0.04em);
-  max-width: 151px;
+  max-width: 200px;
   margin-bottom: 20px;
 
   @include mq(desktop) {
     @include font(400, 14px, 1.4, 0.04em);
     max-width: 200px;
-    margin-bottom: 32px;
+    
   }
+}
+
+.hero-img__plate{
+z-index: 2;
 }
 
 .icon-buttom {
@@ -222,6 +237,58 @@
     display: block;
   }
 
+}
+
+.canvas{
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+
+}
+
+.hero-img__bubbles{
+position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ 
+   
+}
+
+.hero-img__icecream{
+  position: absolute;
+  bottom: 0;
+  left: 29%;
+  z-index: 1;
+   
+  @include mq(tablet){
+    left: 54%;
+  }
+
+}
+
+.canvas__mobile {
+    @include mq(tablet) {
+    display: none;
+  }
+}
+
+.canvas__tablet {
+  display: none;
+
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    display: block;
+    
+  }
+}
+
+.canvas__desktop {
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+  }
 }
 
 /*-----------mobile_menu---*/
