@@ -1,4 +1,4 @@
-.madal-readMore {
+.modal-readMore {
   padding-left: 28px;
   padding-right: 28px;
 
@@ -13,14 +13,14 @@
   }
 }
 
-.madal-readMore__title {
+.modal-readMore__title {
   margin-bottom: 20px;
   @include mq(desktop) {
     margin-bottom: 32px;
   }
 }
 
-.madal-readMore__video {
+.modal-readMore__video {
   width: 100%;
   margin-bottom: 20px;
   @include mq(desktop) {
@@ -28,7 +28,7 @@
   }
 }
 
-.madal-readMore__text {
+.modal-readMore__text {
   font-size: 14px;
   line-height: 1.43;
   color: $primaryColor;
