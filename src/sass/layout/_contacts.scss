@@ -1,0 +1,196 @@
+.contacts {
+  padding-bottom: 40px;
+  @include mq(desktop) {
+    padding-bottom: 120px;
+  }
+  // кнопка Our Locations
+  &__button {
+    @media (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    min-width: 196px;
+    height: 42px;
+    background-color: $accentColor;
+    border-radius: 10px;
+    gap: 6px;
+    &:first-child {
+      @media (max-width: 767px) {
+        margin-bottom: 16px;
+      }
+      &:hover {
+        background-color: $btn-hoverColor;
+      }
+      &:focus {
+        background-color: $btn-hoverColor;
+        color: $textColor;
+      }
+      &:disabled {
+        background-color: $btn-disabledColor;
+      }
+    }
+  }
+  // кнопка Franchise
+  &__button--transparent {
+    background-color: transparent;
+    border: 2px solid $accentColor;
+    gap: 6px;
+    &:hover {
+      background-color: transparent;
+      border-color: $btn-hoverColor;
+    }
+    &:focus {
+      background-color: transparent;
+      border-color: $btn-hoverColor;
+      color: $textColor;
+    }
+    &:disabled {
+      background-color: transparent;
+      border-color: $btn-disabledColor;
+    }
+  }
+}
+
+.contacts-btns {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contacts-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px;
+  @include mq(table) {
+    padding-bottom: 60px;
+  }
+  @include mq(desktop) {
+    padding-bottom: 64px;
+  }
+}
+
+.contacts-item {
+  width: 280px;
+  padding: 40px 32px;
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  @include mq(tablet) {
+    padding: 40px 24px;
+    width: calc((100% - 32px) / 3);
+  }
+  @include mq(desktop) {
+    padding: 40px;
+  }
+}
+
+.contacts-item__title {
+  display: inline-block;
+  height: 28px;
+  padding: 0px 15px;
+  background: #f8d24e;
+  border-radius: 4px;
+}
+
+.contacts-item__text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #131313;
+}
+
+.contacts-adress {
+  padding-top: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  @include mq(tablet) {
+    padding-top: 32px;
+    padding-bottom: 26px;
+  }
+  @include mq(desktop) {
+    padding-bottom: 32px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: #131313;
+    margin-bottom: 8px;
+  }
+  &__loc {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+    color: #d6936d;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts-time {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  @include mq(tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &__title,
+  &_clock {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    color: #131313;
+  }
+  &_clock {
+    color: #907e82;
+  }
+}
+
+.contacts-time__title,
+.contacts-time__clock {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  color: #131313;
+}
+
+.contacts-time_clock {
+  color: #907e82;
+}
+.contacts-cont {
+  padding-top: 24px;
+  @include mq(tablet) {
+    padding-top: 32px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.83;
+    color: #131313;
+  }
+}
+
+.contacts-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,57 @@
+<!-- Modal franchise -->
+<div class="modal modal-franchise" data-modal="5">
+  <button
+    class="modal__btn-close js-modal-close"
+    type="button"
+    data-modal-close
+  >
+    <svg class="modal__btn-close-icon" width="16" height="16">
+      <use href="./images/icon.svg#close-modal"></use>
+    </svg>
+  </button>
+
+  <h2 class="modal__title modal-franchise__title">
+    Thank you for your interest in owning an Ice Cream shop
+  </h2>
+  <p class="modal-franchise__descr">
+    Due to the overwhelming volume of franchise requests we are not accepting
+    new franchisee applications at this time. Once the application process
+    resumes, we will contact you for further information. Please fill out the
+    contact information below and we will reach out for additional information.
+    We appreciate your patience.
+  </p>
+  <!-- Form -->
+  <form class="form">
+    <input
+      class="form__input"
+      type="text"
+      name="username"
+      placeholder="Name"
+      required
+      autofocus
+    />
+    <input
+      class="form__input"
+      type="tel"
+      name="phone"
+      placeholder="Phone"
+      required
+      pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
+    />
+    <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
+
+    <input class="form__input" type="email" name="email" placeholder="Email"
+    required
+    pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+    />
+    <!-- The pattern see in https://stackoverflow.com/questions/201323/how-can-i-validate-an-email-address-using-a-regular-expression -->
+
+    <textarea
+      class="form__input form__input--multiline"
+      name="comment"
+      id="comment"
+      placeholder="Comment"
+    ></textarea>
+    <button class="form__button button" type="submit">Submit</button>
+  </form>
+</div>
