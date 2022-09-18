@@ -99,7 +99,6 @@
 }
 
 .advantages__title {
-  font-family: 'Roboto';
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -109,8 +108,6 @@
   color: $textColor;
 
   @include mq(tablet) {
-    font-family: 'Montserrat';
-
     font-size: 48px;
     line-height: 1.23;
   }
