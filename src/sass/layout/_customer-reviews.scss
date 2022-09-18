@@ -1,15 +1,12 @@
 .customer__section{
-    
     padding-bottom: 48px;
 }
 
 .customer{
    width: 100%;
-   background-color: #F5F5F5;
+   background-color: $extrabackgroundColor;
    background-image: url(../images/icecream-bgr1-1920px.png);
-   @media (min-device-pixel-ratio: 2),
-   (min-resolution: 192dpi),
-   (min-resolution: 2dppx) {
+   @include mq(retina) {
      background-image: url(../images/icecream-bgr1-1920px-2x.png);
    }
    background-repeat: no-repeat;
@@ -41,19 +38,16 @@
     border-radius: 10px;
     background-color: $backgroundColor;
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 255%;
+    @include font(400, 12px, 2.55, null);
     text-align: center;
-    color: #FCFCFC;
+    color: $extrabackgroundColor;
 
-     @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         font-size: 14px;
         max-height: 138px;
         padding: 28px 80px;
      }
-     @media screen and (min-width: 1200px) {
+     @include mq(desktop) {
         font-size: 14px;
         max-height: 138px;
         padding: 40px 109px;
@@ -61,13 +55,9 @@
 }
 .customer__name{
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 186%;
-    text-align: center;
+    @include font(500, 20px, 1.8, null);
     color: #131313;
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         font-size: 16px;
        }
     
