@@ -8,19 +8,22 @@
 
 .header__container {
   display: flex;
-
+  justify-content: space-between;
+  align-items: center;
   padding-top: 12px;
 
   @include mq(tablet) {
     padding-top: 20px;
   }
 
-  @include mq(notDesktop) {
-    justify-content: space-between;
+  @include mq(desktop) {
+    justify-content: start;
   }
 }
 
-
+.logo{
+  flex-shrink: 0;
+}
 
 .header__list-desktop {
   @include mq(notDesktop) {
@@ -28,10 +31,9 @@
   }
 
   display: flex;
-  gap: 27px;
-  margin-left: 269px;
   align-items: center;
-  width: 100%;
+  gap: 27px;  
+  margin-left: 270px;
 }
 
 .header__item-desktop {
@@ -50,8 +52,20 @@
 .header__list{
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
+    align-items: center;
     gap: 32px;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: auto;
+  }
+}
+
+.header__list li:first-child {
+  height: 32px;
 }
 
 .header__button-menu {
@@ -71,10 +85,6 @@
 
   @include mq(tablet) {
     display: block;
-  }
-
-  @include mq(desktop) {
-    margin-left: 247px;
   }
 }
 
@@ -182,15 +192,15 @@
   @include mq(mobile-only) {
     display: none;
   }
-
-    padding-bottom: 13px;
+  
   display: flex;
   align-items: flex-end;
   gap: 33px;
+  padding-bottom: 13px;
 
   @include mq(desktop) {
-    padding-bottom: 65px;
     gap: 14px;
+    padding-bottom: 65px;
   }
 }
 
