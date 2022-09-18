@@ -1,0 +1,81 @@
+.customer__section{
+    
+    padding-bottom: 48px;
+}
+.customer{
+   
+}
+.customer__item{
+     
+     
+  }
+.customer__bgr{
+   width: 100%;
+   background-color: #F5F5F5;
+   background-image: url(../images/icecream-bgr1-1920px.png);
+   @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+     background-image: url(../images/icecream-bgr1-1920px-2x.png);
+   }
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+}
+
+.slik-prew.slick-prew.slick-arrow{
+    display: none;
+}
+.slick-dots li.slick-active button:before{
+    color: $backgroundColor;
+}
+.slick-dots li button:before{
+    font-size: 12px;
+    color: #D9D9D9;
+
+}
+.customer__img{
+    margin: 0px auto;
+    margin-bottom: 32px;
+    border-radius: 50%;
+
+}
+.customer__text{
+    max-height: 256px;
+    padding: 34px 39px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: $backgroundColor;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 255%;
+    text-align: center;
+    color: #FCFCFC;
+
+     @media screen and (min-width: 768px) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 28px 80px;
+     }
+     @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 40px 109px;
+     }
+}
+.customer__name{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 186%;
+    text-align: center;
+    color: #131313;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+       }
+    
+
+}
