@@ -74,18 +74,27 @@
     background-size: 36px;
     background-repeat: no-repeat;
     background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon1-2x.png);
+    }
   }
   &.advantages__item--weight::before {
     background-image: url(../images/about-icon2.png);
     background-size: 36px;
     background-repeat: no-repeat;
     background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon2-2x.png);
+    }
   }
   &.advantages__item--icecream::before {
     background-image: url(../images/about-icon3.png);
     background-size: 36px;
     background-repeat: no-repeat;
     background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon3-2x.png);
+    }
   }
 }
 
@@ -102,7 +111,6 @@
   @include mq(tablet) {
     font-family: 'Montserrat';
 
-    font-weight: 700;
     font-size: 48px;
     line-height: 1.23;
   }
