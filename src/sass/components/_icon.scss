@@ -1,6 +1,6 @@
 .menu {
   stroke: #ffffff;
-  transition: stroke 250ms ease;
+  transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     stroke: #f8d24e;
   }
@@ -8,46 +8,47 @@
     stroke: #f8d24e;
   }
 }
-
 .arrow {
-  fill: #131313;
-  stroke: #131313;
-  stroke-width: 0px;
-  width: 40px;
-  height: 16px;
-  transition: stroke-width 250ms ease, height 250ms ease, width 250ms ease;
+  &.arrow-default {
+    display: block;
+  }
+  &.arrow-hover {
+    display: none;
+  }
+  &.arrow-focus {
+    display: none;
+  }
   .icon__hover__focus:hover & {
-    width: 50px;
-    height: 16px;
+    &.arrow-default {
+      display: none;
+    }
+    &.arrow-hover {
+      display: block;
+    }
   }
   .icon__hover__focus:focus & {
-    width: 50px;
-    height: 22px;
-    stroke-width: 0.25;
+    &.arrow-default {
+      display: none;
+    }
+    &.arrow-focus {
+      display: block;
+    }
   }
 }
-
 .arrow-white {
   fill: #fcfcfc;
-  stroke: #fcfcfc;
-  stroke-width: 0px;
-  width: 40px;
-  height: 16px;
-  transition: stroke-width 250ms ease, height 250ms ease, width 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
-    width: 50px;
-    height: 16px;
+    fill: #f8d24e;
   }
   .icon__hover__focus:focus & {
-    width: 50px;
-    height: 22px;
-    stroke-width: 0.25;
+    fill: #f8d24e;
   }
 }
 
 .close {
   fill: #ffffff;
-  transition: fill 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     fill: #f8d24e;
   }
@@ -59,7 +60,7 @@
 .close-modal,
 .close-modal-20 {
   fill: #131313;
-  transition: fill 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     fill: #f8d24e;
   }
@@ -80,7 +81,7 @@
   width: 34px;
   height: 34px;
   fill: #84a178;
-  transition: width 250ms ease, height 250ms ease;
+  transition: width $mainTransitionDuration $mainTransitionTimingFunction, height $mainTransitionDuration $mainTransitionTimingFunction;
   .icon__hover__focus:hover & {
     width: 32px;
     height: 32px;
