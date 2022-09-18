@@ -4,11 +4,16 @@ button {
   color: $primaryColor;
   border: none;
   outline: none;
+  fill: $primaryColor;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   @include font(600, 14px, 1.25, null);
   @include flex(flex, center, center);
   gap: 5px;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
+    background-color $mainTransitionDuration $mainTransitionTimingFunction,
+    border-color $mainTransitionDuration $mainTransitionTimingFunction,
+    fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 // кнопка Buy now
 .header__button {
@@ -23,9 +28,13 @@ button {
   &:focus {
     background-color: $btn-hoverColor;
     color: $textColor;
+    fill: $textColor;
   }
   &:disabled {
     background-color: $btn-disabledColor;
+  }
+  &:focus .button__arrow {
+    fill: $textColor;
   }
 }
 // кнопка Products
@@ -93,6 +102,9 @@ button {
   &:disabled {
     background-color: $btn-disabledColor;
   }
+  &:focus .button__arrow {
+    fill: $textColor;
+  }
 }
 // кнопка Our Locations
 .contacts__button {
@@ -110,6 +122,9 @@ button {
   }
   &:disabled {
     background-color: $btn-disabledColor;
+  }
+  &:focus .button__arrow {
+    fill: $textColor;
   }
 }
 // кнопка Franchise
@@ -129,6 +144,9 @@ button {
   &:disabled {
     background-color: transparent;
     border-color: $btn-disabledColor;
+  }
+  &:focus .button__arrow {
+    fill: $textColor;
   }
 }
 // кнопка модального вікна Open map
