@@ -1,0 +1,64 @@
+.customer__section{
+    padding-bottom: 48px;
+}
+
+.customer{
+   width: 100%;
+   background-color: $extrabackgroundColor;
+   background-image: url(../images/icecream-bgr1-1920px.png);
+   @include mq(retina) {
+     background-image: url(../images/icecream-bgr1-1920px-2x.png);
+   }
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; 
+}
+
+.slik-prew.slick-prew.slick-arrow{
+    display: none;
+}
+.slick-dots li.slick-active button:before{
+    color: $backgroundColor;
+}
+.slick-dots li button:before{
+    font-size: 12px;
+    color: #D9D9D9;
+
+}
+.customer__img{
+    margin: 0px auto;
+    margin-bottom: 32px;
+    border-radius: 50%;
+
+}
+.customer__text{
+    max-height: 256px;
+    padding: 34px 39px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: $backgroundColor;
+    font-family: 'Montserrat';
+    @include font(400, 12px, 2.55, null);
+    text-align: center;
+    color: $extrabackgroundColor;
+
+    @include mq(tablet) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 28px 80px;
+     }
+     @include mq(desktop) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 40px 109px;
+     }
+}
+.customer__name{
+    font-family: 'Montserrat';
+    text-align: center;
+    @include font(500, 20px, 1.8, null);
+    color: #131313;
+    @include mq(tablet) {
+        font-size: 16px;
+       }
+}
