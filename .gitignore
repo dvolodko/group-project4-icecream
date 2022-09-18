@@ -80,6 +80,9 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .parcel-cache
 
+# prettier.json
+.prettierrc
+
 # Next.js build output
 .next
 
