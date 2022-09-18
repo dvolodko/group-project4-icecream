@@ -1,0 +1,25 @@
+.swiper {
+    width: 280px;
+    height: 132px;
+    @include mq(tablet) {
+     width: 704px;
+     height: 328px;
+    }
+    @include mq(desktop) {
+    width: 1013px;
+    height: 424px;
+    
+    }
+  }
+  .slider__img{
+    overflow: hidden;
+    border-radius: 7.40681px;
+     @include mq(tablet) {
+      border-radius: 18px;
+      @include mq(desktop) {
+      border-radius: 24px;
+     
+     }
+  }
+  }
+  
