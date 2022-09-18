@@ -4,6 +4,11 @@
   @include mq(tablet) {
     padding: 30px 60px;
   }
+
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 723px,
+    $actualModalHeightTablet: 665px
+  );
 }
 
 .modal-franchise__title {
