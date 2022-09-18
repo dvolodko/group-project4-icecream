@@ -42,8 +42,26 @@
 
   z-index: 30; /* Should be greater than  for .overlay */
 
+  &.active {
+    transform: translate(-50%, -50%) scale(100%);
+  }
+
   @include mq(tablet) {
     width: 568px;
+  }
+
+  @media screen and (max-width: 767px) and (max-height: 723px),
+    screen and (min-width: 768px) and (max-height: 665px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0, 0) scale(0);
+
+    &.active {
+      transform: translate(0, 0) scale(100%);
+    }
   }
 }
 
@@ -52,10 +70,6 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(100%);
 }
 
 .modal__btn-close {
