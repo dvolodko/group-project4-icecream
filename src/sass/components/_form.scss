@@ -26,7 +26,7 @@
 
   &:focus {
     outline: none;
-    border-color: $accentColor;
+    border-color: $btn-hoverColor;
   }
 
   @include mq(tablet) {
