@@ -1,10 +1,15 @@
 .gallery {
-  padding-bottom: 75px;
+ position: relative;
+}
+.gallery__container{
+  position: absolute;
+  width: 100vw;
+  top: -24px;
   @include mq(tablet) {
-    padding-bottom: 55px;
+    top: -104px;
   }
   @include mq(desktop) {
-    padding-bottom: 120px;
+    top: -94px;
   }
 }
 .swiper {
