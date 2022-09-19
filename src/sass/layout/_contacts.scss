@@ -1,10 +1,10 @@
 .contacts {
+  position: relative;
   padding-bottom: 40px;
   @include mq(desktop) {
     padding-bottom: 120px;
   }
   &__btns {
-    padding-top: 284px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -17,9 +17,19 @@
   }
 }
 
+.contacts__container {
+  position: absolute;
+  top: -345px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(tablet) {
+    top: -304px;
+  }
+  @include mq(desktop) {
+    top: -96px;
+  }
+}
 .container--contacts {
-  background-color: $backgroundColor;
-  position: relative;
   padding-left: 20px;
   padding-right: 20px;
   @include mq(tablet) {
@@ -35,8 +45,6 @@
   }
 }
 .contacts-list {
-  position: absolute;
-  top: -345px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
