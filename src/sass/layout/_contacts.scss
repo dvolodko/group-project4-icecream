@@ -113,7 +113,7 @@
       line-height: (30 / 16);
     }
   }
-  &__box--address {
+  &__box--paddbot {
     padding-bottom: 24px;
     @include mq(tablet) {
       padding-bottom: 32px;
@@ -189,13 +189,12 @@
   &__clock {
     color: #907e82;
   }
-  &__box--contact {
+  &__box--paddtop {
     padding-top: 24px;
     padding-bottom: 0px;
     @include mq(tablet) {
       padding-top: 32px;
     }
-    padding-top: 32px;
   }
   &__tel,
   &__mail {
