@@ -25,15 +25,19 @@
     @include font(800, 18px, 1.22, null);
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 12px;
     @include mq(mobile) {
-      @include font(800, 20px, null.22, null);
+      @include font(800, 20px, null, null);
     }
     @include mq(tablet) {
-      @include font(800, 30px, 1.23, null);
+      @include font(800, 22px, 1.23, null);
     }
     @include mq(desktop) {
       @include font(800, 30px, 1.22, null);
     }
+  }
+  &__title-section {
+    font-family: $secondaryFontFamily;
   }
 
   &__list {
@@ -77,7 +81,7 @@
       height: 428px;
     }
     @include mq(desktop) {
-      padding: 166px 86px 0px;
+      padding: 166px 64px 0px;
       width: calc((100% - 64px) / 3);
       height: 536px;
     }
@@ -249,8 +253,13 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  &__title--card {
+    font-weight: 700;
+    line-height: 1.23;
+  }
   &__paragraph {
     margin-top: 40px;
+    text-align: center;
     @include font(400, 14, 1.76, 0.04em);
     @include mq(mobile) {
       @include font(400, 15, null, null);
