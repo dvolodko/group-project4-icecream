@@ -6,10 +6,10 @@
   width: 100vw;
   top: -24px;
   @include mq(tablet) {
-    top: -104px;
+    top: -164px;
   }
   @include mq(desktop) {
-    top: -94px;
+    top: -106px;
   }
 }
 .swiper {
