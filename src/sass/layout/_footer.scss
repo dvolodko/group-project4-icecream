@@ -39,7 +39,7 @@
     line-height: calc(22 / 18);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #fcfcfc;
+    color: $textColor;
     text-align: left;
     margin-bottom: 16px;
     @include mq(tablet) {
@@ -61,7 +61,7 @@
     line-height: calc(41 / 34);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #fcfcfc;
+    color: $textColor;
     text-align: left;
     @include mq(tablet) {
       font-size: 48px;
@@ -89,7 +89,7 @@
   width: 32px;
   height: 32px;
   fill: #84a178;
-  transition: width 250ms ease, height 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   @media (max-width: 767px) {
     width: 34px;
     height: 34px;
@@ -97,12 +97,12 @@
   .icons-soc:hover & {
     width: 32px;
     height: 32px;
-    fill: #fcfcfc;
+    fill: $textColor;
   }
   .icons-soc:focus & {
     width: 35px;
     height: 35px;
-    fill: #fcfcfc;
+    fill: $textColor;
   }
 }
 
@@ -119,10 +119,10 @@
     font-size: 12px;
     line-height: calc(22 / 12);
     text-align: right;
-    color: #131313;
+    color: $primaryColor;
   }
   &__tel {
-    color: #fcfcfc;
+    color: $textColor;
   }
 }
 
