@@ -134,6 +134,7 @@
     width: calc(100% + 40px);
     border-bottom: 1px solid #e1e1e1;
     @include mq(tablet) {
+      position: relative;
       left: 0px;
       width: 100%;
     }
@@ -143,14 +144,7 @@
 .footer-after-title {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
   text-align: center;
-  @include mq(tablet) {
-    margin-top: 14px;
-  }
-  @include mq(desktop) {
-    margin-top: 12px;
-  }
   &__text {
     max-width: 160px;
     font-weight: 700;
@@ -158,14 +152,17 @@
     line-height: calc(21 / 14);
     text-align: center;
     color: #7a7a7a;
+    margin-top: 16px;
     @include mq(tablet) {
       max-width: 100%;
       line-height: calc(26 / 14);
       letter-spacing: 0.02em;
+      margin-top: 14px;
     }
     @include mq(desktop) {
       font-size: 12px;
       line-height: calc(22 / 12);
+      margin-top: 12px;
     }
   }
 }
