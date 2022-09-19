@@ -1,26 +1,6 @@
 .products {
-  // background: url(../images/icecream-bgr-products1-mob.jpg), #f5f5f5;
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
-  // background-position: top center, center, bottom center;
-  // background-size: cover;
-  // text-align: center;
   padding: 60px 0px;
-  // @include mq(retina) {
-  //   background-image: url(../images/icecream-bgr-products1-mob-2x.jpg);
-  // }
-  // @include mq(tablet) {
-  //   background-image: url(../images/icecream-bgr-products-tab.jpg);
-  //   @include mq(retina) {
-  //     background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
-  //   }
-  // }
-  // @include mq(desktop) {
-  //   background-image: url(../images/icecream-bgr-products.jpg);
-  //   @include mq(retina) {
-  //     background-image: url(../images/icecream-bgr-products-2x.jpg);
-  //   }
-  // }
+  text-align: center;
   &__label {
     @include font(800, 18px, 1.22, null);
     text-align: center;
