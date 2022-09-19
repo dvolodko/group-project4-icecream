@@ -1,39 +1,24 @@
 .products {
-  // background: url(../images/icecream-bgr-products1-mob.jpg), #f5f5f5;
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
-  // background-position: top center, center, bottom center;
-  // background-size: cover;
-  // text-align: center;
   padding: 60px 0px;
-  // @include mq(retina) {
-  //   background-image: url(../images/icecream-bgr-products1-mob-2x.jpg);
-  // }
-  // @include mq(tablet) {
-  //   background-image: url(../images/icecream-bgr-products-tab.jpg);
-  //   @include mq(retina) {
-  //     background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
-  //   }
-  // }
-  // @include mq(desktop) {
-  //   background-image: url(../images/icecream-bgr-products.jpg);
-  //   @include mq(retina) {
-  //     background-image: url(../images/icecream-bgr-products-2x.jpg);
-  //   }
-  // }
+  text-align: center;
   &__label {
     @include font(800, 18px, 1.22, null);
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 12px;
     @include mq(mobile) {
-      @include font(800, 20px, null.22, null);
+      @include font(800, 20px, null, null);
     }
     @include mq(tablet) {
-      @include font(800, 30px, 1.23, null);
+      @include font(800, 22px, 1.23, null);
     }
     @include mq(desktop) {
       @include font(800, 30px, 1.22, null);
     }
+  }
+  &__title-section {
+    font-family: $secondaryFontFamily;
+    text-align: center;
   }
 
   &__list {
@@ -77,7 +62,7 @@
       height: 428px;
     }
     @include mq(desktop) {
-      padding: 166px 86px 0px;
+      padding: 166px 64px 0px;
       width: calc((100% - 64px) / 3);
       height: 536px;
     }
@@ -249,8 +234,13 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  &__title--card {
+    font-weight: 700;
+    line-height: 1.23;
+  }
   &__paragraph {
     margin-top: 40px;
+    text-align: center;
     @include font(400, 14, 1.76, 0.04em);
     @include mq(mobile) {
       @include font(400, 15, null, null);
@@ -272,27 +262,16 @@
       bottom: 40px;
     }
   }
-
+  &__button--arrow &__button--icon {
+    transition: $timingAnima;
+    transform: scale(1);
+  }
   &__button--arrow:hover &__button--icon {
-    animation: arrow $timingAnima;
+    transition: $timingAnima;
+    transform: scaleX(1.25);
   }
   &__button--arrow:focus &__button--icon {
-    animation: arrow-f $timingAnima;
-  }
-  @keyframes arrow {
-    0% {
-      transform: scaleX(1);
-    }
-    100% {
-      transform: scaleX(1.25);
-    }
-  }
-  @keyframes arrow-f {
-    0% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(1.25, 1.5);
-    }
+    transition: $timingAnima;
+    transform: scale(1.25, 1.5);
   }
 }

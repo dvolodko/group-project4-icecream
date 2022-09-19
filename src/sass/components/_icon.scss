@@ -11,33 +11,25 @@
 .arrow--white {
   fill: $extrabackgroundColor;
 }
-.arrow,
+.arrow--hover, .arrow--focus{
+  display: none;
+}
+.arrow, 
 .arrow--white {
   &.arrow--default {
-    display: block;
-  }
-  &.arrow--hover {
-    display: none;
-  }
-  &.arrow--focus {
-    display: none;
+    scale: 1;
+    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
   .icon--hoverfocus:hover & {
     &.arrow--default {
-      display: none;
-    }
-    &.arrow--hover {
-      display: block;
+      transform: scaleX(1.25);
     }
   }
   .icon--hoverfocus:focus & {
     &.arrow--default {
-      display: none;
-    }
-    &.arrow--focus {
-      display: block;
-    }
+      transform: scale(1.25, 1.5);
   }
+}
 }
 .close {
   fill: #ffffff;
@@ -71,19 +63,15 @@
 .facebook,
 .github,
 .telegram {
-  width: 34px;
-  height: 34px;
+  scale: 1;
   fill: $backgroundColor;
-  transition: width $mainTransitionDuration $mainTransitionTimingFunction,
-    height $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon--hoverfocus:hover & {
-    width: 32px;
-    height: 32px;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+   .icon--hoverfocus:hover & {
+    transform: scale(0.9);
     fill: $extrabackgroundColor;
   }
   .icon--hoverfocus:focus & {
-    width: 35px;
-    height: 35px;
+    transform: scale(1.1);
     fill: $extrabackgroundColor;
   }
 }
