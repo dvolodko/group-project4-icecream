@@ -1,5 +1,4 @@
 .about {
-  background-color: $backgroundColor;
   padding-top: 60px;
   padding-bottom: 42px;
   @include mq(tablet) {
@@ -27,7 +26,7 @@
   }
 }
 .about__title {
-  font-family: 'Seymour One', sans-serif;
+  font-family: $secondaryFontFamily;
   @include font(400, 30px, 1.27, 0.04em);
   text-align: center;
   text-transform: uppercase;
@@ -52,8 +51,8 @@
 .about__picture {
   position: relative;
   @include flex(flex, null, flex-end);
-  width: 279.3px;
-  height: 300.07px;
+  width: 278px;
+  height: 300px;
   overflow: hidden;
   background: linear-gradient(
       0deg,
@@ -62,13 +61,13 @@
     ),
     #d9d9d9;
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
-  border-radius: 140.182px;
+  border-radius: 140px;
   margin-bottom: 40px;
   @include mq(tablet) {
-    width: 336px;
-    height: 355.88px;
+    width: 333px;
+    height: 355px;
     box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
-    border-radius: 165.879px;
+    border-radius: 165px;
     margin-right: 32px;
     margin-bottom: 0;
   }
@@ -84,12 +83,12 @@
 }
 .about__image {
   position: absolute;
-  width: 278.19px;
-  height: 278.25px;
+  width: 278px;
+  height: 278px;
   overflow: hidden;
   @include flex(flex, center, flex-end);
   @include mq(tablet) {
-    min-width: 334.65px;
+    min-width: 334px;
     min-height: 330px;
   }
   @include mq(desktop) {
@@ -126,7 +125,7 @@
   }
 }
 .about__text--first {
-  margin-bottom: 3.83px;
+  margin-bottom: 4px;
   @include mq(desktop) {
     font-size: 16px;
   }
