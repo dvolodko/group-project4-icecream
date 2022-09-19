@@ -21,9 +21,18 @@
 }
 
 .modal-readMore__video {
-  width: 100%;
+  display: block;
+  width: 224px;
+  height: 199px;
   margin-bottom: 20px;
-  @include mq(desktop) {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border-color: transparent;
+
+  @include mq(tablet) {
+    width: 448px;
+    height: 205px;
     margin-bottom: 32px;
   }
 }
