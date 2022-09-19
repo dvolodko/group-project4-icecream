@@ -139,7 +139,7 @@
           </p>
         </li>
         <li>
-          <button type="button" class="icon-bottom">
+          <button type="button" class="js-open-modal" data-modal="3">
             <svg class="icon-bottom_focus" width="40" height="15">
               <use href="./images/icon.svg#arrow"></use>
             </svg>
@@ -184,15 +184,15 @@
     <picture class="canvas-icecream">
       <source
         class="canvas-icecream__desktop"
-        srcset="./images/hero-icecream.png 1x, ./images/hero-icecream-2x.png 2x"
+        srcset="./images/group-without.png 1x, ./images/group-without-2x.png 2x"
         media="(min-width: 1200px)"
       />
 
       <source
         class="canvas-icecream__tablet"
         srcset="
-          ./images/hero-icecream-tab.png    1x,
-          ./images/hero-icecream-tab-2x.png 2x
+          ./images/group-without-tab.png    1x,
+          ./images/group-without-tab-2x.png 2x
         "
         media="(min-width: 768px)"
       />
@@ -200,44 +200,13 @@
       <source
         class="canvas-icecream__mobile"
         srcset="
-          ./images/hero-icecream-mob.png    1x,
-          ./images/hero-icecream-mob-2x.png 2x
+          ./images/group-without-mob.png    1x,
+          ./images/group-without-mob-2x.png 2x
         "
         media="(max-width: 767px)"
       />
 
-      <img src="./images/hero-icecream-tab.png " alt="yellow bubbles" />
-    </picture>
-
-    <picture class="canvas-shine">
-      <source
-        class="canvas-shine__desktop"
-        srcset="
-          ./images/rectangle-ice-cream.png    1x,
-          ./images/rectangle-ice-cream-2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
-
-      <source
-        class="canvas-shine__tablet"
-        srcset="
-          ./images/rectangle-icecream-tab.png    1x,
-          ./images/rectangle-icecream-tab-2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-
-      <source
-        class="canvas-shine__mobile"
-        srcset="
-          ./images/rectangle-icecream-mob.png    1x,
-          ./images/rectangle-icecream-mob-2x.png 2x
-        "
-        media="(max-width: 767px)"
-      />
-
-      <img src="./images/rectangle-ice-cream.png" alt="yellow bubbles" />
+      <img src="./images/group-without-mob.png" alt="yellow bubbles" />
     </picture>
   </div>
 </section>
@@ -250,6 +219,11 @@
       <a href="#" class="logo">
         <picture>
           <source
+            srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+
+          <source
             srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
             media="(min-width: 768px)"
           />
@@ -261,7 +235,7 @@
 
           <img
             class="header__logo"
-            src="./images/Logo.png"
+            src="./images/logo.png"
             alt="site logo icecream"
             width="60"
             height="65"
@@ -278,19 +252,27 @@
 
     <nav class="menu-container__nav">
       <ul class="menu-container__list">
-        <li class="menu-container__item"><a href="#">Home</a></li>
         <li class="menu-container__item">
-          <a href="#about">How it's made?</a>
+          <a class="js-close-menu" href="#">Home</a>
         </li>
         <li class="menu-container__item">
-          <a href="#products">Our products</a>
+          <a class="js-close-menu" href="#about">How it's made?</a>
         </li>
-        <li class="menu-container__item"><a href="#contacts">Contact</a></li>
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#products">Our products</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#contacts">Contact</a>
+        </li>
       </ul>
     </nav>
 
     <div class="menu-container__button">
-      <button type="button" class="header__button js-open-modal" data-modal="2">
+      <button
+        type="button"
+        class="header__button js-open-modal js-close-menu"
+        data-modal="2"
+      >
         Buy now<svg width="12" height="12">
           <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
         </svg>
