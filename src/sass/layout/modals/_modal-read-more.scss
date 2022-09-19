@@ -2,6 +2,11 @@
   padding-left: 28px;
   padding-right: 28px;
 
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 487px,
+    $actualModalHeightTablet: 430px
+  );
+
   @include mq(tablet) {
     padding-left: 60px;
     padding-right: 60px;
