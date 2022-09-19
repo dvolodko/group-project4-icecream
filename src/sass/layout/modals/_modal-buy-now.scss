@@ -15,15 +15,6 @@
   }
 }
 
-// TODO:
-// .form-checkbox {
-//   @include flex(flex, center, center);
-//   margin: 0 0 20px 0;
-//   @include mq(tablet) {
-//     margin: 20px 0 40px 0;
-//   }
-// }
-
 .buy-now__form {
   width: auto;
 }
@@ -88,26 +79,26 @@
     ),
     #d9d9d9;
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-}
 
-.checkbox__img-bg--yellow {
-  background: linear-gradient(
-      0deg,
-      rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
-}
+  &--yellow {
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  }
 
-.checkbox__img-bg--brown {
-  background: linear-gradient(
-      0deg,
-      rgba(213, 117, 63, 0.7),
-      rgba(213, 117, 63, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  &--brown {
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  }
 }
 
 // Checkbox text
@@ -128,102 +119,29 @@
   border-style: solid;
   border-color: #96af8c;
   border-radius: 15px;
+  transition: background-color $mainTransitionDuration
+    $mainTransitionTimingFunction;
+
+  .checkbox__input:checked + & {
+    background-color: #96af8c;
+  }
+
+  &--yellow {
+    border-color: #efd478;
+
+    .checkbox__input:checked + & {
+      background-color: #efd478;
+    }
+  }
+
+  &--brown {
+    border-color: #d6936d;
+
+    .checkbox__input:checked + & {
+      background-color: #d6936d;
+    }
+  }
 }
-
-.checkbox__text-box--yellow {
-  border-color: #efd478;
-}
-
-.checkbox__text-box--brown {
-  border-color: #d6936d;
-}
-
-// .checkbox--green {
-//   width: 132px;
-//   height: 132px;
-//   background: linear-gradient(
-//       0deg,
-//       rgba(156, 190, 143, 0.7),
-//       rgba(156, 190, 143, 0.7)
-//     ),
-//     #d9d9d9;
-//   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-//   background-position-y: bottom 7.48px;
-//   border-radius: 98.6301px;
-// }
-// .checkbox--yellow {
-//   background: linear-gradient(
-//       0deg,
-//       rgba(248, 210, 78, 0.7),
-//       rgba(248, 210, 78, 0.7)
-//     ),
-//     #d9d9d9;
-//   box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
-//   border-radius: 98.6301px;
-// }
-// .checkbox--brown {
-//   background: linear-gradient(
-//       0deg,
-//       rgba(213, 117, 63, 0.7),
-//       rgba(213, 117, 63, 0.7)
-//     ),
-//     #d9d9d9;
-//   box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
-//   border-radius: 98.6301px;
-// }
-
-// .checkbox--green,
-// .checkbox--yellow,
-// .checkbox--brown {
-//   &::after {
-//     position: absolute;
-//     transform: translateY(-69px);
-//     z-index: -1;
-//     width: 132px;
-//     height: 136.4px;
-//     @include font(700, 16px, 1.25, 0.04em);
-//     display: block;
-//     text-align: center;
-//     text-transform: uppercase;
-//     color: $primaryColor;
-//     padding-top: 95.98px;
-//     padding-bottom: 20.21px;
-//     border-radius: 15.78px;
-//     @include mq(tablet) {
-//       height: 135px;
-//       padding-top: 95px;
-//       padding-bottom: 20px;
-//     }
-//   }
-// }
-
-// .checkbox--green {
-//   &::after {
-//     content: 'ice cream';
-//     border: 2px solid #96af8c;
-//   }
-// }
-// .checkbox--yellow {
-//   &::after {
-//     content: 'ice coffee';
-//     border: 2px solid #efd478;
-//   }
-// }
-// .checkbox--brown {
-//   &::after {
-//     content: 'milkshake';
-//     border: 2px solid #d6936d;
-//   }
-// }
-// .checkbox__input--green:checked + .checkbox--green {
-//   background-color: #96af8c;
-// }
-// .checkbox__input--yellow:checked + .checkbox--yellow {
-//   background-color: #efd478;
-// }
-// .checkbox__input--brown:checked + .checkbox--brown {
-//   background-color: #d6936d;
-// }
 
 // Form inputs
 
