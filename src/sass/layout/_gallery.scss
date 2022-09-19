@@ -24,7 +24,7 @@
     height: 424px;
   }
 }
-.slider__img {
+.slider__img, .wrapper {
   border-radius: 7px;
   @include mq(tablet) {
     border-radius: 18px;
@@ -32,7 +32,5 @@
       border-radius: 24px;
     }
   }
-  &__picture {
-    overflow: hidden;
-  }
+ 
 }
