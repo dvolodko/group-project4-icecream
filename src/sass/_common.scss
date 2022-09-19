@@ -2,15 +2,28 @@
 
 body {
   color: $primaryColor;
-  background-color: $backgroundColor;
   font-family: 'Montserrat';
   @include font(400, 12, 1.76, 0.04em);
-
+  background-image: url(../images/icecream-bgr-products-tab.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  @include mq(retina) {
+    background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
+  }
   @include mq(tablet) {
     @include font(400, 14, 1.76, 0.04em);
+    background-image: url(../images/icecream-bgr-products.jpg);
+    @include mq(retina) {
+      background-image: url(../images/icecream-bgr-products-2x.jpg);
+    }
   }
-
   @include mq(desktop) {
     @include font(400, 16, 1.76, 0.04em);
+    background-image: url(../images/icecream-bgr1-1920px-opti.jpg);
+    @include mq(retina) {
+      background-image: url(../images/icecream-bgr1-1920px-opti-2x.jpg);
+    }
   }
 }
