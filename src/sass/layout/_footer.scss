@@ -89,7 +89,7 @@
   width: 32px;
   height: 32px;
   fill: #84a178;
-  transition: width 250ms ease, height 250ms ease;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   @media (max-width: 767px) {
     width: 34px;
     height: 34px;
