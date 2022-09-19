@@ -4,6 +4,11 @@
   @include mq(tablet) {
     padding: 30px 55px;
   }
+
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 991px,
+    $actualModalHeightTablet: 646px
+  );
 }
 
 .modal-buy-now__title {
