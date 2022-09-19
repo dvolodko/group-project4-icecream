@@ -3,6 +3,17 @@
   @include mq(desktop) {
     padding-bottom: 120px;
   }
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    @include mq(tablet) {
+      flex-direction: row;
+    }
+  }
   // button Our Locations
   &__button {
     @media (max-width: 419px) {
@@ -46,18 +57,6 @@
   }
 }
 
-.contasts-btns {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  @include mq(tablet) {
-    flex-direction: row;
-  }
-}
-
 .contacts-list {
   display: flex;
   flex-wrap: wrap;
@@ -86,19 +85,19 @@
   @include mq(desktop) {
     padding: 40px;
   }
-}
-.contacts-location {
   &__bg {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 16px;
     padding: 0px 15px;
-    background: #f8d24e;
+    background: $accentColor;
     border-radius: 4px;
+    margin-bottom: 20px;
     @include mq(tablet) {
       height: 28px;
       border-radius: 6px;
+      margin-bottom: 32px;
     }
   }
   &__place {
@@ -108,79 +107,110 @@
     line-height: (22 / 12);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #131313;
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: (30 / 16);
+    }
   }
-  @include mq(tablet) {
-    font-size: 16px;
-    line-height: (30 / 16);
+  &__box--address {
+    padding-bottom: 24px;
+    @include mq(tablet) {
+      padding-bottom: 32px;
+    }
   }
-}
-
-.contacts-adress {
-  padding-top: 20px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
-  @include mq(tablet) {
-    padding-top: 32px;
-    padding-bottom: 26px;
-  }
-  @include mq(desktop) {
-    padding-bottom: 32px;
-  }
-  &__title {
+  &__label {
     font-style: normal;
     font-weight: 00;
     font-size: 12px;
     line-height: calc(22 / 12);
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $primaryColor;
     margin-bottom: 8px;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      margin-bottom: 12px;
+    }
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      margin-bottom: 8px;
+    }
   }
-  &__loc {
+  &__link {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.83;
+    line-height: calc(22 / 12);
     letter-spacing: 0.04em;
-    color: #d6936d;
+    color: $extraColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
     &:hover,
     &:focus {
       text-decoration: underline;
     }
   }
-}
-
-.contacts-time {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
-  @include mq(tablet) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  &__box--border {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0px;
+    @include mq(tablet) {
+      gap: 12px;
+      padding: 32px 0px;
+    }
   }
   &__title,
   &__clock {
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: calc(22 / 12);
-    color: #131313;
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
   }
   &__clock {
     color: #907e82;
   }
-}
-
-.contacts-cont {
-  padding-top: 24px;
-  @include mq(tablet) {
+  &__box--contact {
+    padding-top: 24px;
+    padding-bottom: 0px;
+    @include mq(tablet) {
+      padding-top: 32px;
+    }
     padding-top: 32px;
   }
-  &__text {
+  &__tel,
+  &__mail {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(18 / 12);
-    color: #131313;
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
   }
 }
