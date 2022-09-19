@@ -1,7 +1,6 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  cursor: url('../images/сursor.png'), auto;
   color: $primaryColor;
   font-family: 'Montserrat';
   @include font(400, 12, 1.76, 0.04em);
@@ -11,7 +10,6 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   @include mq(retina) {
-    cursor: url('../images/сursor-2х.png'), auto;
     background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
   }
   @include mq(tablet) {
