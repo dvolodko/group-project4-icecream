@@ -1,4 +1,5 @@
 .footer {
+  background-color: $backgroundColor;
   padding-bottom: 62px;
   @include mq(tablet) {
     padding-bottom: 13px;
