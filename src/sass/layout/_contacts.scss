@@ -4,6 +4,7 @@
     padding-bottom: 120px;
   }
   &__btns {
+    padding-top: 284px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -16,7 +17,26 @@
   }
 }
 
+.container--contacts {
+  background-color: $backgroundColor;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include mq(tablet) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq(desktop) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .contacts-list {
+  position: absolute;
+  top: -345px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -25,6 +45,8 @@
   padding-bottom: 32px;
   @include mq(tablet) {
     padding-bottom: 60px;
+
+    top: -305px;
   }
   @include mq(desktop) {
     padding-bottom: 64px;
@@ -63,13 +85,13 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: (22 / 12);
+    line-height: calc(15.96 / 12);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $primaryColor;
     @include mq(tablet) {
       font-size: 16px;
-      line-height: (30 / 16);
+      line-height: calc(28 / 16);
     }
   }
   &__box--paddbot {
