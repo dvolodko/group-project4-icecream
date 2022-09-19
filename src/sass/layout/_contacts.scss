@@ -58,7 +58,7 @@
   }
 }
 
-.contacts-box {
+.contacts-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -86,7 +86,9 @@
   @include mq(desktop) {
     padding: 40px;
   }
-  &__box {
+}
+.contacts-location {
+  &__bg {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +101,7 @@
       border-radius: 6px;
     }
   }
-  &__title {
+  &__place {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -129,7 +131,7 @@
     font-style: normal;
     font-weight: 00;
     font-size: 12px;
-    line-height: 1.86;
+    line-height: calc(22 / 12);
     letter-spacing: 0.04em;
     color: #131313;
     margin-bottom: 8px;
@@ -161,7 +163,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.86;
+    line-height: calc(22 / 12);
     color: #131313;
   }
   &__clock {
@@ -178,7 +180,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.83;
+    line-height: calc(18 / 12);
     color: #131313;
   }
 }
