@@ -76,8 +76,8 @@
   padding: 0;
   border: none;
   background-color: transparent;
-cursor: pointer;
-transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  cursor: pointer;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
     display: none;
@@ -98,7 +98,6 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 /*--------hero*/
-
 
 .hero .container {
   background-color: $backgroundColor;
@@ -163,7 +162,6 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   margin-top: 32px;
   display: flex;
   gap: 8px;
-
 }
 
 .hero__wrap--right {
@@ -235,11 +233,10 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   z-index: 2;
 }
 
-
-.icon-bottom{
+.icon-bottom {
   z-index: 3;
   fill: $textColor;
-    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -250,7 +247,7 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
-.icon-bottom_focus{
+.icon-bottom_focus {
   left: 0;
   z-index: 3;
 }
@@ -268,8 +265,6 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   bottom: 0;
   left: 0;
   width: 100%;
- 
-  
 }
 
 .canvas-icecream {
@@ -283,23 +278,22 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
-.canvas-shine{
+.canvas-shine {
   position: absolute;
-      bottom: -40px;
-        left: 20%;
-    width: 100%; 
-    z-index: 2;
+  bottom: -40px;
+  left: 20%;
+  width: 100%;
+  z-index: 2;
 
-    @include mq(tablet) {
-          bottom: -47px;
-            left: 50%;
-       
-      }
+  @include mq(tablet) {
+    bottom: -47px;
+    left: 50%;
+  }
 
-            @include mq(desktop){
-                bottom: -60px;
-                  left: 49%;
-            }
+  @include mq(desktop) {
+    bottom: -60px;
+    left: 49%;
+  }
 }
 
 .canvas-bubbles__mobile,
@@ -351,25 +345,25 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform 250ms ease-in-out;
 
-    @include mq(tablet) {
-   padding: 20px 32px ;
-      }
+  @include mq(tablet) {
+    padding: 20px 32px;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
   transform: translateX(0);
 }
 
-
-
-
 .menu-container__top {
   display: flex;
   justify-content: space-between;
- 
 
   @include mq(tablet) {
     margin-bottom: 76px;
@@ -378,7 +372,6 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
 .menu-container__nav {
   text-align: center;
-
 }
 
 .menu-container__item:not(:last-child) {
@@ -418,18 +411,17 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
-.icon-cross{
+.icon-cross {
   width: 20px;
   height: 20px;
   fill: $textColor;
 }
 
-
-.menu-container__wrap{
-  @include mq(mobile-only){
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.menu-container__wrap {
+  @include mq(mobile-only) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
