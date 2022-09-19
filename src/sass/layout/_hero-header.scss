@@ -250,6 +250,7 @@
 .icon-bottom_focus {
   left: 0;
   z-index: 3;
+  fill: $textColor;
 }
 
 .icon-bottom:hover .icon-bottom_focus {
@@ -280,8 +281,8 @@
 
 .canvas-shine {
   position: absolute;
-    bottom: 0px;
-      left: 25%;
+  bottom: 0px;
+  left: 25%;
   width: 50%;
   z-index: 2;
 
@@ -291,7 +292,7 @@
   }
 
   @include mq(desktop) {
-       left: 53%;
+    left: 53%;
   }
 }
 
@@ -425,7 +426,51 @@
   }
 }
 
-
 /*---back to home*/
 
+.back-to-home {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #60BD73;
+  display: none;
+  z-index: 100;
+  transform:scale $mainTransitionDuration $mainTransitionTimingFunction
+  background-color $mainTransitionDuration $mainTransitionTimingFunction;
+}
 
+.back-to-home:hover,
+.back-to-home:focus {
+  scale: 1.5;
+  outline: none;
+  background-color:#FEB860;
+}
+
+.back-to-home::before,
+.back-to-home::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-to-home::before {
+  width: 5px;
+  height: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: $textColor;
+}
+
+.back-to-home::after {
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid $textColor;
+  border-left: 5px solid $textColor;
+}

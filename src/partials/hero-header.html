@@ -60,11 +60,10 @@
       </li>
     </ul>
   </div>
+  <!--back to home-->
+  
+  <a href="#home" class="back-to-home"></a>
 </header>
-
-<!--back to home    <img class="home__front" src="./images/face3-mob.png" alt="smile" width="80" height="80" />-->
-
-
 
 <!--hero-->
 
@@ -144,7 +143,7 @@
           </p>
         </li>
         <li>
-          <button type="button" class="js-open-modal" data-modal="3">
+          <button type="button" class="js-open-modal icon-bottom" data-modal="3">
             <svg class="icon-bottom_focus" width="40" height="15">
               <use href="./images/icon.svg#arrow"></use>
             </svg>
@@ -215,23 +214,34 @@
     </picture>
 
     <picture class="canvas-shine">
-      <source class="canvas-shine__desktop" srcset="
-                  ./images/rectangle-ice-cream.png    1x,
-                  ./images/rectangle-ice-cream-2x.png 2x
-                " media="(min-width: 1200px)" />
-    
-      <source class="canvas-shine__tablet" srcset="
-                  ./images/rectangle-icecream-tab.png    1x,
-                  ./images/rectangle-icecream-tab-2x.png 2x
-                " media="(min-width: 768px)" />
-    
-      <source class="canvas-shine__mobile" srcset="
-                  ./images/rectangle-icecream-mob.png    1x,
-                  ./images/rectangle-icecream-mob-2x.png 2x
-                " media="(max-width: 767px)" />
-    
+      <source
+        class="canvas-shine__desktop"
+        srcset="
+          ./images/rectangle-ice-cream.png    1x,
+          ./images/rectangle-ice-cream-2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+
+      <source
+        class="canvas-shine__tablet"
+        srcset="
+          ./images/rectangle-icecream-tab.png    1x,
+          ./images/rectangle-icecream-tab-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        class="canvas-shine__mobile"
+        srcset="
+          ./images/rectangle-icecream-mob.png    1x,
+          ./images/rectangle-icecream-mob-2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+
       <img src="./images/rectangle-ice-cream.png" alt="yellow bubbles" />
-    
     </picture>
   </div>
 </section>
@@ -305,3 +315,6 @@
     </div>
   </div>
 </div>
+
+
+
