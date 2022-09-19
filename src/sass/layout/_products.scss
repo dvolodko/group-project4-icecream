@@ -1,26 +1,26 @@
 .products {
-  background: url(../images/icecream-bgr-products1-mob.jpg), #f5f5f5;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center, center, bottom center;
-  background-size: cover;
-  text-align: center;
+  // background: url(../images/icecream-bgr-products1-mob.jpg), #f5f5f5;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-position: top center, center, bottom center;
+  // background-size: cover;
+  // text-align: center;
   padding: 60px 0px;
-  @include mq(retina) {
-    background-image: url(../images/icecream-bgr-products1-mob-2x.jpg);
-  }
-  @include mq(tablet) {
-    background-image: url(../images/icecream-bgr-products-tab.jpg);
-    @include mq(retina) {
-      background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
-    }
-  }
-  @include mq(desktop) {
-    background-image: url(../images/icecream-bgr-products.jpg);
-    @include mq(retina) {
-      background-image: url(../images/icecream-bgr-products-2x.jpg);
-    }
-  }
+  // @include mq(retina) {
+  //   background-image: url(../images/icecream-bgr-products1-mob-2x.jpg);
+  // }
+  // @include mq(tablet) {
+  //   background-image: url(../images/icecream-bgr-products-tab.jpg);
+  //   @include mq(retina) {
+  //     background-image: url(../images/icecream-bgr-products-tab-2x.jpg);
+  //   }
+  // }
+  // @include mq(desktop) {
+  //   background-image: url(../images/icecream-bgr-products.jpg);
+  //   @include mq(retina) {
+  //     background-image: url(../images/icecream-bgr-products-2x.jpg);
+  //   }
+  // }
   &__label {
     @include font(800, 18px, 1.22, null);
     text-align: center;
@@ -272,14 +272,27 @@
       bottom: 40px;
     }
   }
-  &__button--icon {
-    transform: scale(1);
-    transition: scale $timingAnima;
-  }
+
   &__button--arrow:hover &__button--icon {
-    transform: scaleX(1.25);
+    animation: arrow $timingAnima;
   }
   &__button--arrow:focus &__button--icon {
-    transform: scale(1.25, 1.5);
+    animation: arrow-f $timingAnima;
+  }
+  @keyframes arrow {
+    0% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(1.25);
+    }
+  }
+  @keyframes arrow-f {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1.25, 1.5);
+    }
   }
 }
