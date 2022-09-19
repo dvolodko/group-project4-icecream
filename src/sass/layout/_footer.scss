@@ -88,13 +88,8 @@
 .telegram {
   width: 32px;
   height: 32px;
-<<<<<<< Updated upstream
   fill: #84a178;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-=======
-  fill: $backgroundColor;
-  transition: width 250ms ease, height 250ms ease;
->>>>>>> Stashed changes
   @media (max-width: 767px) {
     width: 34px;
     height: 34px;
