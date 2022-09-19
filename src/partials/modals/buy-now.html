@@ -13,118 +13,119 @@
   <h2 class="modal__title modal-buy-now__title">Buy now</h2>
 
   <!-- Form -->
-  <form class="form">
-    <div class="form-checkbox">
-      <ul class="form-checkbox__list">
-        <li class="form-checkbox__items">
+  <form class="form buy-now__form">
+    <ul class="checkbox-list">
+      <li class="checkbox-list__item">
+        <label class="checkbox checkbox--green">
           <input
-            class="form-checkbox__input form-checkbox__input--ice-cream visually-hidden"
+            class="checkbox__input checkbox__input--green visually-hidden"
             type="checkbox"
             name="ice-cream"
-            id="icecream"
           />
-          <label
-            class="form-checkbox__label form-checkbox__label--ice-cream"
-            for="icecream"
-            ><span class="form-checkbox__text-wrap"
-              ><picture class="label__picture label__picture--ice-cream">
-                <source
-                  srcset="
-                    ./images/buy-now-modal1.png    1x,
-                    ./images/buy-now-modal1-2x.png 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/buy-now-modal1-mob.png    1x,
-                    ./images/buy-now-modal1-mob-2x.png 2x
-                  "
-                  media="(max-width:767px)"
-                />
-                <img
-                  class="label__picture"
-                  src="./images/buy-now-modal1.png"
-                  alt="Ice cream balls in a waffel cone"
-                  width="132"
-                  height="131"
-                /> </picture></span
-          ></label>
-        </li>
-        <li class="form-checkbox__items">
+          <span class="form-checkbox__text-wrap">
+            <picture class="label__picture label__picture--green">
+              <source
+                srcset="
+                  ./images/buy-now-modal1.png    1x,
+                  ./images/buy-now-modal1-2x.png 2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                  ./images/buy-now-modal1-mob.png    1x,
+                  ./images/buy-now-modal1-mob-2x.png 2x
+                "
+                media="(max-width:767px)"
+              />
+              <img
+                class="label__picture"
+                src="./images/buy-now-modal1.png"
+                alt="Ice cream balls in a waffel cone"
+                width="132"
+                height="131"
+              />
+            </picture>
+          </span>
+          <span> Ice cream </span>
+        </label>
+      </li>
+
+      <li class="checkbox-list__item">
+        <label class="checkbox checkbox--yellow">
           <input
-            class="form-checkbox__input form-checkbox__input--ice-coffee visually-hidden"
+            class="checkbox__input checkbox__input--yellow visually-hidden"
             type="checkbox"
             name="ice-coffee"
-            id="icecoffee"
           />
-          <label
-            class="form-checkbox__label form-checkbox__label--ice-coffee"
-            for="icecoffee"
-            ><span class="form-checkbox__text-wrap"
-              ><picture class="label__picture label__picture--ice-coffee">
-                <source
-                  srcset="
-                    ./images/buy-now-modal2.png    1x,
-                    ./images/buy-now-modal2-2x.png 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/buy-now-modal2-mob.png    1x,
-                    ./images/buy-now-modal2-mob-2x.png 2x
-                  "
-                  media="(max-width:767px)"
-                />
-                <img
-                  class="label__picture"
-                  src="./images/buy-now-modal2.png"
-                  alt="Transparent glass with ice coffee"
-                  width="131"
-                  height="131"
-                /> </picture></span
-          ></label>
-        </li>
-        <li class="form-checkbox__items">
+          <span class="form-checkbox__text-wrap">
+            <picture class="label__picture label__picture--yellow">
+              <source
+                srcset="
+                  ./images/buy-now-modal2.png    1x,
+                  ./images/buy-now-modal2-2x.png 2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                  ./images/buy-now-modal2-mob.png    1x,
+                  ./images/buy-now-modal2-mob-2x.png 2x
+                "
+                media="(max-width:767px)"
+              />
+              <img
+                class="label__picture"
+                src="./images/buy-now-modal2.png"
+                alt="Transparent glass with ice coffee"
+                width="131"
+                height="131"
+              />
+            </picture>
+          </span>
+          <span> Ice coffee </span>
+        </label>
+      </li>
+
+      <li class="checkbox-list__item">
+        <label class="checkbox checkbox--brown">
           <input
-            class="form-checkbox__input form-checkbox__input--milkshake visually-hidden"
+            class="checkbox__input checkbox__input--brown visually-hidden"
             type="checkbox"
             name="milkshake"
-            id="milkshake"
           />
-          <label
-            class="form-checkbox__label form-checkbox__label--milkshake"
-            for="milkshake"
-            ><span class="form-checkbox__text-wrap"
-              ><picture class="label__picture label__picture--milkshake">
-                <source
-                  srcset="
-                    ./images/buy-now-modal3.png    1x,
-                    ./images/buy-now-modal3-2x.png 2x
-                  "
-                  media="(min-width:768px)"
-                />
-                <source
-                  srcset="
-                    ./images/buy-now-modal3-mob.png    1x,
-                    ./images/buy-now-modal3-mob-2x.png 2x
-                  "
-                  media="(max-width:767px)"
-                />
-                <img
-                  class="label__picture"
-                  src="./images/buy-now-modal3.png"
-                  alt="A glass of milkshake"
-                  width="132"
-                  height="131"
-                /> </picture></span
-          ></label>
-        </li>
-      </ul>
-    </div>
+          <span class="form-checkbox__text-wrap">
+            <picture class="label__picture label__picture--brown">
+              <source
+                srcset="
+                  ./images/buy-now-modal3.png    1x,
+                  ./images/buy-now-modal3-2x.png 2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                  ./images/buy-now-modal3-mob.png    1x,
+                  ./images/buy-now-modal3-mob-2x.png 2x
+                "
+                media="(max-width:767px)"
+              />
+              <img
+                class="label__picture"
+                src="./images/buy-now-modal3.png"
+                alt="A glass of milkshake"
+                width="132"
+                height="131"
+              />
+            </picture>
+          </span>
+          <span> Milkshake </span>
+        </label>
+      </li>
+    </ul>
+
     <input
-      class="form__input"
+      class="form__input buy-now__form-input"
       type="text"
       name="username"
       placeholder="Name"
@@ -132,7 +133,7 @@
       autofocus
     />
     <input
-      class="form__input"
+      class="form__input buy-now__form-input"
       type="tel"
       name="phone"
       placeholder="Phone"
@@ -141,7 +142,7 @@
     />
     <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
     <textarea
-      class="form__input form__input--multiline"
+      class="form__input form__input--multiline buy-now__form-input"
       name="comment"
       id="comment"
       placeholder="Comment"
