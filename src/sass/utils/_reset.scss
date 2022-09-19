@@ -1,3 +1,9 @@
+* {
+  cursor: url('../images/сursor.png'), auto;
+  @include mq(retina) {
+    cursor: url('../images/сursor-2х.png'), auto;
+  }
+}
 h1,
 h2,
 h3,

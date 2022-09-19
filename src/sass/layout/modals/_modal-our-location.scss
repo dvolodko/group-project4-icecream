@@ -1,0 +1,31 @@
+.modal {
+  &__our-location {
+    @include modalPreventOverflow(
+      $actualModalHeightMobile: 365px,
+      $actualModalHeightTablet: 458px
+    );
+    padding: 28px;
+    @include mq(tablet) {
+      padding: 32px 60px;
+    }
+  }
+  &__our-location-title {
+    @include mq(tablet) {
+      margin-bottom: 32px;
+    }
+  }
+  &__our-location-maps {
+    width: 224px;
+    height: 200px;
+    padding-bottom: 24px;
+    border-radius: 10px;
+    @include mq(tablet) {
+      width: 450px;
+      height: 260px;
+      padding-bottom: 32px;
+    }
+  }
+  &__our-location-button {
+    margin: 0 auto;
+  }
+}

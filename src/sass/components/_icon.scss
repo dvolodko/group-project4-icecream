@@ -1,71 +1,56 @@
 .menu {
   stroke: #ffffff;
   transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    stroke: #f8d24e;
+  .icon--hoverfocus:hover & {
+    stroke: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    stroke: #f8d24e;
-  }
-}
-.arrow {
-  &.arrow-default {
-    display: block;
-  }
-  &.arrow-hover {
-    display: none;
-  }
-  &.arrow-focus {
-    display: none;
-  }
-  .icon__hover__focus:hover & {
-    &.arrow-default {
-      display: none;
-    }
-    &.arrow-hover {
-      display: block;
-    }
-  }
-  .icon__hover__focus:focus & {
-    &.arrow-default {
-      display: none;
-    }
-    &.arrow-focus {
-      display: block;
-    }
+  .icon--hoverfocus:focus & {
+    stroke: $accentColor;
   }
 }
-.arrow-white {
-  fill: #fcfcfc;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
+.arrow--white {
+  fill: $extrabackgroundColor;
+}
+.arrow--hover, .arrow--focus{
+  display: none;
+}
+.arrow, 
+.arrow--white {
+  &.arrow--default {
+    scale: 1;
+    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
+  .icon--hoverfocus:hover & {
+    &.arrow--default {
+      transform: scaleX(1.25);
+    }
+  }
+  .icon--hoverfocus:focus & {
+    &.arrow--default {
+      transform: scale(1.25, 1.5);
   }
 }
-
+}
 .close {
   fill: #ffffff;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
   }
 }
 
-.close-modal,
-.close-modal-20 {
-  fill: #131313;
+.close--modal,
+.close--modal20 {
+  fill: $primaryColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    fill: #f8d24e;
+  .icon--hoverfocus:hover & {
+    fill: $accentColor;
   }
-  .icon__hover__focus:focus & {
-    fill: #f8d24e;
+  .icon--hoverfocus:focus & {
+    fill: $accentColor;
   }
 }
 
@@ -78,18 +63,15 @@
 .facebook,
 .github,
 .telegram {
-  width: 34px;
-  height: 34px;
-  fill: #84a178;
-  transition: width $mainTransitionDuration $mainTransitionTimingFunction, height $mainTransitionDuration $mainTransitionTimingFunction;
-  .icon__hover__focus:hover & {
-    width: 32px;
-    height: 32px;
-    fill: #fcfcfc;
+  scale: 1;
+  fill: $backgroundColor;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+   .icon--hoverfocus:hover & {
+    transform: scale(0.9);
+    fill: $extrabackgroundColor;
   }
-  .icon__hover__focus:focus & {
-    width: 35px;
-    height: 35px;
-    fill: #fcfcfc;
+  .icon--hoverfocus:focus & {
+    transform: scale(1.1);
+    fill: $extrabackgroundColor;
   }
 }

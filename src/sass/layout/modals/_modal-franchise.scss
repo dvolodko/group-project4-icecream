@@ -1,0 +1,35 @@
+.modal-franchise {
+  padding: 30px;
+
+  @include mq(tablet) {
+    padding: 30px 60px;
+  }
+
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 723px,
+    $actualModalHeightTablet: 665px
+  );
+}
+
+.modal-franchise__title {
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-franchise__descr {
+  margin-bottom: 24px;
+
+  font-size: 14px;
+  line-height: 1.4;
+  color: $primaryColor;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}

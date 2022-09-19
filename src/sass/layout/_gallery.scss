@@ -1,0 +1,38 @@
+.gallery {
+ position: relative;
+}
+.gallery__container{
+  position: absolute;
+  width: 100vw;
+  top: -24px;
+  @include mq(tablet) {
+    top: -104px;
+  }
+  @include mq(desktop) {
+    top: -94px;
+  }
+}
+.swiper {
+  width: 280px;
+  height: 132px;
+  @include mq(tablet) {
+    width: 704px;
+    height: 328px;
+  }
+  @include mq(desktop) {
+    width: 1013px;
+    height: 424px;
+  }
+}
+.slider__img {
+  border-radius: 7px;
+  @include mq(tablet) {
+    border-radius: 18px;
+    @include mq(desktop) {
+      border-radius: 24px;
+    }
+  }
+  &__picture {
+    overflow: hidden;
+  }
+}

@@ -26,45 +26,41 @@
 })(window.Element.prototype);
 
 document.addEventListener('DOMContentLoaded', function () {
-  /* Записываем в переменные массив элементов-кнопок и подложку.
-      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
   var modalButtons = document.querySelectorAll('.js-open-modal'),
-    overlay = document.querySelector('.js-overlay-modal'),
+    overlays = document.querySelectorAll('.js-overlay-modal'),
     closeButtons = document.querySelectorAll('.js-modal-close'),
     modals = document.querySelectorAll('.modal'),
     body = document.querySelector('body');
 
-  /* Перебираем массив кнопок */
+  // Open modal - click on button with attribute
   modalButtons.forEach(function (item) {
-    /* Назначаем каждой кнопке обработчик клика */
     item.addEventListener('click', function (e) {
-      /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-            Нужно подстраховаться. */
       e.preventDefault();
 
-      /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-            и будем искать модальное окно с таким же атрибутом. */
+      // Find related modal window
       var modalId = this.getAttribute('data-modal'),
         modalElem = document.querySelector(
           '.modal[data-modal="' + modalId + '"]'
         );
 
-      /* После того как нашли нужное модальное окно, добавим классы
-            подложке и окну чтобы показать их. */
+      // Set the modal and related overlay active
       modalElem.classList.add('active');
-      overlay.classList.add('active');
+      var parentOverlay = modalElem.closest('.js-overlay-modal');
+      parentOverlay.classList.add('active');
+
       // Prevent body scroll when modal is open
       body.classList.add('no-scroll');
     }); // end click
   }); // end foreach
 
+  // Close modal - Close button
   closeButtons.forEach(function (item) {
     item.addEventListener('click', function (e) {
       var parentModal = this.closest('.modal');
-
       parentModal.classList.remove('active');
-      overlay.classList.remove('active');
+
+      var parentOverlay = this.closest('.js-overlay-modal');
+      parentOverlay.classList.remove('active');
       // Prevent body scroll when modal is open
       body.classList.remove('no-scroll');
     });
@@ -77,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }); // end foreach
 
+  // Close modal - press <Esc> key
   document.body.addEventListener(
     'keyup',
     function (e) {
@@ -84,7 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
-        document.querySelector('.overlay').classList.remove('active');
+        document
+          .querySelector('.js-overlay-modal.active')
+          .classList.remove('active');
         // Prevent body scroll when modal is open
         body.classList.remove('no-scroll');
       }
@@ -92,8 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
     false
   );
 
-  overlay.addEventListener('click', function () {
-    document.querySelector('.modal.active').classList.remove('active');
-    this.classList.remove('active');
+  // Close modal - click on overlay
+  overlays.forEach(function (item) {
+    item.addEventListener('click', function () {
+      document.querySelector('.modal.active').classList.remove('active');
+      this.classList.remove('active');
+      // Prevent body scroll when modal is open
+      body.classList.remove('no-scroll');
+    });
   });
 }); // end ready

@@ -1,0 +1,57 @@
+<section>
+  <div class="container container--bg-green container--about">
+    <p class="about__label" id="about">Tradition and love</p>
+    <h2 class="about__title">How it’s made?</h2>
+    <div class="about__wrap">
+      <div class="about__picture">
+        <picture class="about__image">
+          <source
+            srcset="./images/about.png 1x, ./images/about-2x.png 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="./images/about-tab.png 1x, ./images/about-tab-2x.png 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="./images/about-mob.png 1x, ./images/about-mob-2x.png 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            src="./images/about.png"
+            alt="A cow in the pasture"
+            width="490"
+            height="490"
+          />
+        </picture>
+      </div>
+      <div class="about__content">
+        <div class="about__text-cover">
+          <p class="about__text about__text--first">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it
+            when creating our handmade desserts.
+          </p>
+          <p class="about__text about__text--second">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from the
+            age of three years. Sweets lovers can expect 55 types of ice cream,
+            15 types of coffee and 23 milkshakes.
+          </p>
+          <p class="about__text about__text--third">
+            This is enough to choose ice cream and coffee for any mood!
+          </p>
+        </div>
+        <button
+          type="button"
+          class="about__button about__button--center js-open-modal"
+          data-modal="3"
+        >
+          Read more<svg width="12" height="12">
+            <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

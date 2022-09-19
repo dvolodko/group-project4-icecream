@@ -1,0 +1,61 @@
+.customer__section{
+    padding-top: 181px;
+    padding-bottom: 393px;
+    @include mq(tablet) {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 218px;
+        padding-bottom: 384px;  
+    }
+    @include mq(desktop) {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 451px;
+        padding-bottom: 196px;  
+      }
+}
+.slick-dots li.slick-active button:before{
+    color: $backgroundColor;
+}
+.slick-dots li button:before{
+    font-size: 12px;
+    color: #D9D9D9;
+    opacity: 1;
+}
+.customer__img{
+    margin: 0px auto;
+    margin-bottom: 32px;
+    border-radius: 50%;
+
+}
+.customer__text{
+    max-height: 256px;
+    padding: 34px 39px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: $backgroundColor;
+    font-family: 'Montserrat';
+    @include font(400, 12px, 2.55, null);
+    text-align: center;
+    color: $extrabackgroundColor;
+
+    @include mq(tablet) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 28px 80px;
+     }
+     @include mq(desktop) {
+        font-size: 14px;
+        max-height: 138px;
+        padding: 40px 109px;
+     }
+}
+.customer__name{
+    font-family: 'Montserrat';
+    text-align: center;
+    @include font(500, 20px, 1.8, null);
+    color: #131313;
+    @include mq(tablet) {
+        font-size: 16px;
+       }
+}

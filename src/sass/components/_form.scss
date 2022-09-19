@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    width: 370px;
+  }
+}
+
+.form__input {
+  padding: 11px 8px;
+  margin-bottom: 12px;
+  height: 32px;
+
+  font-size: 12px;
+  line-height: 1.4;
+  color: $primaryColor;
+
+  background-color: rgba(248, 210, 78, 0.1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: $backgroundColor;
+  border-radius: 10px;
+  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $btn-hoverColor;
+  }
+
+  @include mq(tablet) {
+    padding: 16px 11px;
+    margin-bottom: 16px;
+    height: 42px;
+
+    font-size: 14px;
+  }
+}
+
+.form__input--multiline {
+  margin-bottom: 24px;
+  height: 64px;
+  resize: none;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+    height: 84px;
+  }
+}
+
+.form__button {
+  align-self: center;
+
+  // Copied from _button.scss .modal__button
+  min-width: 134px;
+  height: 42px;
+  background-color: $accentColor;
+  border-radius: 10px;
+  @include mq(mobile-only) {
+    @include font(null, 12px, 1.22, null);
+  }
+  @include mq(desktop) {
+    min-width: 121px;
+    height: 42px;
+  }
+  &:hover {
+    background-color: $btn-hoverColor;
+  }
+  &:focus {
+    background-color: $btn-hoverColor;
+    color: $textColor;
+  }
+  &:disabled {
+    background-color: $btn-disabledColor;
+  }
+}
