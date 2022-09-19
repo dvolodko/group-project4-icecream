@@ -354,6 +354,10 @@
   @include mq(desktop) {
     display: none;
   }
+
+    @include modalPreventOverflow(
+      $actualModalHeightMobile: 723px, 
+    $actualModalHeightTablet: 665px);
 }
 
 .menu-container.is-open {
