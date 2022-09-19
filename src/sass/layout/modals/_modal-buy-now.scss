@@ -1,4 +1,7 @@
-.modal__title--form {
+.modal-buy-now {
+}
+
+.modal-buy-now__title {
   @include font(400, 16px, 1.5, null);
   @include mq(tablet) {
     @include font(400, 20px, 1.4, null);
