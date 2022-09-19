@@ -1,0 +1,136 @@
+.modal__padding40 {
+  padding: 28px 20px 32px 20px;
+  @include mq(tablet) {
+    padding: 32px 40px;
+  }
+}
+.modal__title--wrap {
+  @include font(400, 20, 1.4, null);
+  text-align: center;
+}
+
+.ingredients {
+  position: relative;
+  @include flex(flex, null, flex-end);
+  overflow: hidden;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  width: 132px;
+  height: 130.6px;
+  border-radius: 50%;
+  margin: 0 auto 22px auto;
+  @include mq(tablet) {
+    margin-bottom: 24px;
+  }
+}
+
+.ingredients__img {
+  border-radius: 50%;
+  width: 130.43px;
+  height: 131px;
+  position: absolute;
+  overflow: hidden;
+  @include flex(flex, center, flex-end);
+  top: -7px;
+}
+
+.callories {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 39px;
+  @include mq(tablet) {
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+}
+.callories__item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 53px;
+  height: 72px;
+  left: 209px;
+  top: 246px;
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+  padding-bottom: 8px;
+  @include font(null, 10, 1.2, null);
+
+  @include mq(tablet) {
+    width: 65px;
+    height: 90px;
+    @include font(null, 12, 1.25, null);
+    padding-bottom: 14px;
+  }
+}
+
+.round {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 42px;
+  background-color: #9cbe8f;
+  border: 2px solid #9cbe8f;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+  @include font(500, 10, 2.8, null);
+  @include mq(tablet) {
+    width: 53px;
+    height: 53px;
+    @include font(null, 12, null, null);
+  }
+}
+.table__name {
+  display: block;
+  @include font(500, 20, 1.4, null);
+  margin-bottom: 24px;
+  text-align: center;
+}
+.table {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.table__item {
+  margin-bottom: 11px;
+  display: flex;
+  align-items: baseline;
+  &::after {
+    content: '';
+    width: 100px;
+    flex-grow: 1;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.table__item::after {
+  content: '';
+  width: 100px;
+  flex-grow: 1;
+}
+.table__item:last-child {
+  margin-bottom: 0;
+}
+
+.table__text {
+  @include font(400, 14, 1.76, 0.03em);
+  white-space: nowrap;
+  &:nth-child(odd) {
+    min-width: 134px;
+  }
+}
+.table__text:last-child {
+  order: 1;
+}
