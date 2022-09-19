@@ -1,5 +1,9 @@
 .modal {
   &__our-location {
+    @include modalPreventOverflow(
+      $actualModalHeightMobile: 365px,
+      $actualModalHeightTablet: 458px
+    );
     padding: 28px;
     @include mq(tablet) {
       padding: 32px 60px;
