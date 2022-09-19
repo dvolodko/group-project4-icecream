@@ -1,0 +1,22 @@
+.modal {
+  &__our-location {
+    padding: 28px;
+    @include mq(tablet) {
+      padding: 32px 60px;
+    }
+  }
+  &__our-location-title {
+    @include mq(tablet) {
+      margin-bottom: 32px;
+    }
+  }
+  &__our-location-img {
+    padding-bottom: 24px;
+    @include mq(tablet) {
+      padding-bottom: 32px;
+    }
+  }
+  &__our-location-button {
+    margin: 0 auto;
+  }
+}

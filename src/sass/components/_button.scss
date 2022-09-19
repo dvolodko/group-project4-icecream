@@ -1,4 +1,5 @@
 // загальний стиль кнопки
+$timingAnima: $mainTransitionDuration $mainTransitionTimingFunction;
 button {
   background-color: transparent;
   color: $primaryColor;
@@ -9,6 +10,13 @@ button {
   @include font(600, 14px, 1.25, null);
   @include flex(flex, center, center);
   gap: 5px;
+  transition: color $timingAnima, background-color $timingAnima,
+    border-color $timingAnima;
+}
+// іконка кнопок
+.button__arrow {
+  fill: $primaryColor;
+  transition: fill $timingAnima;
 }
 // кнопка Buy now
 .header__button {
@@ -26,6 +34,9 @@ button {
   }
   &:disabled {
     background-color: $btn-disabledColor;
+  }
+  &:focus .button__arrow {
+    fill: $textColor;
   }
 }
 // кнопка Products
@@ -93,6 +104,9 @@ button {
   &:disabled {
     background-color: $btn-disabledColor;
   }
+  &:focus .button__arrow {
+    fill: $textColor;
+  }
 }
 // кнопка Our Locations
 .contacts__button {
@@ -110,6 +124,9 @@ button {
   }
   &:disabled {
     background-color: $btn-disabledColor;
+  }
+  &:focus .button__arrow {
+    fill: $textColor;
   }
 }
 // кнопка Franchise
@@ -130,9 +147,12 @@ button {
     background-color: transparent;
     border-color: $btn-disabledColor;
   }
+  &:focus .button__arrow {
+    fill: $textColor;
+  }
 }
 // кнопка модального вікна Open map
-.modal__location__button {
+.location__button {
   min-width: 134px;
   height: 42px;
   background-color: $accentColor;

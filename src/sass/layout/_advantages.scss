@@ -1,0 +1,118 @@
+.advantages {
+  padding-top: 0;
+  padding-bottom: 36px;
+
+  @include mq(tablet) {
+    padding-bottom: 40px;
+  }
+
+  @include mq(desktop) {
+    padding-bottom: 86px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @include mq(tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+}
+
+.advantages__item {
+  max-width: 230px;
+
+  @include mq(tablet) {
+    max-width: calc((100% - 240px) / 3);
+  }
+  @include mq(desktop) {
+    max-width: calc((100% - 64px) / 3);
+  }
+
+  &::before {
+    content: '';
+
+    display: block;
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 50px;
+    height: 50px;
+    background-color: $accentColor;
+    border-radius: 50%;
+  }
+  &.advantages__item--cow::before {
+    background-image: url(../images/about-icon1.png);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon1-2x.png);
+    }
+  }
+  &.advantages__item--weight::before {
+    background-image: url(../images/about-icon2.png);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon2-2x.png);
+    }
+  }
+  &.advantages__item--icecream::before {
+    background-image: url(../images/about-icon3.png);
+    background-size: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about-icon3-2x.png);
+    }
+  }
+}
+.advantages__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $textColor;
+
+  @include mq(tablet) {
+    font-size: 48px;
+    line-height: 1.23;
+  }
+
+  @include mq(desktop) {
+    font-size: 58px;
+    line-height: 1.22;
+  }
+}
+
+.advantages__text {
+  margin-top: 18px;
+  font-weight: 700;
+  line-height: 1.67;
+  text-align: center;
+
+  color: $textColor;
+
+  @include mq(tablet) {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
