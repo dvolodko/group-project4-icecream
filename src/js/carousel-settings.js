@@ -3,7 +3,6 @@ $('.customer__item').slick({
     centerPadding: '60px',
     slidesToShow: 1,
     dots: true,
-    autoplay: true,
     responsive: [
     {
         breakpoint: 1200,
