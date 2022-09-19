@@ -1,3 +1,13 @@
+.footer {
+  padding-bottom: 62px;
+  @include mq(tablet) {
+    padding-bottom: 13px;
+  }
+  @include mq(desktop) {
+    padding-bottom: 11px;
+  }
+}
+
 .footer-main {
   @include mq(tablet) {
     display: flex;
@@ -11,7 +21,9 @@
 }
 
 .footer-titles {
-  width: 256px;
+  @media (max-width: 767px) {
+    max-width: 256px;
+  }
   margin-bottom: 39px;
   @include mq(tablet) {
     width: 352px;
@@ -98,6 +110,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: right;
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 
   &__text {
     font-weight: 700;
@@ -112,27 +127,42 @@
 }
 
 .footer-border {
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-top: 40px;
-  @include mq(tablet) {
-    margin-top: 0px;
+  position: relative;
+  &__bottom {
+    position: absolute;
+    left: -20px;
+    width: calc(100% + 40px);
+    border-bottom: 1px solid #e1e1e1;
+    @include mq(tablet) {
+      position: relative;
+      left: 0px;
+      width: 100%;
+    }
   }
 }
+
 .footer-after-title {
-  padding: 16px 60px 62px 60px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  @include mq(tablet) {
-    padding: 14px 0px 13px 0px;
-  }
-  @include mq(desktop) {
-    padding: 12px 0px 11px 0px;
-  }
   &__text {
+    max-width: 160px;
     font-weight: 700;
     font-size: 14px;
     line-height: calc(21 / 14);
     text-align: center;
     color: #7a7a7a;
+    margin-top: 16px;
+    @include mq(tablet) {
+      max-width: 100%;
+      line-height: calc(26 / 14);
+      letter-spacing: 0.02em;
+      margin-top: 14px;
+    }
+    @include mq(desktop) {
+      font-size: 12px;
+      line-height: calc(22 / 12);
+      margin-top: 12px;
+    }
   }
 }
