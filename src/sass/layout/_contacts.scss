@@ -1,75 +1,60 @@
 .contacts {
+  position: relative;
   padding-bottom: 40px;
   @include mq(desktop) {
     padding-bottom: 120px;
   }
-  // кнопка Our Locations
-  &__button {
-    @media (max-width: 767px) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    min-width: 196px;
-    height: 42px;
-    background-color: $accentColor;
-    border-radius: 10px;
-    gap: 6px;
-    &:first-child {
-      @media (max-width: 767px) {
-        margin-bottom: 16px;
-      }
-      &:hover {
-        background-color: $btn-hoverColor;
-      }
-      &:focus {
-        background-color: $btn-hoverColor;
-        color: $textColor;
-      }
-      &:disabled {
-        background-color: $btn-disabledColor;
-      }
-    }
-  }
-  // кнопка Franchise
-  &__button--transparent {
-    background-color: transparent;
-    border: 2px solid $accentColor;
-    gap: 6px;
-    &:hover {
-      background-color: transparent;
-      border-color: $btn-hoverColor;
-    }
-    &:focus {
-      background-color: transparent;
-      border-color: $btn-hoverColor;
-      color: $textColor;
-    }
-    &:disabled {
-      background-color: transparent;
-      border-color: $btn-disabledColor;
-    }
-  }
-}
-
-.contacts-btns {
-  @include mq(tablet) {
+  &__btns {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 16px;
     justify-content: center;
     align-items: center;
+    @include mq(tablet) {
+      flex-direction: row;
+    }
   }
 }
 
-.contacts-box {
+.contacts__container {
+  position: absolute;
+  top: -345px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include mq(tablet) {
+    top: -304px;
+  }
+  @include mq(desktop) {
+    top: -96px;
+  }
+}
+.container--contacts {
+  padding-left: 20px;
+  padding-right: 20px;
+  @include mq(tablet) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq(desktop) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.contacts-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
   align-items: center;
   padding-bottom: 32px;
-  @include mq(table) {
+  @include mq(tablet) {
     padding-bottom: 60px;
+
+    top: -305px;
   }
   @include mq(desktop) {
     padding-bottom: 64px;
@@ -77,120 +62,143 @@
 }
 
 .contacts-item {
-  width: 280px;
+  flex-basis: calc(100%);
   padding: 40px 32px;
   background: #fcfcfc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   @include mq(tablet) {
     padding: 40px 24px;
-    width: calc((100% - 32px) / 3);
+    flex-basis: calc((100% - 32px) / 3);
   }
   @include mq(desktop) {
     padding: 40px;
   }
-}
-
-.contacts-item__title {
-  display: inline-block;
-  height: 28px;
-  padding: 0px 15px;
-  background: #f8d24e;
-  border-radius: 4px;
-}
-
-.contacts-item__text {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: uppercase;
-  color: #131313;
-}
-
-.contacts-adress {
-  padding-top: 20px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
-  @include mq(tablet) {
-    padding-top: 32px;
-    padding-bottom: 26px;
+  &__bg {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    padding: 0px 15px;
+    background: $accentColor;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      height: 28px;
+      border-radius: 6px;
+      margin-bottom: 32px;
+    }
   }
-  @include mq(desktop) {
-    padding-bottom: 32px;
-  }
-  &__title {
+  &__place {
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.86;
+    line-height: calc(15.96 / 12);
     letter-spacing: 0.04em;
-    color: #131313;
+    text-transform: uppercase;
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+    }
+  }
+  &__box--paddbot {
+    padding-bottom: 24px;
+    @include mq(tablet) {
+      padding-bottom: 32px;
+    }
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 00;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    letter-spacing: 0.04em;
+    color: $primaryColor;
     margin-bottom: 8px;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      margin-bottom: 12px;
+    }
+    @include mq(tablet) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      margin-bottom: 8px;
+    }
   }
-  &__loc {
+  &__link {
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.83;
+    line-height: calc(22 / 12);
     letter-spacing: 0.04em;
-    color: #d6936d;
+    color: $extraColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
     &:hover,
     &:focus {
       text-decoration: underline;
     }
   }
-}
-
-.contacts-time {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
-  @include mq(tablet) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  &__box--border {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0px;
+    @include mq(tablet) {
+      gap: 12px;
+      padding: 32px 0px;
+    }
   }
   &__title,
-  &_clock {
+  &__clock {
+    font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.86;
-    color: #131313;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+    }
   }
-  &_clock {
+  &__clock {
     color: #907e82;
   }
-}
-
-.contacts-time__title,
-.contacts-time__clock {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.86;
-  color: #131313;
-}
-
-.contacts-time_clock {
-  color: #907e82;
-}
-.contacts-cont {
-  padding-top: 24px;
-  @include mq(tablet) {
-    padding-top: 32px;
+  &__box--paddtop {
+    padding-top: 24px;
+    padding-bottom: 0px;
+    @include mq(tablet) {
+      padding-top: 32px;
+    }
   }
-  &__text {
+  &__tel,
+  &__mail {
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.83;
-    color: #131313;
+    line-height: calc(18 / 12);
+    color: $primaryColor;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: calc(29 / 16);
+    }
   }
-}
-
-.contacts-btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
 }
