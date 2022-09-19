@@ -1,20 +1,22 @@
 // загальний стиль кнопки
+$timingAnima: $mainTransitionDuration $mainTransitionTimingFunction;
 button {
   background-color: transparent;
   color: $primaryColor;
   border: none;
   outline: none;
-  fill: $primaryColor;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   @include font(600, 14px, 1.25, null);
   @include flex(flex, center, center);
   gap: 5px;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction,
-    border-color $mainTransitionDuration $mainTransitionTimingFunction,
-    fill $mainTransitionDuration $mainTransitionTimingFunction,
-    scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: color $timingAnima, background-color $timingAnima,
+    border-color $timingAnima;
+}
+// іконка кнопок
+.button__arrow {
+  fill: $primaryColor;
+  transition: fill $timingAnima;
 }
 // кнопка Buy now
 .header__button {
@@ -29,7 +31,6 @@ button {
   &:focus {
     background-color: $btn-hoverColor;
     color: $textColor;
-    fill: $textColor;
   }
   &:disabled {
     background-color: $btn-disabledColor;
