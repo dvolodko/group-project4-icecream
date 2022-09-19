@@ -1,139 +1,307 @@
 <header class="header">
-    <div class="container header_container">
-        <a href="#" class="logo">
+  <div class="container header__container">
+    <a href="#" class="logo">
+      <picture>
+        <source
+          srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+          media="(min-width: 1200px)"
+        />
 
-            <picture>
-                <!-- <source srcset="./images/Logologo.png 1x, 
-                ./images/Logo-2x.png 2x" media="(min-width: 1200px)" /> -->
+        <source
+          srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
+          media="(min-width: 768px)"
+        />
 
-                <source srcset="./images/logo-tab.png 1x,
-                                   
-                                    ./images/logo-tab-2x.png 2x
-                                  " media="(min-width: 768px)" />
+        <source
+          srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
+          media="(max-width: 767px)"
+        />
 
-                <source srcset="./images/logo-mob.png 1x, 
-                ./images/logo-mob-2x.png 2x" media="(max-width: 767px)" />
+        <img
+          class="header__logo"
+          src="./images/logo.png"
+          alt="site logo icecream"
+          width="60"
+          height="65"
+        />
+      </picture>
+    </a>
 
-                <img src="./images/logo-mob.png" alt="site logo icecream" width="41" height="37" />
-            </picture>
+    <ul class="header__list-desktop">
+      <li class="header__item-desktop"><a href="#">Home</a></li>
+      <li class="header__item-desktop"><a href="#about">How it's made?</a></li>
+      <li class="header__item-desktop"><a href="#products">Our products</a></li>
+      <li class="header__item-desktop"><a href="#contacts">Contact</a></li>
+    </ul>
 
-        </a>
-
-        <ul class="header_list-desktop">
-            <li class="header_item-desktop"><a href="#">Home</a></li>
-            <li class="header_item-desktop"><a href="#"></a>How it’s made?</li>
-            <li class="header_item-desktop"><a href="#"></a>Our products</li>
-            <li class="header_item-desktop"><a href="#">Contact</a></li>
-        </ul>
-
-        <ul class="header__list">
-            <li><button class="header__button-menu" type="button">
-                    <svg width="32" height="32" aria-label="переключає мобільне меню">
-                        <use class="icon-cross" href="./images/icon.svg#telegram"></use>
-                    </svg>
-                </button></li>
-            <li><button type="button" class="header__button">Buy now&nbsp;&#10095;</button></li>
-        </ul>
-
+    <ul class="header__list">
+      <li>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg width="32" height="32" aria-label="переключає мобільне меню">
+            <use class="icon-cross" href="./images/icon.svg#menu"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          class="header__button js-open-modal"
+          data-modal="2"
+        >
+          Buy now<svg width="12" height="12">
+            <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
 </header>
 
+<!--back to home    <img class="home__front" src="./images/face3-mob.png" alt="smile" width="80" height="80" />-->
+
+
+
 <!--hero-->
+
 <section class="hero">
-    <div class="container ">
-        <div class="hero__wrap--top">
-            <div class="hero__wrap--left">
-                <h2 class="hero__title">ice cream made with <span class="accent">passion</span></h2>
-                <ul class="hero__list">
-                    <li><button type="button" class="hero__button">Products</button></li>
-                    <li><button type="button" class="hero__button hero__button--without-body">
-                            How it’s made?</button></li>
-                </ul>
-            </div>
+  <div class="container">
+    <div class="hero__wrap hero__wrap--top">
+      <div class="hero__wrap hero__wrap--left">
+        <h2 class="hero__title">
+          ice cream made with <span class="accent">passion</span>
+        </h2>
+        <ul class="hero__list hero__list--left">
+          <li>
+            <button
+              class="hero__button"
+              onclick="window.location.href ='#products';"
+            >
+              Products
+            </button>
+          </li>
 
-            <div class="hero__wrap--right">
-                <ul>
-                    <li class="hero__item--right">
-                        <span>16</span>
-                        <p class="hero__text"></p>cafes</p>
+          <li>
+            <button
+              class="hero__button hero__button--without-body"
+              onclick="window.location.href ='#about';"
+            >
+              How it's made?
+            </button>
+          </li>
+        </ul>
+      </div>
 
-                    </li>
-                    <li class="hero__item--right">
-                        <span>23</span>
-                        <p class="hero__text--after-span">food trucks</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="hero__wrap--bottom">
-
-            <picture>
-                <source srcset="./images/hero-round.png 1x, 
-                            ./images/hero-round-2x.png 2x" media="(min-width: 1200px)" width="255" height="255"/>
-
-                <source srcset="./images/hero-round-tab.png 1x,
-                            ./images/hero-round-tab-2x.png 2x" media="(min-width: 768px)" />
-
-                <img src="./images/hero-round-tab.png" alt="site logo icecream" width="152" height="152" />
-            </picture>
-
-            <ul class="wrap--bottom__list">
-                <li>
-                    <P class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et</P>
-                    
-                </li>
-                <li>
-                    <svg class="icon-buttom" width="40" height="18">
-                    <use  href="./images/icon.svg#arrow"></use>
-                    </svg>
-                </li>
-            </ul>
-
-
-        </div>
-
+      <div class="hero__wrap hero__wrap--right">
+        <ul>
+          <li class="hero__item hero__item--right">
+            <span>16</span>
+            <p class="hero__text hero__text--after-span">cafes</p>
+          </li>
+          <li class="hero__item hero__item--right">
+            <span>23</span>
+            <p class="hero__text hero__text--after-span">food trucks</p>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <div class="hero__wrap hero__wrap--bottom">
+      <picture class="hero-img hero-img__plate">
+        <source
+          srcset="./images/hero-round.png 1x, ./images/hero-round-2x.png 2x"
+          media="(min-width: 1200px)"
+          width="255"
+          height="255"
+        />
+
+        <source
+          srcset="
+            ./images/hero-round-tab.png    1x,
+            ./images/hero-round-tab-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <img
+          src="./images/hero-round-tab.png"
+          alt="site logo icecream"
+          width="152"
+          height="152"
+        />
+      </picture>
+
+      <ul class="hero__list hero__list--bottom">
+        <li>
+          <p class="hero__text hero__text--botton">
+            We made ice cream with a delicate taste. Made with milk, cream,
+            sugar and natural stabilizer. Our ice cream is made with love for
+            you.
+          </p>
+        </li>
+        <li>
+          <button type="button" class="js-open-modal" data-modal="3">
+            <svg class="icon-bottom_focus" width="40" height="15">
+              <use href="./images/icon.svg#arrow"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <picture class="canvas-bubbles">
+      <source
+        class="canvas-bubbles__desktop"
+        srcset="./images/hero-bgr-dots.png 1x, ./images/hero-bgr-dots-2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+
+      <source
+        class="canvas-bubbles__tablet"
+        srcset="
+          ./images/hero-bgr-dots-tab.png    1x,
+          ./images/hero-bgr-dots-tab-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        class="canvas-bubbles__mobile"
+        srcset="
+          ./images/hero-bgr-dots-mob.png    1x,
+          ./images/hero-bgr-dots-mob-2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+
+      <img
+        src="./images/hero-bgr-dots-tab.png"
+        alt="yellow bubbles"
+        width="1200"
+        height="384"
+      />
+    </picture>
+
+    <picture class="canvas-icecream">
+      <source
+        class="canvas-icecream__desktop"
+        srcset="./images/group-without.png 1x, ./images/group-without-2x.png 2x"
+        media="(min-width: 1200px)"
+      />
+
+      <source
+        class="canvas-icecream__tablet"
+        srcset="
+          ./images/group-without-tab.png    1x,
+          ./images/group-without-tab-2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        class="canvas-icecream__mobile"
+        srcset="
+          ./images/group-without-mob.png    1x,
+          ./images/group-without-mob-2x.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+
+      <img src="./images/group-without-mob.png" alt="yellow bubbles" />
+    </picture>
+
+    <picture class="canvas-shine">
+      <source class="canvas-shine__desktop" srcset="
+                  ./images/rectangle-ice-cream.png    1x,
+                  ./images/rectangle-ice-cream-2x.png 2x
+                " media="(min-width: 1200px)" />
+    
+      <source class="canvas-shine__tablet" srcset="
+                  ./images/rectangle-icecream-tab.png    1x,
+                  ./images/rectangle-icecream-tab-2x.png 2x
+                " media="(min-width: 768px)" />
+    
+      <source class="canvas-shine__mobile" srcset="
+                  ./images/rectangle-icecream-mob.png    1x,
+                  ./images/rectangle-icecream-mob-2x.png 2x
+                " media="(max-width: 767px)" />
+    
+      <img src="./images/rectangle-ice-cream.png" alt="yellow bubbles" />
+    
+    </picture>
+  </div>
 </section>
 
 <!--mobile_menu-->
-<section>
-    <div class="header__mobile-menu ">
 
-        <div class="mobile-menu__top">
-            <a href="#" class="logo logo__mobile-menu">
-                <picture>
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <div class="menu-container__wrap">
+    <div class="menu-container__top">
+      <a href="#" class="logo">
+        <picture>
+          <source
+            srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+            media="(min-width: 1200px)"
+          />
 
-                    <source srcset="./images/logo-tab.png 1x,
-                                                   
-                                                    ./images/logo-tab-2x.png 2x
-                                                  " media="(min-width: 768px)" />
+          <source
+            srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
+            media="(min-width: 768px)"
+          />
 
-                    <source srcset="./images/logo-mob.png 1x, 
-                                ./images/logo-mob-2x.png 2x" media="(max-width: 767px)" />
+          <source
+            srcset="./images/logo-mob.png 1x, ./images/logo-mob-2x.png 2x"
+            media="(max-width: 767px)"
+          />
 
-                    <img src="./images/logo-mob.png" alt="site logo icecream" width="41" height="37" />
-                </picture>
-            </a>
+          <img
+            class="header__logo"
+            src="./images/logo.png"
+            alt="site logo icecream"
+            width="60"
+            height="65"
+          />
+        </picture>
+      </a>
 
-            <button class="header__button-menu" type="button">
-                <svg width="32" height="32" aria-label="переключає мобільне меню">
-                    <use class="icon-cross" href="./images/icon.svg#close-modal"></use>
-                </svg>
-            </button>
-        </div>
-
-
-        <nav class="header__nav">
-            <ul class="site-nav">
-                <li class="site-nav__item"><a href="#Home">Home</a></li>
-                <li class="site-nav__item"><a href="#How it’s made?"></a>How it’s made?</li>
-                <li class="site-nav__item"><a href="#Our products"></a>Our products</li>
-                <li class="site-nav__item"><a href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <button type="button" class="header__button">Buy now&nbsp;&#10095;</button>
-
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg width="32" height="32" aria-label="переключає мобільне меню">
+          <use class="icon-cross" href="./images/icon.svg#close-modal"></use>
+        </svg>
+      </button>
     </div>
-</section>
+
+    <nav class="menu-container__nav">
+      <ul class="menu-container__list">
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#">Home</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#about">How it's made?</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#products">Our products</a>
+        </li>
+        <li class="menu-container__item">
+          <a class="js-close-menu" href="#contacts">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="menu-container__button">
+      <button
+        type="button"
+        class="header__button js-open-modal js-close-menu"
+        data-modal="2"
+      >
+        Buy now<svg width="12" height="12">
+          <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
