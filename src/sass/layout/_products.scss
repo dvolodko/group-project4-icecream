@@ -272,27 +272,16 @@
       bottom: 40px;
     }
   }
-
+  &__button--arrow &__button--icon {
+    transition: $timingAnima;
+    transform: scale(1);
+  }
   &__button--arrow:hover &__button--icon {
-    animation: arrow $timingAnima;
+    transition: $timingAnima;
+    transform: scaleX(1.25);
   }
   &__button--arrow:focus &__button--icon {
-    animation: arrow-f $timingAnima;
-  }
-  @keyframes arrow {
-    0% {
-      transform: scaleX(1);
-    }
-    100% {
-      transform: scaleX(1.25);
-    }
-  }
-  @keyframes arrow-f {
-    0% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(1.25, 1.5);
-    }
+    transition: $timingAnima;
+    transform: scale(1.25, 1.5);
   }
 }
