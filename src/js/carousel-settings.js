@@ -12,6 +12,7 @@ $('.customer__item').slick({
         centerMode: false,
         centerPadding: '40px',
         slidesToShow: 1,
+        slidesPerRow: 1,
       },
     },
     {
