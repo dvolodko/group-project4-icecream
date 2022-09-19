@@ -1,4 +1,4 @@
-.about {
+.container--about {
   padding-top: 60px;
   padding-bottom: 42px;
   @include mq(tablet) {
@@ -9,10 +9,9 @@
     padding-bottom: 152px;
   }
 }
-.about__wrap {
-  display: flex;
-}
+
 .about__label {
+  margin-top: 60px;
   @include font(700, 18px, 1.22, null);
   text-align: center;
   text-transform: uppercase;
@@ -41,6 +40,7 @@
     margin-bottom: 82px;
   }
 }
+
 .about__wrap {
   @include flex(flex, null, center);
   flex-direction: column;
