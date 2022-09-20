@@ -1,9 +1,9 @@
-.footer {
+.footer__container {
   background-color: $backgroundColor;
   padding-top: 1101px;
   padding-bottom: 62px;
   @include mq(tablet) {
-    padding-top: 366px;
+    padding-top: 381px;
     padding-bottom: 13px;
   }
   @include mq(desktop) {
@@ -85,29 +85,6 @@
   gap: 27px;
   justify-content: right;
   margin-bottom: 38px;
-}
-
-.facebook,
-.github,
-.telegram {
-  width: 32px;
-  height: 32px;
-  fill: #84a178;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  @media (max-width: 767px) {
-    width: 34px;
-    height: 34px;
-  }
-  .icons-soc:hover & {
-    width: 32px;
-    height: 32px;
-    fill: $textColor;
-  }
-  .icons-soc:focus & {
-    width: 35px;
-    height: 35px;
-    fill: $textColor;
-  }
 }
 
 .footer-contact {

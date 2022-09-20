@@ -1,9 +1,5 @@
 .contacts {
   position: relative;
-  padding-bottom: 40px;
-  @include mq(desktop) {
-    padding-bottom: 120px;
-  }
   &__btns {
     display: flex;
     flex-wrap: wrap;
@@ -19,49 +15,35 @@
 
 .contacts__container {
   position: absolute;
-  top: -345px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -390px;
+  width: 100%;
   @include mq(tablet) {
-    top: -304px;
+    top: -310px;
   }
   @include mq(desktop) {
     top: -96px;
   }
 }
-.container--contacts {
-  padding-left: 20px;
-  padding-right: 20px;
-  @include mq(tablet) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
 
-  @include mq(desktop) {
-    width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
 .contacts-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
   align-items: center;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   @include mq(tablet) {
-    padding-bottom: 60px;
-
-    top: -305px;
+    margin-bottom: 60px;
   }
   @include mq(desktop) {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
 }
 
 .contacts-item {
+  @media (max-width: 479px) {
+    min-width: 280px;
+  }
   flex-basis: calc(100%);
   padding: 40px 32px;
   background: #fcfcfc;
@@ -69,10 +51,11 @@
   border-radius: 24px;
   @include mq(tablet) {
     padding: 40px 24px;
-    flex-basis: calc((100% - 32px) / 3);
+    flex-basis: calc((100% - 64px) / 3);
   }
   @include mq(desktop) {
     padding: 40px;
+    flex-basis: calc((100% - 32px) / 3);
   }
   &__bg {
     display: inline-flex;
@@ -93,7 +76,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: calc(15.96 / 12);
+    line-height: calc(16 / 12);
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $primaryColor;
@@ -103,9 +86,15 @@
     }
   }
   &__box--paddbot {
-    padding-bottom: 24px;
+    @media (max-width: 767px) {
+      max-width: 220px;
+    }
+    margin-bottom: 24px;
     @include mq(tablet) {
-      padding-bottom: 32px;
+      margin-bottom: 26px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 32px;
     }
   }
   &__label {
@@ -179,10 +168,9 @@
     color: #907e82;
   }
   &__box--paddtop {
-    padding-top: 24px;
-    padding-bottom: 0px;
+    margin-top: 24px;
     @include mq(tablet) {
-      padding-top: 32px;
+      margin-top: 32px;
     }
   }
   &__tel,

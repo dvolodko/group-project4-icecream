@@ -120,7 +120,7 @@
     </div>
 
     <div class="hero__wrap hero__wrap--bottom">
-      <picture class="hero-img hero-img__plate">
+      <picture class="hero-img hero-img__plate" data-aos="zoom-in-right">
         <source
           srcset="./images/hero-round.png 1x, ./images/hero-round-2x.png 2x"
           media="(min-width: 1200px)"
@@ -162,6 +162,8 @@
       </ul>
     </div>
 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <picture class="canvas-bubbles">
       <source
         class="canvas-bubbles__desktop"
@@ -195,18 +197,20 @@
       />
     </picture>
 
-    <picture class="canvas-icecream">
+    <picture class="canvas-icecream" data-aos="fade-up"
+     data-aos-duration="3000">
       <source
         class="canvas-icecream__desktop"
-        srcset="./images/group-without.png 1x, ./images/group-without-2x.png 2x"
+        srcset="./images/group-icecream.png 1x, 
+        ./images/group-icecream-2x.png 2x"
         media="(min-width: 1200px)"
       />
 
       <source
         class="canvas-icecream__tablet"
         srcset="
-          ./images/group-without-tab.png    1x,
-          ./images/group-without-tab-2x.png 2x
+          ./images/group-icecream-tab.png 1x,
+          ./images/group-icecream-tab-2x.png 2x
         "
         media="(min-width: 768px)"
       />
@@ -214,45 +218,15 @@
       <source
         class="canvas-icecream__mobile"
         srcset="
-          ./images/group-without-mob.png    1x,
-          ./images/group-without-mob-2x.png 2x
+          ./images/group-icecream-mob.png 1x,
+          ./images/group-icecream-mob-2x.png 2x
         "
         media="(max-width: 767px)"
       />
 
-      <img src="./images/group-without-mob.png" alt="yellow bubbles" />
+      <img src="./images/group-icecream-tab.png" alt="yellow bubbles" />
     </picture>
 
-    <picture class="canvas-shine">
-      <source
-        class="canvas-shine__desktop"
-        srcset="
-          ./images/rectangle-ice-cream.png    1x,
-          ./images/rectangle-ice-cream-2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
-
-      <source
-        class="canvas-shine__tablet"
-        srcset="
-          ./images/rectangle-icecream-tab.png    1x,
-          ./images/rectangle-icecream-tab-2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-
-      <source
-        class="canvas-shine__mobile"
-        srcset="
-          ./images/rectangle-icecream-mob.png    1x,
-          ./images/rectangle-icecream-mob-2x.png 2x
-        "
-        media="(max-width: 767px)"
-      />
-
-      <img src="./images/rectangle-ice-cream.png" alt="yellow bubbles" />
-    </picture>
   </div>
 </section>
 
