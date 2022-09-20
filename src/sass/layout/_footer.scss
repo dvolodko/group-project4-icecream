@@ -1,9 +1,12 @@
-.footer {
+.footer__container {
+  padding-top: 1101px;
   padding-bottom: 120px;
   @include mq(tablet) {
+    padding-top: 381px;
     padding-bottom: 53px;
   }
   @include mq(desktop) {
+    padding-top: 668px;
     padding-bottom: 45px;
   }
 }
