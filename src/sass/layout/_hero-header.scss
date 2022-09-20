@@ -2,7 +2,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .header__container {
@@ -117,10 +116,9 @@
 .hero__wrap--top {
   display: flex;
   justify-content: space-between;
-    @include mq(tablet){
-       margin-bottom: 28px;
-    }
- 
+  @include mq(tablet) {
+    margin-bottom: 28px;
+  }
 
   @include mq(desktop) {
     margin-bottom: 42px;
@@ -130,6 +128,7 @@
 .hero__title {
   @include font(400, 26px, 1.27, 0.04em);
   font-family: 'Seymour One';
+  text-transform: uppercase;
 
   max-width: 247px;
   margin-top: 61px;
@@ -167,17 +166,20 @@
   z-index: 15;
 
   @include mq(tablet) {
-      margin-top: 21px;
-    }
-  
-    @include mq(desktop) {
-      margin-top: 28px;
-    }
+    margin-top: 21px;
+  }
 
+  @include mq(desktop) {
+    margin-top: 28px;
+  }
 }
 
 .hero__button--flex {
   z-index: 15;
+}
+
+.hero__wrap--left {
+  z-index: 10;
 }
 
 .hero__wrap--right {
@@ -250,12 +252,8 @@
   }
 }
 
-.hero-img__plate {
-  z-index: 2;
-}
-
 .icon-bottom {
-  z-index: 3;
+  z-index: 10;
   fill: $textColor;
   transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
@@ -270,7 +268,7 @@
 
 .icon-bottom_focus {
   left: 0;
-  z-index: 3;
+  z-index: 5;
   fill: $textColor;
 }
 
@@ -293,6 +291,7 @@
   position: absolute;
   bottom: -53px;
   left: 11%;
+  pointer-events: none;
 
   @media screen and (min-width: 400px) {
     bottom: -53px;
@@ -337,6 +336,35 @@
 
 /*-----------mobile_menu---*/
 
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 250ms ease-in-out;
+
+  z-index: 999;
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
+.menu-backdrop.is-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu-mask {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
 .menu-container .menu-toggle {
   display: inline-flex;
   margin: 0;
@@ -346,34 +374,21 @@
 }
 
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+
   background: #84a178;
   padding: 12px 26px;
 
-  z-index: 999;
-
-  transform: translateX(150%);
+  transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
   @include mq(tablet) {
     padding: 20px 32px;
   }
-
-  @include mq(desktop) {
-    display: none;
-  }
-
-  @include modalPreventOverflow(
-    $actualModalHeightMobile: 723px,
-    $actualModalHeightTablet: 665px
-  );
 }
 
-.menu-container.is-open {
+.menu-backdrop.is-open .menu-container {
   transform: translateX(0);
 }
 
@@ -447,8 +462,8 @@
 
 .back-to-home {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 2%;
+  bottom: 2%;
   width: 40px;
   height: 40px;
   border-color: transparent;
@@ -460,8 +475,8 @@
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
-    right: 50px;
-    bottom: 50px;
+    right: 5%;
+    bottom: 5%;
   }
 }
 
