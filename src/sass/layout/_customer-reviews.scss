@@ -43,6 +43,7 @@
       max-width: 705px;
       height: 138px;
       padding: 20px 80px;
+      border-radius: 24px;
     }
     @include mq(desktop) {
       max-width: 968px;
