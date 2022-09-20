@@ -3,7 +3,7 @@
 }
 .gallery__container {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   top: -24px;
   @include mq(tablet) {
     top: -164px;
