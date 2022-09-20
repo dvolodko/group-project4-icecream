@@ -1,9 +1,13 @@
 .footer {
+  background-color: $backgroundColor;
+  padding-top: 1101px;
   padding-bottom: 62px;
   @include mq(tablet) {
+    padding-top: 366px;
     padding-bottom: 13px;
   }
   @include mq(desktop) {
+    padding-top: 668px;
     padding-bottom: 11px;
   }
 }
