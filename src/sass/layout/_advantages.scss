@@ -23,6 +23,9 @@
     justify-content: space-around;
     gap: 0;
   }
+  @include mq(desktop) {
+    justify-content: space-between;
+  }
 }
 
 .advantages__item {
