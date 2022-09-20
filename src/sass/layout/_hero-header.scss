@@ -2,7 +2,6 @@
   width: 100%;
   top: 0;
   left: 0;
-
 }
 
 .header__container {
@@ -11,7 +10,6 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 12px;
- 
 
   @include mq(tablet) {
     padding-top: 20px;
@@ -51,8 +49,6 @@
 .header__item-desktop:focus {
   color: $accentColor;
 }
-
-
 
 .header__list {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -122,10 +118,9 @@
 .hero__wrap--top {
   display: flex;
   justify-content: space-between;
-    @include mq(tablet){
-       margin-bottom: 28px;
-    }
- 
+  @include mq(tablet) {
+    margin-bottom: 28px;
+  }
 
   @include mq(desktop) {
     margin-bottom: 42px;
@@ -173,20 +168,19 @@
   z-index: 15;
 
   @include mq(tablet) {
-      margin-top: 21px;
-    }
-  
-    @include mq(desktop) {
-      margin-top: 28px;
-    }
+    margin-top: 21px;
+  }
 
+  @include mq(desktop) {
+    margin-top: 28px;
+  }
 }
 
 .hero__button--flex {
   z-index: 15;
 }
 
-.hero__wrap--left{
+.hero__wrap--left {
   z-index: 10;
 }
 
