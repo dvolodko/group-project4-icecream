@@ -63,8 +63,9 @@
 .facebook,
 .github,
 .telegram {
-  scale: 1;
+  scale: (1);
   fill: $backgroundColor;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
   transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
    .icon--hoverfocus:hover & {
     transform: scale(0.9);
