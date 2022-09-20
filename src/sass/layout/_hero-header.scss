@@ -41,7 +41,6 @@
   cursor: pointer;
   align-items: center;
   color: $textColor;
-  z-index: 10;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
@@ -55,7 +54,6 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    z-index: 10;
   }
 
   @media screen and (min-width: 1200px) {
@@ -293,6 +291,7 @@
   position: absolute;
   bottom: -53px;
   left: 11%;
+  pointer-events: none;
 
   @media screen and (min-width: 400px) {
     bottom: -53px;
