@@ -1,5 +1,4 @@
 .header {
-  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -43,12 +42,12 @@
   cursor: pointer;
   align-items: center;
   color: $textColor;
-  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .header__item-desktop:hover,
 .header__item-desktop:focus {
-  color: $primaryColor;
+  color: $accentColor;
 }
 
 .header__list {
@@ -76,8 +75,8 @@
   padding: 0;
   border: none;
   background-color: transparent;
-cursor: pointer;
-transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  cursor: pointer;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
     display: none;
@@ -89,16 +88,15 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   scale: 1.5;
 }
 
-.header__button {
+.header__button--yellow {
   display: none;
 
   @include mq(tablet) {
-    display: block;
+    display: flex;
   }
 }
 
 /*--------hero*/
-
 
 .hero .container {
   background-color: $backgroundColor;
@@ -163,7 +161,11 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   margin-top: 32px;
   display: flex;
   gap: 8px;
+  z-index: 15;
+}
 
+.hero__button--flex {
+  z-index: 15;
 }
 
 .hero__wrap--right {
@@ -179,6 +181,10 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
+.hero__item--right {
+  text-align: right;
+}
+
 .hero__item--right span {
   @include font(900, 28px, 1.21, 0.04em);
   color: $primaryColor;
@@ -189,6 +195,7 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .hero__text--after-span {
+  text-align: right;
   @include font(400, 8px, 1.25, 0.04em);
 
   margin-top: 4px;
@@ -235,11 +242,10 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   z-index: 2;
 }
 
-
-.icon-bottom{
+.icon-bottom {
   z-index: 3;
   fill: $textColor;
-    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -250,9 +256,10 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
-.icon-bottom_focus{
+.icon-bottom_focus {
   left: 0;
   z-index: 3;
+  fill: $textColor;
 }
 
 .icon-bottom:hover .icon-bottom_focus {
@@ -268,51 +275,38 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   bottom: 0;
   left: 0;
   width: 100%;
- 
-  
 }
 
 .canvas-icecream {
   position: absolute;
-  bottom: 0;
-  left: 29%;
-  z-index: 3;
+  bottom: -53px;
+  left: 11%;
+
+  @media screen and (min-width: 400px) {
+    bottom: -53px;
+    left: 18%;
+  }
 
   @include mq(tablet) {
-    left: 54%;
+    bottom: -56px;
+    left: 48%;
+  }
+
+  @include mq(desktop) {
+    bottom: -100px;
+    left: 46%;
   }
 }
 
-.canvas-shine{
-  position: absolute;
-      bottom: -40px;
-        left: 20%;
-    width: 100%; 
-    z-index: 2;
-
-    @include mq(tablet) {
-          bottom: -47px;
-            left: 50%;
-       
-      }
-
-            @include mq(desktop){
-                bottom: -60px;
-                  left: 49%;
-            }
-}
-
 .canvas-bubbles__mobile,
-.canvas-icecream__mobile,
-.canvas-shine__mobile {
+.canvas-icecream__mobile {
   @include mq(tablet) {
     display: none;
   }
 }
 
 .canvas-bubbles__tablet,
-.canvas-icecream__tablet,
-.canvas-shine__tablet {
+.canvas-icecream__tablet {
   display: none;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -321,8 +315,7 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .canvas-bubbles__desktop,
-.canvas-icecream__desktop,
-.canvas-shine__desktop {
+.canvas-icecream__desktop {
   display: none;
 
   @include mq(desktop) {
@@ -351,25 +344,30 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(150%);
   transition: transform 250ms ease-in-out;
 
-    @include mq(tablet) {
-   padding: 20px 32px ;
-      }
+  @include mq(tablet) {
+    padding: 20px 32px;
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 723px,
+    $actualModalHeightTablet: 665px
+  );
 }
 
 .menu-container.is-open {
   transform: translateX(0);
 }
 
-
-
-
 .menu-container__top {
   display: flex;
   justify-content: space-between;
- 
 
   @include mq(tablet) {
     margin-bottom: 76px;
@@ -378,7 +376,6 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
 .menu-container__nav {
   text-align: center;
-
 }
 
 .menu-container__item:not(:last-child) {
@@ -399,10 +396,11 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
     @include font(700, 48px, 1.23, 0.04em);
   }
 
-  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.menu-container__item:hover {
+.menu-container__item:hover .menu-container__link,
+.menu-container__item:focus .menu-container__link {
   color: $primaryColor;
 }
 
@@ -418,18 +416,70 @@ transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
-.icon-cross{
+.icon-cross {
   width: 20px;
   height: 20px;
   fill: $textColor;
 }
 
-
-.menu-container__wrap{
-  @include mq(mobile-only){
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.menu-container__wrap {
+  @include mq(mobile-only) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+}
+
+/*---back to home*/
+
+.back-to-home {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #60bd73;
+  display: none;
+  z-index: 100;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction
+    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  @include mq(desktop) {
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
+.back-to-home:hover {
+  scale: 1.2;
+  outline: none;
+  background-color: #feb860;
+}
+
+.back-to-home::before,
+.back-to-home::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-to-home::before {
+  width: 5px;
+  height: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: $textColor;
+}
+
+.back-to-home::after {
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid $textColor;
+  border-left: 5px solid $textColor;
 }

@@ -1,10 +1,15 @@
 .gallery {
-  padding-bottom: 75px;
+  position: relative;
+}
+.gallery__container {
+  position: absolute;
+  width: 100%;
+  top: -24px;
   @include mq(tablet) {
-    padding-bottom: 55px;
+    top: -164px;
   }
   @include mq(desktop) {
-    padding-bottom: 120px;
+    top: -106px;
   }
 }
 .swiper {
@@ -19,15 +24,13 @@
     height: 424px;
   }
 }
-.slider__img {
+.slider__img,
+.wrapper {
   border-radius: 7px;
   @include mq(tablet) {
     border-radius: 18px;
     @include mq(desktop) {
       border-radius: 24px;
     }
-  }
-  &__picture {
-    overflow: hidden;
   }
 }

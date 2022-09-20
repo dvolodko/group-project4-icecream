@@ -2,12 +2,12 @@
   padding-left: 28px;
   padding-right: 28px;
 
-  @include mq(tablet) {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 487px,
+    $actualModalHeightTablet: 430px
+  );
 
-  @include mq(desktop) {
+  @include mq(tablet) {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -21,9 +21,17 @@
 }
 
 .modal-readMore__video {
+  display: block;
   width: 100%;
+  height: 199px;
   margin-bottom: 20px;
-  @include mq(desktop) {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border-color: transparent;
+
+  @include mq(tablet) {
+    height: 205px;
     margin-bottom: 32px;
   }
 }

@@ -1,9 +1,13 @@
-.footer {
+.footer__container {
+  background-color: $backgroundColor;
+  padding-top: 1101px;
   padding-bottom: 62px;
   @include mq(tablet) {
+    padding-top: 381px;
     padding-bottom: 13px;
   }
   @include mq(desktop) {
+    padding-top: 668px;
     padding-bottom: 11px;
   }
 }
@@ -39,7 +43,7 @@
     line-height: calc(22 / 18);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #fcfcfc;
+    color: $textColor;
     text-align: left;
     margin-bottom: 16px;
     @include mq(tablet) {
@@ -61,7 +65,7 @@
     line-height: calc(41 / 34);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #fcfcfc;
+    color: $textColor;
     text-align: left;
     @include mq(tablet) {
       font-size: 48px;
@@ -83,29 +87,6 @@
   margin-bottom: 38px;
 }
 
-.facebook,
-.github,
-.telegram {
-  width: 32px;
-  height: 32px;
-  fill: #84a178;
-  transition: width 250ms ease, height 250ms ease;
-  @media (max-width: 767px) {
-    width: 34px;
-    height: 34px;
-  }
-  .icons-soc:hover & {
-    width: 32px;
-    height: 32px;
-    fill: #fcfcfc;
-  }
-  .icons-soc:focus & {
-    width: 35px;
-    height: 35px;
-    fill: #fcfcfc;
-  }
-}
-
 .footer-contact {
   display: flex;
   flex-wrap: wrap;
@@ -119,10 +100,10 @@
     font-size: 12px;
     line-height: calc(22 / 12);
     text-align: right;
-    color: #131313;
+    color: $primaryColor;
   }
   &__tel {
-    color: #fcfcfc;
+    color: $textColor;
   }
 }
 

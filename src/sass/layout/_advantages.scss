@@ -1,13 +1,14 @@
-.advantages {
+.advantages__container {
+  background-color: $backgroundColor;
   padding-top: 0;
-  padding-bottom: 36px;
+  padding-bottom: 60px;
 
   @include mq(tablet) {
-    padding-bottom: 40px;
+    padding-bottom: 204px;
   }
 
   @include mq(desktop) {
-    padding-bottom: 86px;
+    padding-bottom: 180px;
   }
 }
 

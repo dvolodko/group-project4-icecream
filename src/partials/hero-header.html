@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container header__container">
+  <div class="container header__container" id="home">
     <a href="#" class="logo">
       <picture>
         <source
@@ -28,10 +28,18 @@
     </a>
 
     <ul class="header__list-desktop">
-      <li class="header__item-desktop"><a href="#">Home</a></li>
-      <li class="header__item-desktop"><a href="#about">How it's made?</a></li>
-      <li class="header__item-desktop"><a href="#products">Our products</a></li>
-      <li class="header__item-desktop"><a href="#contacts">Contact</a></li>
+      <li class="header__item-desktop">
+        <a href="#">Home</a>
+      </li>
+      <li class="header__item-desktop">
+        <a href="#about">How it's made?</a>
+      </li>
+      <li class="header__item-desktop">
+        <a href="#products">Our products</a>
+      </li>
+      <li class="header__item-desktop">
+        <a href="#contacts">Contact</a>
+      </li>
     </ul>
 
     <ul class="header__list">
@@ -50,7 +58,7 @@
       <li>
         <button
           type="button"
-          class="header__button js-open-modal"
+          class="header__button header__button--yellow js-open-modal"
           data-modal="2"
         >
           Buy now<svg width="12" height="12">
@@ -60,9 +68,15 @@
       </li>
     </ul>
   </div>
+  <!--back to home-->
+  
+  <a href="#home" class="back-to-home"></a>
 </header>
 
+
+
 <!--hero-->
+
 <section class="hero">
   <div class="container">
     <div class="hero__wrap hero__wrap--top">
@@ -73,7 +87,7 @@
         <ul class="hero__list hero__list--left">
           <li>
             <button
-              class="hero__button"
+              class="hero__button hero__button--flex"
               onclick="window.location.href ='#products';"
             >
               Products
@@ -82,7 +96,7 @@
 
           <li>
             <button
-              class="hero__button hero__button--without-body"
+              class="hero__button hero__button--without-body hero__button--flex"
               onclick="window.location.href ='#about';"
             >
               How it's made?
@@ -106,7 +120,7 @@
     </div>
 
     <div class="hero__wrap hero__wrap--bottom">
-      <picture class="hero-img hero-img__plate">
+      <picture class="hero-img hero-img__plate" data-aos="zoom-in-right">
         <source
           srcset="./images/hero-round.png 1x, ./images/hero-round-2x.png 2x"
           media="(min-width: 1200px)"
@@ -139,7 +153,7 @@
           </p>
         </li>
         <li>
-          <button type="button" class="icon-bottom">
+          <button type="button" class="icon-bottom js-open-modal" data-modal="3">
             <svg class="icon-bottom_focus" width="40" height="15">
               <use href="./images/icon.svg#arrow"></use>
             </svg>
@@ -147,6 +161,8 @@
         </li>
       </ul>
     </div>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <picture class="canvas-bubbles">
       <source
@@ -181,18 +197,20 @@
       />
     </picture>
 
-    <picture class="canvas-icecream">
+    <picture class="canvas-icecream" data-aos="fade-up"
+     data-aos-duration="3000">
       <source
         class="canvas-icecream__desktop"
-        srcset="./images/hero-icecream.png 1x, ./images/hero-icecream-2x.png 2x"
+        srcset="./images/group-icecream.png 1x, 
+        ./images/group-icecream-2x.png 2x"
         media="(min-width: 1200px)"
       />
 
       <source
         class="canvas-icecream__tablet"
         srcset="
-          ./images/hero-icecream-tab.png    1x,
-          ./images/hero-icecream-tab-2x.png 2x
+          ./images/group-icecream-tab.png 1x,
+          ./images/group-icecream-tab-2x.png 2x
         "
         media="(min-width: 768px)"
       />
@@ -200,55 +218,30 @@
       <source
         class="canvas-icecream__mobile"
         srcset="
-          ./images/hero-icecream-mob.png    1x,
-          ./images/hero-icecream-mob-2x.png 2x
+          ./images/group-icecream-mob.png 1x,
+          ./images/group-icecream-mob-2x.png 2x
         "
         media="(max-width: 767px)"
       />
 
-      <img src="./images/hero-icecream-tab.png " alt="yellow bubbles" />
+      <img src="./images/group-icecream-tab.png" alt="yellow bubbles" />
     </picture>
 
-    <picture class="canvas-shine">
-      <source
-        class="canvas-shine__desktop"
-        srcset="
-          ./images/rectangle-ice-cream.png    1x,
-          ./images/rectangle-ice-cream-2x.png 2x
-        "
-        media="(min-width: 1200px)"
-      />
-
-      <source
-        class="canvas-shine__tablet"
-        srcset="
-          ./images/rectangle-icecream-tab.png    1x,
-          ./images/rectangle-icecream-tab-2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-
-      <source
-        class="canvas-shine__mobile"
-        srcset="
-          ./images/rectangle-icecream-mob.png    1x,
-          ./images/rectangle-icecream-mob-2x.png 2x
-        "
-        media="(max-width: 767px)"
-      />
-
-      <img src="./images/rectangle-ice-cream.png" alt="yellow bubbles" />
-    </picture>
   </div>
 </section>
 
 <!--mobile_menu-->
 
-<div class="menu-container js-menu-container" id="mobile-menu">
+<div class="menu-container js-menu-container" id="mobile-menu home">
   <div class="menu-container__wrap">
     <div class="menu-container__top">
       <a href="#" class="logo">
         <picture>
+          <source
+            srcset="./images/logo.png 1x, ./images/logo-2x.png 2x"
+            media="(min-width: 1200px)"
+          />
+
           <source
             srcset="./images/logo-tab.png, ./images/logo-tab-2x.png 2x"
             media="(min-width: 768px)"
@@ -261,7 +254,7 @@
 
           <img
             class="header__logo"
-            src="./images/Logo.png"
+            src="./images/logo.png"
             alt="site logo icecream"
             width="60"
             height="65"
@@ -278,19 +271,33 @@
 
     <nav class="menu-container__nav">
       <ul class="menu-container__list">
-        <li class="menu-container__item"><a href="#">Home</a></li>
         <li class="menu-container__item">
-          <a href="#about">How it's made?</a>
+          <a class="menu-container__link js-close-menu" href="#home">Home</a>
         </li>
         <li class="menu-container__item">
-          <a href="#products">Our products</a>
+          <a class="menu-container__link js-close-menu" href="#about"
+            >How it's made?</a
+          >
         </li>
-        <li class="menu-container__item"><a href="#contacts">Contact</a></li>
+        <li class="menu-container__item">
+          <a class="menu-container__link js-close-menu" href="#products"
+            >Our products</a
+          >
+        </li>
+        <li class="menu-container__item">
+          <a class="menu-container__link js-close-menu" href="#contacts"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
 
     <div class="menu-container__button">
-      <button type="button" class="header__button js-open-modal" data-modal="2">
+      <button
+        type="button"
+        class="header__button js-open-modal js-close-menu"
+        data-modal="2"
+      >
         Buy now<svg width="12" height="12">
           <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
         </svg>

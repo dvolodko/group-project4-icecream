@@ -1,61 +1,160 @@
-.customer__section{
+.customer__section {
     padding-top: 181px;
     padding-bottom: 393px;
     @include mq(tablet) {
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-top: 218px;
-        padding-bottom: 384px;  
+      padding-top: 218px;
+      padding-bottom: 384px;
     }
     @include mq(desktop) {
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-top: 451px;
-        padding-bottom: 196px;  
-      }
-}
-.slick-dots li.slick-active button:before{
-    color: $backgroundColor;
-}
-.slick-dots li button:before{
-    font-size: 12px;
-    color: #D9D9D9;
-    opacity: 1;
-}
-.customer__img{
+      padding-top: 451px;
+      padding-bottom: 196px;
+    }
+  }
+  .customer__item,
+  .customer__item2 {
+    @include mq(tablet) {
+      max-width: 705px;
+    }
+    @include mq(desktop) {
+      max-width: 968px;
+      margin: auto;
+    }
+  }
+  .customer__img {
     margin: 0px auto;
     margin-bottom: 32px;
     border-radius: 50%;
-
-}
-.customer__text{
-    max-height: 256px;
-    padding: 34px 39px;
-    margin-bottom: 30px;
+  }
+  .customer__text {
+    height: 256px;
+    padding: 38px 39px;
+    max-width: 280px;
+    margin: 0 auto;
+    // margin-bottom: 30px;
     border-radius: 10px;
     background-color: $backgroundColor;
     font-family: 'Montserrat';
     @include font(400, 12px, 2.55, null);
     text-align: center;
     color: $extrabackgroundColor;
-
+  
     @include mq(tablet) {
-        font-size: 14px;
-        max-height: 138px;
-        padding: 28px 80px;
-     }
-     @include mq(desktop) {
-        font-size: 14px;
-        max-height: 138px;
-        padding: 40px 109px;
-     }
-}
-.customer__name{
+      font-size: 14px;
+      max-width: 705px;
+      height: 138px;
+      padding: 20px 80px;
+    }
+    @include mq(desktop) {
+      max-width: 968px;
+      font-size: 16px;
+      padding: 30px 109px;
+    }
+  }
+  
+  .customer__item3 {
+    display: block;
+    margin-top: 30px;
+    @include mq(tablet) {
+      margin-top: 32px;
+    }
+  }
+  .slick-dots {
+    margin-top: 30px;
+    @include mq(tablet) {
+      margin-top: 32px;
+    }
+  }
+  .customer__name {
     font-family: 'Montserrat';
     text-align: center;
     @include font(500, 20px, 1.8, null);
     color: #131313;
     @include mq(tablet) {
-        font-size: 16px;
-       }
-}
+      font-size: 16px;
+    }
+  }
+  .slick-slide {
+    margin: 0 10px;
+  }
+  .draggable {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .slick-dotees {
+    margin-top: 30px;
+    @include mq(tablet) {
+      margin-top: 32px;
+    }
+  }
+  /* Dots */
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+  //   background: transparent;
+  color: $backgroundColor; 
+  }
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    outline: none;
+    opacity: 0.95;
+   color: $backgroundColor;
+   }
+  .slick-dots li button:hover:before,
+  .slick-dots li button:focus:before {
+    opacity: 0.95;
+    
+    color: $backgroundColor;
+    
+  }
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #D9D9D9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: $backgroundColor;
+  }
+  
