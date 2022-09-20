@@ -1,4 +1,4 @@
-$('.customer__item').slick({
+$('.customer__item ,.modal__slider').slick({
   centerMode: false,
   centerPadding: '60px',
   slidesToShow: 1,
@@ -44,3 +44,4 @@ $('.customer__item').slick({
     },
   ],
 });
+

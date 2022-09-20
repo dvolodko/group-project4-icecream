@@ -8,6 +8,11 @@
     $actualModalHeightTablet: 990px
   );
 }
+
+.modal__container-ingr{
+  width: 100%;
+  height: 100%
+}
 .modal__title--ingr{
   @include font(400, 20, 1.4, null);
   text-align: center;

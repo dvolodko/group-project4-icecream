@@ -10,102 +10,299 @@
       <use href="./images/icon.svg#close-modal"></use>
     </svg>
   </button>
-
-  <h2 class="modal__title modal__title--ingr">Chololate milkshake</h2>
-  <div class="ingredients">
-    <picture>
-      <source
-        class="ingredients__img"
-        srcset="
-        ./images/modal3-ingr1.jpg 1x,
-        ./images/modal3-ingr1-2x.jpg 2x"
-        media="(min-width:1200px)"
+<div class="modal__slider">
+  <div class="modal__container-ingr"> <h2 class="modal__title modal__title--ingr">Chocolate milkshake</h2>
+    <div class="ingredients">
+      <picture>
+        <source
+          class="ingredients__img"
+          srcset="
+          ./images/modal3-ingr1.jpg 1x,
+          ./images/modal3-ingr1-2x.jpg 2x"
+          media="(min-width:1200px)"
+        />
+  
+        
+        <img
+          class="ingredients__img"
+          src="./images/modal3-ingr1.jpg"
+          alt="milkshake"
+        />
+      </picture>
+    </div>
+  
+    <ul class="callories">
+      <li class="callories__item">
+        <div class="round"><p class="round__text">510</p></div>
+        <p>kcal</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">7g</p></div>
+        <p>Protein</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">7,7g</p></div>
+        <p>Fats</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">50,3g</p></div>
+        <p>Carbs</p>
+      </li>
+    </ul>
+    <h3 class="table__name">Ingredients</h3>
+    <ul class="table">
+      <li class="table__item">
+        <p class="table__text">Milk</p>
+        <p class="table__text">100ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Belgian chocolate</p>
+        <p class="table__text">30g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Cream</p>
+        <p class="table__text">50ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Icecream</p>
+        <p class="table__text">100g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Syrup</p>
+        <p class="table__text">20ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Vanilla sugar</p>
+        <p class="table__text">10g</p>
+      </li>
+    </ul>
+  
+    <!-- Form -->
+    <form class="form">
+      <input
+        class="form__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        required
+        autofocus
       />
-
-      
-      <img
-        class="ingredients__img"
-        src="./images/modal3-ingr1.jpg"
-        alt="milkshake"
+      <input
+        class="form__input"
+        type="tel"
+        name="phone"
+        placeholder="Phone"
+        required
+        pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
       />
-    </picture>
-  </div>
+      <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
+  
+      <textarea
+        class="form__input form__input--multiline"
+        name="comment"
+        id="comment"
+        placeholder="Comment"
+      ></textarea>
+      <button class="form__button button" type="submit">Submit</button>
+    </form>
+  
+    <!-- TODO: form -->
+    <form></form></div>
+  <div class="modal__container-ingr"> <h2 class="modal__title modal__title--ingr">Strawberry milkshake</h2>
+    <div class="ingredients">
+      <picture>
+        <source
+          class="ingredients__img"
+          srcset="
+          ./images/modal3-ingr2.jpg 1x,
+          ./images/modal3-ingr2-2x.jpg 2x"
+          media="(min-width:1200px)"
+        />
+  
+        
+        <img
+          class="ingredients__img"
+          src="./images/modal3-ingr2.jpg"
+          alt="milkshake"
+        />
+      </picture>
+    </div>
+  
+    <ul class="callories">
+      <li class="callories__item">
+        <div class="round"><p class="round__text">507</p></div>
+        <p>kcal</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">9g</p></div>
+        <p>Protein</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">7,9g</p></div>
+        <p>Fats</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">55,3g</p></div>
+        <p>Carbs</p>
+      </li>
+    </ul>
+    <h3 class="table__name">Ingredients</h3>
+    <ul class="table">
+      <li class="table__item">
+        <p class="table__text">Milk</p>
+        <p class="table__text">120ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Strawberry</p>
+        <p class="table__text">30g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Cream</p>
+        <p class="table__text">50ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Icecream</p>
+        <p class="table__text">120g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Syrup</p>
+        <p class="table__text">20ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Vanilla sugar</p>
+        <p class="table__text">10g</p>
+      </li>
+    </ul>
+  
+    <!-- Form -->
+    <form class="form">
+      <input
+        class="form__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        required
+        autofocus
+      />
+      <input
+        class="form__input"
+        type="tel"
+        name="phone"
+        placeholder="Phone"
+        required
+        pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
+      />
+      <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
+  
+      <textarea
+        class="form__input form__input--multiline"
+        name="comment"
+        id="comment"
+        placeholder="Comment"
+      ></textarea>
+      <button class="form__button button" type="submit">Submit</button>
+    </form>
+  
+    <!-- TODO: form -->
+    <form></form></div>
+  <div class="modal__container-ingr"> <h2 class="modal__title modal__title--ingr">Mango milkshake</h2>
+    <div class="ingredients">
+      <picture>
+        <source
+          class="ingredients__img"
+          srcset="
+          ./images/modal3-ingr1.jpg 1x,
+          ./images/modal3-ingr1-2x.jpg 2x"
+          media="(min-width:1200px)"
+        />
+  
+        
+        <img
+          class="ingredients__img"
+          src="./images/modal3-ingr1.jpg"
+          alt="milkshake"
+        />
+      </picture>
+    </div>
+  
+    <ul class="callories">
+      <li class="callories__item">
+        <div class="round"><p class="round__text">490</p></div>
+        <p>kcal</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">8g</p></div>
+        <p>Protein</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">7,8g</p></div>
+        <p>Fats</p>
+      </li>
+      <li class="callories__item">
+        <div class="round"><p class="round__text">60,3g</p></div>
+        <p>Carbs</p>
+      </li>
+    </ul>
+    <h3 class="table__name">Ingredients</h3>
+    <ul class="table">
+      <li class="table__item">
+        <p class="table__text">Milk</p>
+        <p class="table__text">100ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Mango</p>
+        <p class="table__text">50g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Cream</p>
+        <p class="table__text">50ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Icecream</p>
+        <p class="table__text">100g</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Syrup</p>
+        <p class="table__text">20ml</p>
+      </li>
+      <li class="table__item">
+        <p class="table__text">Vanilla sugar</p>
+        <p class="table__text">10g</p>
+      </li>
+    </ul>
+  
+    <!-- Form -->
+    <form class="form">
+      <input
+        class="form__input"
+        type="text"
+        name="username"
+        placeholder="Name"
+        required
+        autofocus
+      />
+      <input
+        class="form__input"
+        type="tel"
+        name="phone"
+        placeholder="Phone"
+        required
+        pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
+      />
+      <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
+  
+      <textarea
+        class="form__input form__input--multiline"
+        name="comment"
+        id="comment"
+        placeholder="Comment"
+      ></textarea>
+      <button class="form__button button" type="submit">Submit</button>
+    </form>
+  
+    <!-- TODO: form -->
+    <form></form></div>
+</div>
 
-  <ul class="callories">
-    <li class="callories__item">
-      <div class="round"><p class="round__text">510</p></div>
-      <p>kcal</p>
-    </li>
-    <li class="callories__item">
-      <div class="round"><p class="round__text">7g</p></div>
-      <p>Protein</p>
-    </li>
-    <li class="callories__item">
-      <div class="round"><p class="round__text">7,7g</p></div>
-      <p>Fats</p>
-    </li>
-    <li class="callories__item">
-      <div class="round"><p class="round__text">50,3g</p></div>
-      <p>Carbs</p>
-    </li>
-  </ul>
-  <h3 class="table__name">Ingredients</h3>
-  <ul class="table">
-    <li class="table__item">
-      <p class="table__text">Milk</p>
-      <p class="table__text">100ml</p>
-    </li>
-    <li class="table__item">
-      <p class="table__text">Belgian chocolate</p>
-      <p class="table__text">30g</p>
-    </li>
-    <li class="table__item">
-      <p class="table__text">Cream</p>
-      <p class="table__text">50ml</p>
-    </li>
-    <li class="table__item">
-      <p class="table__text">Icecream</p>
-      <p class="table__text">100g</p>
-    </li>
-    <li class="table__item">
-      <p class="table__text">Syrup</p>
-      <p class="table__text">20ml</p>
-    </li>
-    <li class="table__item">
-      <p class="table__text">Vanilla sugar</p>
-      <p class="table__text">10g</p>
-    </li>
-  </ul>
-
-  <!-- Form -->
-  <form class="form">
-    <input
-      class="form__input"
-      type="text"
-      name="username"
-      placeholder="Name"
-      required
-      autofocus
-    />
-    <input
-      class="form__input"
-      type="tel"
-      name="phone"
-      placeholder="Phone"
-      required
-      pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
-    />
-    <!-- The pattern see in https://stackoverflow.com/questions/58248441/regex-template-for-ukrainian-phone-numbers -->
-
-    <textarea
-      class="form__input form__input--multiline"
-      name="comment"
-      id="comment"
-      placeholder="Comment"
-    ></textarea>
-    <button class="form__button button" type="submit">Submit</button>
-  </form>
-
-  <!-- TODO: form -->
-  <form></form>
+ 
 </div>
