@@ -44,4 +44,3 @@ $('.customer__item ,.modal__slider').slick({
     },
   ],
 });
-
