@@ -2,20 +2,26 @@
     padding-top: 181px;
     padding-bottom: 393px;
     @include mq(tablet) {
-        padding-right: 15px;
-        padding-left: 15px;
         padding-top: 218px;
         padding-bottom: 384px;  
     }
     @include mq(desktop) {
-        padding-right: 15px;
-        padding-left: 15px;
         padding-top: 451px;
         padding-bottom: 196px;  
       }
 }
+.customer__item{
+    @include mq(tablet) {
+        max-width: 705px;    
+    }
+    @include mq(desktop) {
+        max-width: 968px;
+        margin: auto;
+    }
+}
 .slick-dots li.slick-active button:before{
     color: $backgroundColor;
+    opacity: 1;
 }
 .slick-dots li button:before{
     font-size: 12px;
@@ -59,3 +65,4 @@
         font-size: 16px;
        }
 }
+.slick-slide { margin: 0 10px;}
