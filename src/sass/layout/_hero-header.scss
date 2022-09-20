@@ -1,5 +1,4 @@
 .header {
-  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -182,7 +181,7 @@
   }
 }
 
-.hero__item--right{
+.hero__item--right {
   text-align: right;
 }
 
@@ -278,76 +277,36 @@
   width: 100%;
 }
 
-.canvas__wrap{
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-
 .canvas-icecream {
   position: absolute;
-bottom: -239px;
-  left: 27%;
-  z-index: 3;
+  bottom: -53px;
+  left: 11%;
 
-  @include mq(tablet) {
-    left: 54%;
-    bottom: -14px;
+  @media screen and (min-width: 400px) {
+    bottom: -53px;
+    left: 18%;
   }
 
- @include mq(desktop){
-   bottom: -65px;
-            left: 54%;
- }         
-}
-
-.canvas-shine {
-    width: 80%;
-      z-index: 2;
-      position: absolute;
-      bottom: -230px;
-      left: 23%;
-
-@media screen and (min-width:350px){
-      bottom: -250px;
-        left: 20%;
-}
-
-@media screen and (min-width:370px) {
-    bottom: -270px;
-      left: 18%;
-}
-
-      @include mq(mobile){
-        width: 75%;
-      bottom: -275px;
-      left: 18%;
-      }
-    
-
   @include mq(tablet) {
-    width: 50%;
-      bottom: -30px;
-      left: 52%;
+    bottom: -56px;
+    left: 48%;
   }
 
   @include mq(desktop) {
-    left: 51%;
-    bottom: -80px;
+    bottom: -100px;
+    left: 46%;
   }
 }
 
 .canvas-bubbles__mobile,
-.canvas-icecream__mobile,
-.canvas-shine__mobile {
+.canvas-icecream__mobile {
   @include mq(tablet) {
     display: none;
   }
 }
 
 .canvas-bubbles__tablet,
-.canvas-icecream__tablet,
-.canvas-shine__tablet {
+.canvas-icecream__tablet {
   display: none;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -356,8 +315,7 @@ bottom: -239px;
 }
 
 .canvas-bubbles__desktop,
-.canvas-icecream__desktop,
-.canvas-shine__desktop {
+.canvas-icecream__desktop {
   display: none;
 
   @include mq(desktop) {
