@@ -16,6 +16,9 @@
 }
 
 .footer-main {
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
   @include mq(tablet) {
     display: flex;
     flex-grow: 1;
@@ -83,9 +86,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
-    @media (max-width: 767px) {
-      margin-bottom: 40px;
-    }
   }
   &__text {
     font-weight: 700;
@@ -140,6 +140,10 @@
   width: calc(100% + 40px);
   border-bottom: 1px solid #e1e1e1;
   @include mq(tablet) {
+    left: -32px;
+    width: calc(100% + 64px);
+  }
+  @include mq(desktop) {
     position: relative;
     left: 0px;
     width: 100%;
