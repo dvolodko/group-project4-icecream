@@ -39,19 +39,16 @@
 }
 
 .header__item-desktop {
- 
   @include font(700, 16px, 1.25, 0.04em);
   cursor: pointer;
   align-items: center;
   color: $textColor;
-  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-
-
-.header__item-desktop:hover, 
-.header__item-desktop:focus{
-  color:$accentColor;
+.header__item-desktop:hover,
+.header__item-desktop:focus {
+  color: $accentColor;
 }
 
 .header__list {
@@ -94,7 +91,6 @@
 
 .header__button--yellow {
   display: none;
-
 
   @include mq(tablet) {
     display: flex;
@@ -166,11 +162,11 @@
   margin-top: 32px;
   display: flex;
   gap: 8px;
-z-index: 15;
+  z-index: 15;
 }
 
-.hero__button--flex{
-    z-index: 15;
+.hero__button--flex {
+  z-index: 15;
 }
 
 .hero__wrap--right {
@@ -186,6 +182,10 @@ z-index: 15;
   }
 }
 
+.hero__item--right{
+  text-align: right;
+}
+
 .hero__item--right span {
   @include font(900, 28px, 1.21, 0.04em);
   color: $primaryColor;
@@ -196,6 +196,7 @@ z-index: 15;
 }
 
 .hero__text--after-span {
+  text-align: right;
   @include font(400, 8px, 1.25, 0.04em);
 
   margin-top: 4px;
@@ -257,7 +258,6 @@ z-index: 15;
 }
 
 .icon-bottom_focus {
-  
   left: 0;
   z-index: 3;
   fill: $textColor;
@@ -278,40 +278,62 @@ z-index: 15;
   width: 100%;
 }
 
+.canvas__wrap{
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
 .canvas-icecream {
   position: absolute;
-  bottom: 0;
-  left: 29%;
+bottom: -239px;
+  left: 27%;
   z-index: 3;
 
   @include mq(tablet) {
     left: 54%;
+    bottom: -14px;
   }
+
+ @include mq(desktop){
+   bottom: -65px;
+            left: 54%;
+ }         
 }
 
 .canvas-shine {
-    width: 75%;
-  z-index: 2;
+    width: 80%;
+      z-index: 2;
       position: absolute;
-      bottom: 0px;
-      left: 25%;
+      bottom: -230px;
+      left: 23%;
 
-      @media screen and(min-width:380px) {
-        width: 60%;
+@media screen and (min-width:350px){
+      bottom: -250px;
+        left: 20%;
+}
+
+@media screen and (min-width:370px) {
+    bottom: -270px;
+      left: 18%;
+}
+
+      @include mq(mobile){
+        width: 75%;
+      bottom: -275px;
+      left: 18%;
       }
-   
+    
 
-    @include mq(mobile){
-    width: 53%;
-  }
-     
   @include mq(tablet) {
-    left: 50%;
-    width: 45%;
+    width: 50%;
+      bottom: -30px;
+      left: 52%;
   }
 
   @include mq(desktop) {
-       left: 53%;
+    left: 51%;
+    bottom: -80px;
   }
 }
 
@@ -342,7 +364,7 @@ z-index: 15;
     display: block;
   }
 }
- 
+
 /*-----------mobile_menu---*/
 
 .menu-container .menu-toggle {
@@ -375,9 +397,10 @@ z-index: 15;
     display: none;
   }
 
-    @include modalPreventOverflow(
-      $actualModalHeightMobile: 723px, 
-    $actualModalHeightTablet: 665px);
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 723px,
+    $actualModalHeightTablet: 665px
+  );
 }
 
 .menu-container.is-open {
@@ -415,11 +438,11 @@ z-index: 15;
     @include font(700, 48px, 1.23, 0.04em);
   }
 
-  transform: color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .menu-container__item:hover .menu-container__link,
-.menu-container__item:focus .menu-container__link{
+.menu-container__item:focus .menu-container__link {
   color: $primaryColor;
 }
 
@@ -450,28 +473,32 @@ z-index: 15;
   }
 }
 
-
 /*---back to home*/
 
 .back-to-home {
   position: fixed;
   right: 10px;
-  bottom: 50px;
-  width: 50px;
-  height: 50px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
   border-color: transparent;
   border-radius: 50%;
-  background-color: #60BD73;
+  background-color: #60bd73;
   display: none;
   z-index: 100;
-  transform: scale $mainTransitionDuration $mainTransitionTimingFunction background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: scale $mainTransitionDuration $mainTransitionTimingFunction
+    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  @include mq(desktop) {
+    right: 50px;
+    bottom: 50px;
+  }
 }
 
-.back-to-home:hover,
-.back-to-home:focus {
-  scale: 1.5;
+.back-to-home:hover {
+  scale: 1.2;
   outline: none;
-  background-color: #FEB860;
+  background-color: #feb860;
 }
 
 .back-to-home::before,
