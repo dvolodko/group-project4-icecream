@@ -6,6 +6,9 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 12px;
+    @media screen and (min-width: 321px) and (max-width: 479px) {
+      font-size: 5.6vw;
+    }
     @include mq(mobile) {
       @include font(800, 20px, null, null);
     }
@@ -18,6 +21,9 @@
   }
   &__title-section {
     font-family: $secondaryFontFamily;
+    @media screen and (min-width: 321px) and (max-width: 479px) {
+      font-size: 9.5vw;
+    }
   }
 
   &__list {
@@ -47,6 +53,13 @@
     background-color: #efd478;
     width: 100%;
     height: 420px;
+    @media screen and (min-width: 321px) {
+      padding-top: 40vw;
+      margin-top: 50vw;
+    }
+    @media screen and (min-width: 321px) and (max-width: 479px) {
+      height: 131vw;
+    }
     border-radius: 24px;
     @include mq(mobile) {
       padding: 185px 60px 0px;
@@ -71,25 +84,20 @@
   }
 
   &__ellipse {
-    width: 200px;
-    height: 200px;
+    width: calc(100vw - 120px);
+    height: calc(100vw - 120px);
     border-radius: 100%;
     background: linear-gradient(
-        180deg,
+        0deg,
         rgba(156, 190, 143, 0.7),
         rgba(156, 190, 143, 0.7)
       ),
       #d9d9d9;
     box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
     position: absolute;
-    top: -11px;
+    top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media screen and (min-width: 400px) {
-      width: 255px;
-      height: 255px;
-      box-shadow: 0px 6px 22px rgba(10, 136, 23, 0.25);
-    }
     @include mq(mobile) {
       width: 311px;
       height: 311px;
@@ -238,11 +246,17 @@
   &__title--card {
     font-weight: 700;
     line-height: 1.23;
+    @media screen and (min-width: 321px) and (max-width: 479px) {
+      font-size: 6.3vw;
+    }
   }
   &__paragraph {
     margin-top: 40px;
     text-align: center;
     @include font(400, 14, 1.76, 0.04em);
+    @media screen and (min-width: 321px) and (max-width: 479px) {
+      font-size: 4.4vw;
+    }
     @include mq(mobile) {
       @include font(400, 15, null, null);
     }
