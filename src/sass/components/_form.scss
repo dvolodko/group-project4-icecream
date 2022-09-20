@@ -33,6 +33,10 @@
     border-color: $btn-hoverColor;
   }
 
+  &::placeholder {
+    color: $primaryColor;
+  }
+
   @include mq(tablet) {
     padding: 16px 11px;
     margin-bottom: 16px;

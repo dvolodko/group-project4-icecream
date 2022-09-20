@@ -117,7 +117,10 @@
 .hero__wrap--top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 28px;
+    @include mq(tablet){
+       margin-bottom: 28px;
+    }
+ 
 
   @include mq(desktop) {
     margin-bottom: 42px;
@@ -129,17 +132,17 @@
   font-family: 'Seymour One';
 
   max-width: 247px;
-  margin-top: 110px;
+  margin-top: 61px;
 
   @include mq(tablet) {
     @include font(400, 18px, 1.28, 0.04em);
-    margin-top: 104px;
+    margin-top: 40px;
     max-width: 181px;
   }
 
   @include mq(desktop) {
     @include font(400, 38px, 1.26, 0.04em);
-    margin-top: 118px;
+    margin-top: 40px;
     max-width: 367px;
   }
 }
@@ -162,6 +165,15 @@
   display: flex;
   gap: 8px;
   z-index: 15;
+
+  @include mq(tablet) {
+      margin-top: 21px;
+    }
+  
+    @include mq(desktop) {
+      margin-top: 28px;
+    }
+
 }
 
 .hero__button--flex {
@@ -173,11 +185,11 @@
     display: none;
   }
 
-  margin-top: 94px;
+  margin-top: 28px;
   margin-right: 0;
 
   @include mq(desktop) {
-    margin-top: 126px;
+    margin-top: 56px;
   }
 }
 
