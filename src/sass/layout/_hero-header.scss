@@ -255,7 +255,6 @@
 .icon-bottom {
   z-index: 10;
   fill: $textColor;
-  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -265,18 +264,21 @@
     bottom: 60px;
   }
 }
-
 .icon-bottom_focus {
   left: 0;
   z-index: 5;
   fill: $textColor;
 }
-
+.icon-bottom .icon-bottom_focus {
+  transition: $mainTransitionDuration $mainTransitionTimingFunction;
+  transform: scale(1);
+}
 .icon-bottom:hover .icon-bottom_focus {
+  transition: $mainTransitionDuration $mainTransitionTimingFunction;
   transform: scaleX(1.25);
 }
-
 .icon-bottom:focus .icon-bottom_focus {
+  transition: $mainTransitionDuration $mainTransitionTimingFunction;
   transform: scale(1.25, 1.5);
 }
 
@@ -345,7 +347,7 @@
 
   visibility: hidden;
   pointer-events: none;
-  transition: visibility 250ms ease-in-out;
+  transition: visibility $mainTransitionDuration $mainTransitionTimingFunction;
 
   z-index: 999;
 
@@ -381,7 +383,7 @@
   padding: 12px 26px;
 
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     padding: 20px 32px;
