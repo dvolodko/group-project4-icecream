@@ -79,8 +79,8 @@
 .footer-soc__icon {
   scale: 1;
   fill: $backgroundColor;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
+   scale $mainTransitionDuration $mainTransitionTimingFunction;
   .icon--hoverfocus:hover & {
     transform: scale(0.9);
     fill: $extrabackgroundColor;
