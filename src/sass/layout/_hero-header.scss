@@ -39,6 +39,7 @@
 }
 
 .header__item-desktop {
+ 
   @include font(700, 16px, 1.25, 0.04em);
   cursor: pointer;
   align-items: center;
@@ -46,9 +47,11 @@
   transform: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.header__item-desktop:hover,
-.header__item-desktop:focus {
-  color: $primaryColor;
+
+
+.header__item-desktop:hover, 
+.header__item-desktop:focus{
+  color:$accentColor;
 }
 
 .header__list {
@@ -89,11 +92,12 @@
   scale: 1.5;
 }
 
-.header__button {
+.header__button--yellow {
   display: none;
 
+
   @include mq(tablet) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -162,6 +166,11 @@
   margin-top: 32px;
   display: flex;
   gap: 8px;
+z-index: 15;
+}
+
+.hero__button--flex{
+    z-index: 15;
 }
 
 .hero__wrap--right {
@@ -236,7 +245,7 @@
 .icon-bottom {
   z-index: 3;
   fill: $textColor;
-  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -248,8 +257,10 @@
 }
 
 .icon-bottom_focus {
+  
   left: 0;
   z-index: 3;
+  fill: $textColor;
 }
 
 .icon-bottom:hover .icon-bottom_focus {
@@ -279,12 +290,21 @@
 }
 
 .canvas-shine {
-  position: absolute;
-    bottom: 0px;
-      left: 25%;
-  width: 50%;
+    width: 75%;
   z-index: 2;
+      position: absolute;
+      bottom: 0px;
+      left: 25%;
 
+      @media screen and(min-width:380px) {
+        width: 60%;
+      }
+   
+
+    @include mq(mobile){
+    width: 53%;
+  }
+     
   @include mq(tablet) {
     left: 50%;
     width: 45%;
@@ -322,7 +342,7 @@
     display: block;
   }
 }
-
+ 
 /*-----------mobile_menu---*/
 
 .menu-container .menu-toggle {
@@ -354,6 +374,10 @@
   @include mq(desktop) {
     display: none;
   }
+
+    @include modalPreventOverflow(
+      $actualModalHeightMobile: 723px, 
+    $actualModalHeightTablet: 665px);
 }
 
 .menu-container.is-open {
@@ -394,7 +418,8 @@
   transform: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.menu-container__item:hover {
+.menu-container__item:hover .menu-container__link,
+.menu-container__item:focus .menu-container__link{
   color: $primaryColor;
 }
 
@@ -428,4 +453,48 @@
 
 /*---back to home*/
 
+.back-to-home {
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #60BD73;
+  display: none;
+  z-index: 100;
+  transform: scale $mainTransitionDuration $mainTransitionTimingFunction background-color $mainTransitionDuration $mainTransitionTimingFunction;
+}
 
+.back-to-home:hover,
+.back-to-home:focus {
+  scale: 1.5;
+  outline: none;
+  background-color: #FEB860;
+}
+
+.back-to-home::before,
+.back-to-home::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-to-home::before {
+  width: 5px;
+  height: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: $textColor;
+}
+
+.back-to-home::after {
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid $textColor;
+  border-left: 5px solid $textColor;
+}
