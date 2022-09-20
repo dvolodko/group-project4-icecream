@@ -12,10 +12,12 @@
 
 .modal__slider {
   margin: 0 -10px;
+  
 }
 .modal__container-ingr{
   width: 100%;
-  height: 100%;  
+  height: 100%;
+    
  
 }
 .modal__title--ingr{
@@ -113,9 +115,10 @@
 }
 .table {
   width: 100%;
-  margin-bottom: 48px;
 }
-
+.form-ingr{
+  margin-top: 48px;
+}
 .table__item {
   margin-bottom: 11px;
   display: flex;
