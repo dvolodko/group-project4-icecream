@@ -1,8 +1,5 @@
 * {
-  cursor: url('../images/сursor.png'), auto;
-  @include mq(retina) {
-    cursor: url('../images/сursor-2х.png'), auto;
-  }
+  cursor: url(../images/cursor.svg);
 }
 h1,
 h2,
