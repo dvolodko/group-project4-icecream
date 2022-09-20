@@ -2,7 +2,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+
 }
 
 .header__container {
@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 12px;
+ 
 
   @include mq(tablet) {
     padding-top: 20px;
@@ -42,6 +43,7 @@
   cursor: pointer;
   align-items: center;
   color: $textColor;
+  z-index: 10;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
@@ -50,11 +52,14 @@
   color: $accentColor;
 }
 
+
+
 .header__list {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     align-items: center;
     gap: 32px;
+    z-index: 10;
   }
 
   @media screen and (min-width: 1200px) {
@@ -130,6 +135,7 @@
 .hero__title {
   @include font(400, 26px, 1.27, 0.04em);
   font-family: 'Seymour One';
+  text-transform: uppercase;
 
   max-width: 247px;
   margin-top: 61px;
@@ -178,6 +184,10 @@
 
 .hero__button--flex {
   z-index: 15;
+}
+
+.hero__wrap--left{
+  z-index: 10;
 }
 
 .hero__wrap--right {
@@ -250,12 +260,8 @@
   }
 }
 
-.hero-img__plate {
-  z-index: 2;
-}
-
 .icon-bottom {
-  z-index: 3;
+  z-index: 10;
   fill: $textColor;
   transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
@@ -270,7 +276,7 @@
 
 .icon-bottom_focus {
   left: 0;
-  z-index: 3;
+  z-index: 5;
   fill: $textColor;
 }
 
@@ -447,8 +453,8 @@
 
 .back-to-home {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 2%;
+  bottom: 2%;
   width: 40px;
   height: 40px;
   border-color: transparent;
@@ -460,8 +466,8 @@
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
-    right: 50px;
-    bottom: 50px;
+    right: 5%;
+    bottom: 5%;
   }
 }
 
