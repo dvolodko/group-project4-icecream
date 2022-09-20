@@ -337,6 +337,35 @@
 
 /*-----------mobile_menu---*/
 
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 250ms ease-in-out;
+
+  z-index: 999;
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
+.menu-backdrop.is-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu-mask {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
 .menu-container .menu-toggle {
   display: inline-flex;
   margin: 0;
@@ -346,34 +375,21 @@
 }
 
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+
   background: #84a178;
   padding: 12px 26px;
 
-  z-index: 999;
-
-  transform: translateX(150%);
+  transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
   @include mq(tablet) {
     padding: 20px 32px;
   }
-
-  @include mq(desktop) {
-    display: none;
-  }
-
-  @include modalPreventOverflow(
-    $actualModalHeightMobile: 723px,
-    $actualModalHeightTablet: 665px
-  );
 }
 
-.menu-container.is-open {
+.menu-backdrop.is-open .menu-container {
   transform: translateX(0);
 }
 
