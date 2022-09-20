@@ -1,13 +1,18 @@
-.modal__padding40 {
+.modal--ingr{
   padding: 28px 20px 32px 20px;
   @include mq(tablet) {
     padding: 32px 40px;
   }
+  @include modalPreventOverflow(
+    $actualModalHeightMobile: 995px,
+    $actualModalHeightTablet: 990px
+  );
 }
-.modal__title--wrap {
+.modal__title--ingr{
   @include font(400, 20, 1.4, null);
   text-align: center;
 }
+
 
 .ingredients {
   position: relative;
