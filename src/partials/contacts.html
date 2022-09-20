@@ -1,14 +1,12 @@
 <section class="contacts">
+  <h2 class="visually-hidden">Contacts</h2>
   <div class="contacts__container" id="contacts">
     <div class="container container--contacts">
-      <h2 class="visually-hidden">Contacts</h2>
       <address>
         <ul class="contacts__contacts-list contacts-list">
           <li class="contacts-list__contacts-item contacts-item">
             <div class="contacts-item__box">
-              <div class="contacts-item__bg">
-                <p class="contacts-item__place">cafe</p>
-              </div>
+              <p class="contacts-item__place">cafe</p>
             </div>
             <div class="contacts-item__box contacts-item__box--paddbot">
               <p class="contacts-item__label">Chicago</p>
@@ -45,9 +43,7 @@
           </li>
           <li class="contacts-list__contacts-item contacts-item">
             <div class="contacts-item__box">
-              <div class="contacts-item__bg">
-                <p class="contacts-item__place">food truck</p>
-              </div>
+              <p class="contacts-item__place">food truck</p>
             </div>
             <div class="contacts-item__box contacts-item__box--paddbot">
               <p class="contacts-item__label">Los Angeles</p>
@@ -84,9 +80,7 @@
           </li>
           <li class="contacts-list__contacts-item contacts-item">
             <div class="contacts-item__box">
-              <div class="contacts-item__bg">
-                <p class="contacts-item__place">cafe</p>
-              </div>
+              <p class="contacts-item__place">cafe</p>
             </div>
             <div class="contacts-item__box contacts-item__box--paddbot">
               <p class="contacts-item__label">New York</p>
@@ -123,28 +117,38 @@
           </li>
         </ul>
       </address>
-      <div class="contacts__btns">
-        <button
-          type="button"
-          class="contacts__button js-open-modal"
-          data-modal="4"
-        >
-          Our Locations
-          <svg width="12" height="12">
-            <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
-          </svg>
-        </button>
-        <button
-          type="button"
-          class="contacts__button contacts__button--transparent js-open-modal"
-          data-modal="5"
-        >
-          Franchise
-          <svg width="12" height="12">
-            <use class="button__arrow" href="./images/icon.svg#arrow-btn"></use>
-          </svg>
-        </button>
-      </div>
+      <ul class="contacts__btns">
+        <li>
+          <button
+            type="button"
+            class="contacts__button js-open-modal"
+            data-modal="4"
+          >
+            Our Locations
+            <svg width="12" height="12">
+              <use
+                class="button__arrow"
+                href="./images/icon.svg#arrow-btn"
+              ></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="contacts__button contacts__button--transparent js-open-modal"
+            data-modal="5"
+          >
+            Franchise
+            <svg width="12" height="12">
+              <use
+                class="button__arrow"
+                href="./images/icon.svg#arrow-btn"
+              ></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
