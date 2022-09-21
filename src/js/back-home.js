@@ -15,3 +15,28 @@ function backToTop()
     })
 }
 backToTop();
+
+
+var $page = $('html, body');
+$('a[href*="#about"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+    return false;
+});
+
+var $page = $('html, body');
+$('a[href*="#products"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+    return false;
+});
+
+var $page = $('html, body');
+$('a[href*="#contacts"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 3000);
+    return false;
+});
