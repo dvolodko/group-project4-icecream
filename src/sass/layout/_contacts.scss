@@ -25,19 +25,28 @@
   }
 }
 
-.contacts-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
+.contacts__address {
   margin-bottom: 32px;
   @include mq(tablet) {
     margin-bottom: 60px;
   }
   @include mq(desktop) {
-    gap: 32px;
     margin-bottom: 64px;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  @include mq(tablet) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @include mq(desktop) {
+    gap: 32px;
   }
 }
 
@@ -76,7 +85,7 @@
       border-radius: 6px;
       margin-bottom: 32px;
       font-size: 16px;
-      line-height: calc(30 / 16);
+      line-height: calc(28 / 16);
     }
   }
   &__box--paddbot {
