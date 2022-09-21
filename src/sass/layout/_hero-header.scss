@@ -297,7 +297,6 @@
 
 .icon-bottom {
   fill: $textColor;
-  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -310,7 +309,8 @@
 
 .icon-bottom_focus {
   left: 0;
-  fill: $textColor;
+  color: currentColor;
+  transition: transform $timingAnima;
 }
 
 .icon-bottom:hover .icon-bottom_focus {
