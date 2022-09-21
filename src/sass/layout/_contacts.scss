@@ -42,6 +42,7 @@
 }
 
 .contacts-item {
+  border: 1px solid rgba(248, 210, 78, 0.5);
   @media (max-width: 767px) {
     max-width: 280px;
   }
