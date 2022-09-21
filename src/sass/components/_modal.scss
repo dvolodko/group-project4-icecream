@@ -81,8 +81,8 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 
   display: flex;
   justify-content: center;
@@ -100,6 +100,13 @@
   &:hover,
   &:focus {
     border-color: $backgroundColor;
+  }
+
+  @include mq(tablet) {
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
   }
 }
 
