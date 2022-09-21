@@ -89,16 +89,41 @@
   align-items: center;
   // Fix for iphone
   padding: 0;
-  cursor: pointer;
+  // Fix for custom cursor
+  // cursor: pointer;
+
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-color: $backgroundColor;
+  }
+
+  @include mq(tablet) {
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .modal__btn-close-icon {
+  width: 16px;
+  height: 16px;
   fill: $primaryColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 
   .modal__btn-close:hover &,
   .modal__btn-close:focus & {
     fill: $btn-hoverColor;
+  }
+
+  @include mq(tablet) {
+    width: 20px;
+    height: 20px;
   }
 }
 
