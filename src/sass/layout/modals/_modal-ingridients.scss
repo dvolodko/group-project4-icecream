@@ -10,7 +10,7 @@
   );
 }
 
-.modal__slider {
+.ingridient__slider1, ingridient__slider2, ingridient__slider3  {
   margin: 0 -10px;
   
 }
@@ -23,6 +23,10 @@
 .modal__title--ingr{
   @include font(400, 20, 1.4, null);
   text-align: center;
+  margin-bottom: 22px;
+  @include mq(tablet) {
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -40,10 +44,8 @@
   width: 132px;
   height: 130.6px;
   border-radius: 50%;
-  margin: 0 auto 22px auto;
-  @include mq(tablet) {
-    margin-bottom: 24px;
-  }
+  margin: 0 auto 24px auto;
+ 
 }
 
 .ingredients__img {
@@ -151,4 +153,10 @@
 }
 .table__text:last-child {
   order: 1;
+}
+.dots1, .dots2, .dots3 {
+  position: relative;
+}
+.dots1 .slick-dots, .dots2 .slick-dots, .dots3 .slick-dots {
+  bottom: -67px;
 }
