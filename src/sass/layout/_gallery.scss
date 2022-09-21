@@ -4,7 +4,10 @@
 .gallery__container {
   position: absolute;
   width: 100%;
-  top: -24px;
+  top: -40px;
+  @media screen and (max-width: 380px) {
+    top: -24px;
+  }
   @include mq(tablet) {
     top: -164px;
   }
@@ -22,6 +25,18 @@
   @include mq(desktop) {
     width: 1013px;
     height: 424px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 400px;
+    height: auto;
+  }
+  @media screen and(max-width: 438px) {
+    width: 350px;
+    height: auto;
+  }
+  @media screen and(max-width: 379px) {
+    max-width: 280px;
+    height: auto;
   }
 }
 .slider__img,
