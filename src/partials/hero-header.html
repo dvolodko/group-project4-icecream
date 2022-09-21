@@ -27,17 +27,20 @@
 
     <ul class="header__list-desktop">
       <li class="header__item-desktop">
-        <a href="#">Home</a>
-      </li class="header__link-desktop">
+        <a class="header__link-desktop" href="#">Home</a>
+      </li>
+
       <li class="header__item-desktop">
-        <a  href="#about">How it's made?</a>
-      </li class="header__link-desktop">
+        <a class="header__link-desktop" href="#about">How it's made?</a>
+      </li>
+
       <li class="header__item-desktop">
-        <a href="#products">Our products</a>
-      </li class="header__link-desktop">
+        <a class="header__link-desktop" href="#products">Our products</a>
+      </li>
+
       <li class="header__item-desktop">
-        <a href="#contacts">Contact</a>
-      </li class="header__link-desktop">
+        <a class="header__link-desktop" href="#contacts">Contact</a>
+      </li>
     </ul>
 
     <ul class="header__list">
@@ -74,12 +77,12 @@
 <!--hero-->
 
 <section class="hero">
-  <div class="container">
+  <div class="container hero__container">
     <div class="hero__wrap hero__wrap--top">
       <div class="hero__wrap hero__wrap--left">
-        <h2 class="hero__title">
+        <h1 class="hero__title">
           ice cream made with <span class="accent">passion</span>
-        </h2>
+        </h1>
         <ul class="hero__list hero__list--left">
           <li>
             <button
@@ -116,9 +119,7 @@
     </div>
 
     <div class="hero__wrap hero__wrap--bottom">
-      <picture class="hero-img hero-img__plate"  data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+      <picture class="hero-img hero-img__plate">
         <source
           srcset="./images/hero-round.png 1x, ./images/hero-round-2x.png 2x"
           media="(min-width: 1200px)"
@@ -142,29 +143,19 @@
         />
       </picture>
 
-      <ul class="hero__list hero__list--bottom">
-        <li>
-          <p class="hero__text hero__text--botton">
-            We made ice cream with a delicate taste. Made with milk, cream,
-            sugar and natural stabilizer. Our ice cream is made with love for
-            you.
-          </p>
-        </li>
-        <li>
-          <button
-            type="button"
-            class="icon-bottom js-open-modal"
-            data-modal="3"
-          >
-            <svg class="icon-bottom_focus" width="40" height="15">
-              <use href="./images/icon.svg#arrow"></use>
-            </svg>
-          </button>
-        </li>
-      </ul>
-    </div>
+      <div class="hero__list hero__list--bottom">
+        <p class="hero__text hero__text--botton">
+          We made ice cream with a delicate taste. Made with milk, cream, sugar
+          and natural stabilizer. Our ice cream is made with love for you.
+        </p>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <button type="button" class="icon-bottom js-open-modal" data-modal="3">
+          <svg class="icon-bottom_focus" width="40" height="15">
+            <use href="./images/icon.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <picture class="canvas-bubbles">
       <source
@@ -199,11 +190,7 @@
       />
     </picture>
 
-    <picture
-      class="canvas-icecream"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
+    <picture class="canvas-icecream">
       <source
         class="canvas-icecream__desktop"
         srcset="
@@ -237,7 +224,7 @@
 </section>
 
 <!--mobile_menu-->
-<div class="menu-backdrop js-menu-container" id="mobile-menu home">
+<div class="menu-backdrop js-menu-container" id="mobile-menu">
   <div class="container menu-mask">
     <div class="menu-container">
       <div class="menu-container__wrap">
@@ -263,8 +250,6 @@
                 class="header__logo"
                 src="./images/logo.png"
                 alt="site logo icecream"
-                width="60"
-                height="65"
               />
             </picture>
           </a>
@@ -304,10 +289,10 @@
           </ul>
         </nav>
 
-        <div class="menu-container__button">
+        <div>
           <button
             type="button"
-            class="header__button js-open-modal js-close-menu"
+            class="header__button header__button--mobile js-open-modal js-close-menu"
             data-modal="2"
           >
             Buy now<svg width="12" height="12">

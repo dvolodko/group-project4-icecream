@@ -1,4 +1,3 @@
-
 .header__container {
   background-color: $backgroundColor;
   display: flex;
@@ -42,6 +41,11 @@
 .header__item-desktop:hover,
 .header__item-desktop:focus {
   color: $accentColor;
+}
+
+.header__link-desktop,
+.header__item-desktop {
+  transition-delay: ease-in;
 }
 
 .header__list {
@@ -92,26 +96,51 @@
 
 /*--------hero*/
 
-.hero .container {
-  background-color: $backgroundColor;
-  color: $textColor;
-  position: relative;
+.hero {
+  animation-name: overflowHero;
+  animation-duration: 8500ms;
+}
+
+@keyframes overflowHero {
+  0% {
+    overflow: hidden;
+  }
+
+  100% {
+    overflow: visible;
+  }
+}
+
+.hero__container {
+  padding-top: 61px;
   padding-bottom: 239px;
-  overflow: hidden;
 
   @include mq(tablet) {
+    padding-top: 40px;
     padding-bottom: 13px;
   }
 
   @include mq(desktop) {
     justify-content: start;
+    padding-top: 40px;
     padding-bottom: 65px;
+  }
+}
+
+.hero .container {
+  background-color: $backgroundColor;
+  color: $textColor;
+  position: relative;
+
+  @include mq(desktop) {
+    justify-content: start;
   }
 }
 
 .hero__wrap--top {
   display: flex;
   justify-content: space-between;
+
   @include mq(tablet) {
     margin-bottom: 28px;
   }
@@ -125,19 +154,15 @@
   @include font(400, 26px, 1.27, 0.04em);
   font-family: 'Seymour One';
   text-transform: uppercase;
-
   max-width: 247px;
-  margin-top: 61px;
 
   @include mq(tablet) {
     @include font(400, 18px, 1.28, 0.04em);
-    margin-top: 40px;
     max-width: 181px;
   }
 
   @include mq(desktop) {
     @include font(400, 38px, 1.26, 0.04em);
-    margin-top: 40px;
     max-width: 367px;
   }
 }
@@ -241,6 +266,7 @@
 
 .icon-bottom {
   fill: $textColor;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -250,20 +276,17 @@
     bottom: 60px;
   }
 }
+
 .icon-bottom_focus {
   left: 0;
   fill: $textColor;
 }
-.icon-bottom .icon-bottom_focus {
-  transition: $mainTransitionDuration $mainTransitionTimingFunction;
-  transform: scale(1);
-}
+
 .icon-bottom:hover .icon-bottom_focus {
-  transition: $mainTransitionDuration $mainTransitionTimingFunction;
   transform: scaleX(1.25);
 }
+
 .icon-bottom:focus .icon-bottom_focus {
-  transition: $mainTransitionDuration $mainTransitionTimingFunction;
   transform: scale(1.25, 1.5);
 }
 
@@ -281,6 +304,9 @@
   left: 11%;
   pointer-events: none;
 
+  animation-name: changePosition;
+  animation-duration: 3000ms;
+
   @media screen and (min-width: 400px) {
     bottom: -53px;
     left: 18%;
@@ -294,6 +320,16 @@
   @include mq(desktop) {
     bottom: -100px;
     left: 46%;
+  }
+}
+
+@keyframes changePosition {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -330,11 +366,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-
   visibility: hidden;
   pointer-events: none;
-  transition: visibility $mainTransitionDuration $mainTransitionTimingFunction;
-
+  transition: visibility 250ms ease-in-out;
   z-index: 999;
 
   @include mq(desktop) {
@@ -366,10 +400,10 @@
   height: 100%;
 
   background: #84a178;
-  padding: 12px 26px;
+  padding: 12px 20px 63px 20px;
 
   transform: translateX(100%);
-  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: transform 250ms ease-in-out;
 
   @include mq(tablet) {
     padding: 20px 32px;
@@ -419,11 +453,9 @@
   color: $primaryColor;
 }
 
-.menu-container .header__button {
-  display: block;
+.header__button--mobile {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 63px;
   bottom: 0;
 
   @include mq(tablet) {
@@ -450,8 +482,8 @@
 
 .back-to-home {
   position: fixed;
-  right: 2%;
-  bottom: 2%;
+  right: 10px;
+  bottom: 10px;
   width: 40px;
   height: 40px;
   border-color: transparent;
@@ -463,8 +495,8 @@
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
-    right: 5%;
-    bottom: 5%;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
