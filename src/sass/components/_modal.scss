@@ -81,15 +81,26 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   // Fix for iphone
   padding: 0;
-  cursor: pointer;
+  // Fix for custom cursor
+  // cursor: pointer;
+
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 50%;
+  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:hover,
+  &:focus {
+    border-color: $backgroundColor;
+  }
 }
 
 .modal__btn-close-icon {
