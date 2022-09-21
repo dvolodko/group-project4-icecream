@@ -6,12 +6,6 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 12px;
-    @media screen and (min-width: 321px) and (max-width: 479px) {
-      font-size: 5.6vw;
-    }
-    @include mq(mobile) {
-      @include font(800, 20px, null, null);
-    }
     @include mq(tablet) {
       @include font(800, 22px, 1.23, null);
     }
@@ -21,16 +15,10 @@
   }
   &__title-section {
     font-family: $secondaryFontFamily;
-    @media screen and (min-width: 321px) and (max-width: 479px) {
-      font-size: 9.5vw;
-    }
   }
 
   &__list {
     margin-top: 148px;
-    @include mq(mobile) {
-      margin-top: 222px;
-    }
     @include mq(tablet) {
       margin-top: 200px;
       display: flex;
@@ -45,33 +33,21 @@
   &__card:first-child {
     background-color: #aec6a5;
   }
+  &__card:not(:first-child) {
+    @include mq(mobile-only) {
+      margin-top: 164px;
+    }
+  }
 
   &__card {
-    padding: 123px 40px 0px;
-    margin-top: 164px;
+    padding: 123px 40px 12px;
     position: relative;
     background-color: #efd478;
     width: 100%;
-    height: 420px;
-    @media screen and (min-width: 321px) {
-      padding-top: 40vw;
-      margin-top: 50vw;
-    }
-    @media screen and (min-width: 321px) and (max-width: 479px) {
-      height: 131vw;
-    }
     border-radius: 24px;
-    @include mq(mobile) {
-      padding: 185px 60px 0px;
-      margin-top: 246px;
-      height: 630px;
-      border-radius: 20px;
-    }
     @include mq(tablet) {
-      padding: 108px 26px 0px;
-      margin-top: 0px;
+      padding: 108px 26px 12px;
       width: calc((100% - 32px) / 3);
-      height: 428px;
     }
     @include mq(desktop) {
       padding: 166px 64px 0px;
@@ -84,8 +60,8 @@
   }
 
   &__ellipse {
-    width: calc(100vw - 120px);
-    height: calc(100vw - 120px);
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background: linear-gradient(
         0deg,
@@ -98,15 +74,7 @@
     top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include mq(mobile) {
-      width: 311px;
-      height: 311px;
-      top: -13px;
-      box-shadow: 0px 7px 25px rgba(10, 136, 23, 0.25);
-    }
     @include mq(tablet) {
-      width: 199px;
-      height: 197px;
       top: -11px;
       box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
     }
@@ -166,9 +134,6 @@
     display: block;
     height: 100%;
     border-radius: 100%;
-    @include mq(mobile) {
-      background-position: top -13px center;
-    }
     @include mq(tablet) {
       background-position: top -11px center;
     }
@@ -246,35 +211,23 @@
   &__title--card {
     font-weight: 700;
     line-height: 1.23;
-    @media screen and (min-width: 321px) and (max-width: 479px) {
-      font-size: 6.3vw;
+    margin-bottom: 40px;
+    @include mq(desktop) {
+      margin-bottom: 65px;
     }
   }
   &__paragraph {
-    margin-top: 40px;
+    min-height: 175px;
+    margin-bottom: 29px;
     text-align: center;
     @include font(400, 14, 1.76, 0.04em);
-    @media screen and (min-width: 321px) and (max-width: 479px) {
-      font-size: 4.4vw;
-    }
-    @include mq(mobile) {
-      @include font(400, 15, null, null);
-    }
     @include mq(tablet) {
       @include font(400, 14, null, null);
+      min-height: 195px;
     }
     @include mq(desktop) {
       @include font(400, 16, null, null);
-    }
-  }
-  &__button--arrow {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    padding: 20px 0px;
-    transform: translateX(-50%);
-    @include mq(desktop) {
-      bottom: 40px;
+      min-height: 175px;
     }
   }
   &__button--arrow &__button--icon {
