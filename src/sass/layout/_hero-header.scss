@@ -32,7 +32,7 @@
 
 .header__item-desktop {
   @include font(700, 16px, 1.25, 0.04em);
-  cursor: pointer;
+  //cursor: pointer;
   align-items: center;
   color: $textColor;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction;
@@ -73,7 +73,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  //cursor: pointer;
   transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
@@ -477,7 +477,7 @@
   @include font(700, 32px, 1.22, 0.04em);
   text-align: center;
   color: $textColor;
-  cursor: pointer;
+  //cursor: pointer;
 
   @include mq(tablet) {
     @include font(700, 48px, 1.23, 0.04em);
