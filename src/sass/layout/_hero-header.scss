@@ -180,6 +180,37 @@
   }
 }
 
+.hero__button--flex-body {
+  @include font(600, 8px, 1.25, 0.04em);
+  padding: 5px 9px;
+  color: #000;
+
+  @include mq(desktop) {
+    @include font(600, 14px, 1.29, 0.04em);
+    padding: 12px 34px;
+  }
+
+  &:focus {
+    color: $textColor;
+  }
+
+  &:disabled {
+    border-color: $btn-disabledColor;
+    color: #000;
+  }
+}
+
+.hero__button--flex {
+  @include font(600, 8px, 1.25, 0.04em);
+  padding: 5px 9px;
+  color: $accentColor;
+
+  @include mq(desktop) {
+    @include font(600, 14px, 1.21, 0.04em);
+    padding: 12px 34px;
+  }
+}
+
 .hero__list--left {
   margin-top: 32px;
   display: flex;
