@@ -36,13 +36,14 @@
     margin-bottom: 60px;
   }
   @include mq(desktop) {
+    gap: 32px;
     margin-bottom: 64px;
   }
 }
 
 .contacts-item {
-  @media (max-width: 479px) {
-    min-width: 280px;
+  @media (max-width: 767px) {
+    max-width: 280px;
   }
   flex-basis: calc(100%);
   padding: 40px 32px;
@@ -51,28 +52,18 @@
   border-radius: 24px;
   @include mq(tablet) {
     padding: 40px 24px;
-    flex-basis: calc((100% - 64px) / 3);
+    flex-basis: calc((100% - 32px) / 3);
   }
   @include mq(desktop) {
     padding: 40px;
-    flex-basis: calc((100% - 32px) / 3);
-  }
-  &__bg {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 16px;
-    padding: 0px 15px;
-    background: $accentColor;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    @include mq(tablet) {
-      height: 28px;
-      border-radius: 6px;
-      margin-bottom: 32px;
-    }
+    flex-basis: calc((100% - 64px) / 3);
   }
   &__place {
+    display: inline-flex;
+    padding: 0px 15px;
+    border-radius: 4px;
+    background: $accentColor;
+    margin-bottom: 20px;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -81,8 +72,10 @@
     text-transform: uppercase;
     color: $primaryColor;
     @include mq(tablet) {
+      border-radius: 6px;
+      margin-bottom: 32px;
       font-size: 16px;
-      line-height: calc(28 / 16);
+      line-height: calc(30 / 16);
     }
   }
   &__box--paddbot {
@@ -106,13 +99,11 @@
     color: $primaryColor;
     margin-bottom: 8px;
     @include mq(tablet) {
-      font-size: 14px;
-      line-height: calc(26 / 14);
-      margin-bottom: 12px;
-    }
-    @include mq(tablet) {
       font-size: 16px;
       line-height: calc(30 / 16);
+      margin-bottom: 12px;
+    }
+    @include mq(desktop) {
       margin-bottom: 8px;
     }
   }
