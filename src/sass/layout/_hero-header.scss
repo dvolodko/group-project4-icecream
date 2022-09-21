@@ -324,9 +324,16 @@
 .canvas-bubbles {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 5px;
+  width: 97%;
   pointer-events: none;
+  @include mq(tablet) {
+    left: 8px;
+    width: 98%;
+  }
+  @include mq(desktop) {
+    width: 99%;
+  }
 }
 
 .canvas-icecream {
