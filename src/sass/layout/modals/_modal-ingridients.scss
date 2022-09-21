@@ -10,7 +10,7 @@
   );
 }
 
-.modal__slider {
+.ingridient__slider1, ingridient__slider2, ingridient__slider3  {
   margin: 0 -10px;
   
 }
@@ -152,7 +152,9 @@
 .table__text:last-child {
   order: 1;
 }
-.dotes-class{
+.dots1, .dots2, .dots3 {
   position: relative;
-  margin-top: 20px;
+}
+.dots1 .slick-dots, .dots2 .slick-dots, .dots3 .slick-dots {
+  bottom: -67px;
 }
