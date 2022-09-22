@@ -151,29 +151,7 @@ button {
     fill: $textColor;
   }
 }
-// кнопка модального вікна Open map
-.location__button {
-  min-width: 134px;
-  height: 42px;
-  background-color: $accentColor;
-  border-radius: 10px;
-  @include mq(mobile-only) {
-    @include font(null, 12px, 1.22, null);
-  }
-  @include mq(desktop) {
-    min-width: 145px;
-  }
-  &:hover {
-    background-color: $btn-hoverColor;
-  }
-  &:focus {
-    background-color: $btn-hoverColor;
-    color: $textColor;
-  }
-  &:disabled {
-    background-color: $btn-disabledColor;
-  }
-}
+
 // кнопка модалки Submit
 .modal__button {
   min-width: 134px;
