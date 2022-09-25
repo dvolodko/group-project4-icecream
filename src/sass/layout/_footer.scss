@@ -1,17 +1,16 @@
 .footer__container {
-  padding-top: 1101px;
+  padding-top: 40px;
   padding-bottom: 120px;
   @include mq(tablet) {
-    padding-top: 381px;
     padding-bottom: 53px;
   }
   @include mq(desktop) {
-    padding-top: 668px;
+    padding-top: 120px;
     padding-bottom: 45px;
   }
 }
 
-.footer__container--green {
+.footer__container--bg-green {
   background-color: $backgroundColor;
 }
 

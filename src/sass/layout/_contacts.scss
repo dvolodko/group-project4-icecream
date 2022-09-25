@@ -1,5 +1,4 @@
 .contacts {
-  position: relative;
   &__btns {
     display: flex;
     flex-wrap: wrap;
@@ -13,31 +12,36 @@
   }
 }
 
-.contacts__container {
-  position: absolute;
-  top: -390px;
-  width: 100%;
+.contacts__container--bg-green {
+  position: relative;
+  padding-top: 962px;
+  background-color: $backgroundColor;
   @include mq(tablet) {
-    top: -310px;
+    padding-top: 284px;
   }
   @include mq(desktop) {
-    top: -96px;
+    padding-top: 506px;
   }
 }
 
 .contacts-list {
+  position: absolute;
+  width: calc(100% - 40px);
+  top: -345px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
   @include mq(tablet) {
-    margin-bottom: 60px;
+    gap: 16px;
+    width: calc(100% - 64px);
+    top: -304px;
   }
   @include mq(desktop) {
+    width: calc(100% - 32px);
+    top: -96px;
     gap: 32px;
-    margin-bottom: 64px;
   }
 }
 
@@ -82,12 +86,12 @@
     @media (max-width: 767px) {
       max-width: 220px;
     }
-    margin-bottom: 24px;
+    margin-bottom: 17px;
     @include mq(tablet) {
-      margin-bottom: 26px;
+      margin-bottom: 15px;
     }
     @include mq(desktop) {
-      margin-bottom: 32px;
+      margin-bottom: 25px;
     }
   }
   &__label {
@@ -133,10 +137,10 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 24px 0px;
+    padding: 22px 0px;
     @include mq(tablet) {
       gap: 12px;
-      padding: 32px 0px;
+      padding: 29px 0px;
     }
   }
   &__title,
@@ -159,9 +163,9 @@
     color: #907e82;
   }
   &__box--paddtop {
-    margin-top: 24px;
+    margin-top: 17px;
     @include mq(tablet) {
-      margin-top: 32px;
+      margin-top: 25px;
     }
   }
   &__tel,
