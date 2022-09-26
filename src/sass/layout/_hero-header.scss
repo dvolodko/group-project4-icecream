@@ -32,7 +32,7 @@
 
 .header__item-desktop {
   @include font(700, 16px, 1.25, 0.04em);
-  cursor: pointer;
+  //cursor: pointer;
   align-items: center;
   color: $textColor;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction;
@@ -73,7 +73,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  //cursor: pointer;
   transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
@@ -297,7 +297,6 @@
 
 .icon-bottom {
   fill: $textColor;
-  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(tablet) {
     bottom: 15px;
@@ -310,7 +309,8 @@
 
 .icon-bottom_focus {
   left: 0;
-  fill: $textColor;
+  color: currentColor;
+  transition: transform $timingAnima;
 }
 
 .icon-bottom:hover .icon-bottom_focus {
@@ -324,9 +324,16 @@
 .canvas-bubbles {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 5px;
+  width: 97%;
   pointer-events: none;
+  @include mq(tablet) {
+    left: 8px;
+    width: 98%;
+  }
+  @include mq(desktop) {
+    width: 99%;
+  }
 }
 
 .canvas-icecream {
@@ -470,7 +477,7 @@
   @include font(700, 32px, 1.22, 0.04em);
   text-align: center;
   color: $textColor;
-  cursor: pointer;
+  //cursor: pointer;
 
   @include mq(tablet) {
     @include font(700, 48px, 1.23, 0.04em);

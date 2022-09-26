@@ -25,7 +25,31 @@
       padding-bottom: 32px;
     }
   }
+  // кнопка модального вікна Open map
   &__our-location-button {
+    @include flex(flex, center, center);
     margin: 0 auto;
+    width: 134px;
+    height: 42px;
+    font-family: 'Montserrat', sans-serif;
+    @include font(600, 12px, 1.25, null);
+    background-color: $accentColor;
+    border-radius: 10px;
+    outline: none;
+    transition: color $timingAnima, background-color $timingAnima;
+    &:hover {
+      background-color: $btn-hoverColor;
+    }
+    &:focus {
+      background-color: $btn-hoverColor;
+      color: $textColor;
+    }
+    &:disabled {
+      background-color: $btn-disabledColor;
+    }
+    @include mq(tablet) {
+      width: 145px;
+      @include font(null, 14px, 1.22, null);
+    }
   }
 }
