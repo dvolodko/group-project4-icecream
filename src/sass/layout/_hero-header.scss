@@ -74,7 +74,7 @@
   border: none;
   background-color: transparent;
   //cursor: pointer;
-  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
 
   @include mq(desktop) {
     display: none;
@@ -83,7 +83,7 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  scale: 1.5;
+  transform: scale 1.5;
 }
 
 .header__button--yellow {
@@ -529,19 +529,18 @@
   background-color: #60bd73;
   display: none;
   z-index: 100;
-  transition: scale $mainTransitionDuration $mainTransitionTimingFunction
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: all $mainTransitionDuration $mainTransitionTimingFunction;
+
+  &:hover {
+    transform: scale(1.2);
+    outline: none;
+    background-color: #feb860;
+  }
 
   @include mq(desktop) {
     right: 20px;
     bottom: 20px;
   }
-}
-
-.back-to-home:hover {
-  scale: 1.2;
-  outline: none;
-  background-color: #feb860;
 }
 
 .back-to-home::before,
