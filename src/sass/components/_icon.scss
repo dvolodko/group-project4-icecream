@@ -11,14 +11,15 @@
 .arrow--white {
   fill: $extrabackgroundColor;
 }
-.arrow--hover, .arrow--focus{
+.arrow--hover,
+.arrow--focus {
   display: none;
 }
-.arrow, 
+.arrow,
 .arrow--white {
   &.arrow--default {
     scale: 1;
-    transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
+    transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
   }
   .icon--hoverfocus:hover & {
     &.arrow--default {
@@ -28,8 +29,8 @@
   .icon--hoverfocus:focus & {
     &.arrow--default {
       transform: scale(1.25, 1.5);
+    }
   }
-}
 }
 .close {
   fill: #ffffff;
@@ -66,8 +67,8 @@
   scale: (1);
   fill: $backgroundColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
-  transition: scale $mainTransitionDuration $mainTransitionTimingFunction;
-   .icon--hoverfocus:hover & {
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+  .icon--hoverfocus:hover & {
     transform: scale(0.9);
     fill: $extrabackgroundColor;
   }
@@ -80,7 +81,7 @@
   scale: 1;
   fill: $backgroundColor;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
-   scale $mainTransitionDuration $mainTransitionTimingFunction;
+    transform $mainTransitionDuration $mainTransitionTimingFunction;
   .icon--hoverfocus:hover & {
     transform: scale(0.9);
     fill: $extrabackgroundColor;
